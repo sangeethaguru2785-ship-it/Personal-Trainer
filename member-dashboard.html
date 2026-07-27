@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly | Member Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+
+    <!-- Sidebar -->
+    <aside class="dash-sidebar" id="dashSidebar">
+        <div class="dash-sidebar-header">
+            <a href="index.html" class="dash-sidebar-brand">
+                <img src="img/logo-red.webp" alt="Stackly" class="brand-logo">
+                <span class="dash-brand-text">Stackly</span>
+            </a>
+            <button class="dash-sidebar-close" id="sidebarClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="dash-sidebar-user">
+            <div class="dash-user-avatar"><i class="fas fa-user"></i></div>
+            <div class="dash-user-info">
+                <span class="dash-user-name">Alex Morgan</span>
+                <span class="dash-user-role">Premium Member</span>
+            </div>
+        </div>
+        <nav class="dash-sidebar-nav">
+            <a href="#" class="dash-nav-link active" data-section="overview"><i class="fas fa-th-large"></i><span>Dashboard</span></a>
+            <a href="#" class="dash-nav-link" data-section="profile"><i class="fas fa-user-circle"></i><span>My Profile</span></a>
+            <a href="#" class="dash-nav-link" data-section="myprograms"><i class="fas fa-clipboard-list"></i><span>My Programs</span></a>
+            <a href="#" class="dash-nav-link" data-section="workout"><i class="fas fa-heart-pulse"></i><span>Workout Plan</span></a>
+            <a href="#" class="dash-nav-link" data-section="nutrition"><i class="fas fa-apple-whole"></i><span>Nutrition Plan</span></a>
+            <a href="#" class="dash-nav-link" data-section="progress"><i class="fas fa-chart-line"></i><span>Progress Tracker</span></a>
+            <a href="#" class="dash-nav-link" data-section="calculator"><i class="fas fa-calculator"></i><span>BMI & Calorie Calc</span></a>
+            <a href="#" class="dash-nav-link" data-section="appointments"><i class="fas fa-calendar-check"></i><span>Book Appointments</span></a>
+            <a href="#" class="dash-nav-link" data-section="payments"><i class="fas fa-credit-card"></i><span>Payment History</span></a>
+            <a href="#" class="dash-nav-link" data-section="tips"><i class="fas fa-lightbulb"></i><span>Health Tips</span></a>
+            <a href="#" class="dash-nav-link" data-section="notifications"><i class="fas fa-bell"></i><span>Notifications</span><span class="dash-badge">2</span></a>
+            <div class="dash-nav-divider"></div>
+            <a href="#" class="dash-nav-link" data-section="settings"><i class="fas fa-gear"></i><span>Settings</span></a>
+            <a href="index.html" class="dash-nav-link"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="dash-main" id="dashMain">
+        <!-- Top Bar -->
+        <header class="dash-topbar">
+            <div class="dash-topbar-left">
+                <button class="dash-sidebar-toggle" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+                <div class="dash-breadcrumb">
+                    <span class="dash-breadcrumb-page" id="pageTitle">Dashboard Overview</span>
+                </div>
+            </div>
+            <div class="dash-topbar-right">
+                <div class="dash-search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search..." class="dash-search-input">
+                </div>
+                <div class="dash-topbar-actions">
+                    <button class="dash-action-btn dash-notif-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="dash-notif-dot"></span>
+                    </button>
+                    <div class="dash-topbar-user">
+                        <div class="dash-topbar-avatar"><i class="fas fa-user"></i></div>
+                        <span class="dash-topbar-name">Alex Morgan</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content Area -->
+        <div class="dash-content">
+
+            <!-- Overview Section -->
+            <section class="dash-section active" id="section-overview">
+                <div class="dash-welcome-banner">
+                    <div class="dash-welcome-content">
+                        <h2>Welcome back, <span class="text-gradient">Alex</span>!</h2>
+                        <p>Here's your fitness progress this week. Keep pushing towards your goals!</p>
+                        <div class="dash-welcome-streak">
+                            <i class="fas fa-fire"></i>
+                            <span>14-Day Workout Streak</span>
+                        </div>
+                    </div>
+                    <div class="dash-welcome-visual">
+                        <div class="dash-streak-ring">
+                            <svg viewBox="0 0 120 120">
+                                <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="8"/>
+                                <circle cx="60" cy="60" r="54" fill="none" stroke="#C41E3A" stroke-width="8" stroke-dasharray="339.3" stroke-dashoffset="67.86" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+                            </svg>
+                            <span class="dash-streak-number">80%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 dash-stats-row mt-1">
+                    <div class="col-xl-3 col-sm-6">
+                        <div class="dash-stat-card">
+                            <div class="dash-stat-icon stat-members"><i class="fas fa-fire"></i></div>
+                            <div class="dash-stat-info">
+                                <span class="dash-stat-value" data-count="2450">0</span>
+                                <span class="dash-stat-label">Calories Burned</span>
+                            </div>
+                            <div class="dash-stat-trend trend-up"><i class="fas fa-arrow-up"></i> 15%</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6">
+                        <div class="dash-stat-card">
+                            <div class="dash-stat-icon stat-programs"><i class="fas fa-clock"></i></div>
+                            <div class="dash-stat-info">
+                                <span class="dash-stat-value" data-count="12">0</span>
+                                <span class="dash-stat-label">Hours Trained</span>
+                            </div>
+                            <div class="dash-stat-trend trend-up"><i class="fas fa-arrow-up"></i> 8%</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6">
+                        <div class="dash-stat-card">
+                            <div class="dash-stat-icon stat-appointments"><i class="fas fa-weight-scale"></i></div>
+                            <div class="dash-stat-info">
+                                <span class="dash-stat-value">-<span data-count="5">0</span></span>
+                                <span class="dash-stat-label">lbs This Month</span>
+                            </div>
+                            <div class="dash-stat-trend trend-up"><i class="fas fa-arrow-up"></i> On Track</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6">
+                        <div class="dash-stat-card">
+                            <div class="dash-stat-icon stat-revenue"><i class="fas fa-trophy"></i></div>
+                            <div class="dash-stat-info">
+                                <span class="dash-stat-value" data-count="14">0</span>
+                                <span class="dash-stat-label">Day Streak</span>
+                            </div>
+                            <div class="dash-stat-trend trend-up"><i class="fas fa-arrow-up"></i> Personal Best</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 mt-1">
+                    <div class="col-xl-8">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">Weekly Activity</h3>
+                            </div>
+                            <div class="dash-card-body">
+                                <canvas id="weeklyActivityChart" height="280"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">Calories Breakdown</h3>
+                            </div>
+                            <div class="dash-card-body">
+                                <canvas id="caloriesChart" height="280"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 mt-1">
+                    <div class="col-xl-6">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">Today's Workout</h3>
+                            </div>
+                            <div class="dash-card-body">
+                                <div class="dash-today-workout">
+                                    <div class="dash-tw-item completed">
+                                        <div class="dash-tw-check"><i class="fas fa-check"></i></div>
+                                        <div class="dash-tw-info">
+                                            <span class="dash-tw-name">Barbell Squats</span>
+                                            <span class="dash-tw-detail">4 x 8 reps | 185 lbs</span>
+                                        </div>
+                                    </div>
+                                    <div class="dash-tw-item completed">
+                                        <div class="dash-tw-check"><i class="fas fa-check"></i></div>
+                                        <div class="dash-tw-info">
+                                            <span class="dash-tw-name">Romanian Deadlifts</span>
+                                            <span class="dash-tw-detail">4 x 10 reps | 155 lbs</span>
+                                        </div>
+                                    </div>
+                                    <div class="dash-tw-item">
+                                        <div class="dash-tw-check"></div>
+                                        <div class="dash-tw-info">
+                                            <span class="dash-tw-name">Leg Press</span>
+                                            <span class="dash-tw-detail">3 x 12 reps | 270 lbs</span>
+                                        </div>
+                                    </div>
+                                    <div class="dash-tw-item">
+                                        <div class="dash-tw-check"></div>
+                                        <div class="dash-tw-info">
+                                            <span class="dash-tw-name">Walking Lunges</span>
+                                            <span class="dash-tw-detail">3 x 12 each | 40 lbs</span>
+                                        </div>
+                                    </div>
+                                    <div class="dash-tw-item">
+                                        <div class="dash-tw-check"></div>
+                                        <div class="dash-tw-info">
+                                            <span class="dash-tw-name">Calf Raises</span>
+                                            <span class="dash-tw-detail">4 x 15 reps | 135 lbs</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dash-progress-section">
+                                    <div class="dash-progress-header">
+                                        <span>Workout Progress</span>
+                                        <span>40%</span>
+                                    </div>
+                                    <div class="dash-progress-bar"><div class="dash-progress-fill" style="width:40%"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">Upcoming Appointments</h3>
+                            </div>
+                            <div class="dash-card-body">
+                                <div class="dash-appointment-list">
+                                    <div class="dash-appointment-item">
+                                        <div class="dash-appt-icon"><i class="fas fa-dumbbell"></i></div>
+                                        <div class="dash-appt-info">
+                                            <span class="dash-appt-name">Strength Training</span>
+                                            <span class="dash-appt-type">With Coach Mike</span>
+                                        </div>
+                                        <div class="dash-appt-time">
+                                            <span class="dash-appt-hour">9:00 AM</span>
+                                            <span class="dash-appt-date">Tomorrow</span>
+                                        </div>
+                                    </div>
+                                    <div class="dash-appointment-item">
+                                        <div class="dash-appt-icon"><i class="fas fa-spa"></i></div>
+                                        <div class="dash-appt-info">
+                                            <span class="dash-appt-name">Yoga Session</span>
+                                            <span class="dash-appt-type">With Coach Sarah</span>
+                                        </div>
+                                        <div class="dash-appt-time">
+                                            <span class="dash-appt-hour">6:00 PM</span>
+                                            <span class="dash-appt-date">Wednesday</span>
+                                        </div>
+                                    </div>
+                                    <div class="dash-appointment-item">
+                                        <div class="dash-appt-icon"><i class="fas fa-heart-pulse"></i></div>
+                                        <div class="dash-appt-info">
+                                            <span class="dash-appt-name">HIIT Cardio</span>
+                                            <span class="dash-appt-type">With Coach Mike</span>
+                                        </div>
+                                        <div class="dash-appt-time">
+                                            <span class="dash-appt-hour">10:00 AM</span>
+                                            <span class="dash-appt-date">Friday</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Section -->
+            <section class="dash-section" id="section-profile">
+                <div class="dash-section-header">
+                    <h2>My Profile</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="dash-card text-center">
+                            <div class="dash-card-body">
+                                <div class="dash-profile-avatar"><i class="fas fa-user"></i></div>
+                                <h3 class="mt-3 mb-1">Alex Morgan</h3>
+                                <p class="text-muted">Premium Member since Jan 2026</p>
+                                <div class="dash-profile-badges">
+                                    <span class="dash-badge-tag"><i class="fas fa-fire"></i> 14-Day Streak</span>
+                                    <span class="dash-badge-tag"><i class="fas fa-trophy"></i> Top Performer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">Personal Details</h3>
+                            </div>
+                            <div class="dash-card-body">
+                                <form class="dash-form">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="dash-form-label">Full Name</label>
+                                            <input type="text" class="dash-form-input" value="Alex Morgan">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="dash-form-label">Email</label>
+                                            <input type="email" class="dash-form-input" value="alex@email.com">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="dash-form-label">Phone</label>
+                                            <input type="tel" class="dash-form-input" value="+1 (555) 234-5678">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="dash-form-label">Date of Birth</label>
+                                            <input type="date" class="dash-form-input" value="1992-06-15">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="dash-form-label">Weight (lbs)</label>
+                                            <input type="number" class="dash-form-input" value="178">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="dash-form-label">Height</label>
+                                            <input type="text" class="dash-form-input" value="5'10&quot;">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="dash-form-label">Goal</label>
+                                            <select class="dash-form-input">
+                                                <option selected>Lose Weight</option>
+                                                <option>Build Muscle</option>
+                                                <option>Maintain</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="button" class="btn btn-accent">Save Changes</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- My Programs Section -->
+            <section class="dash-section" id="section-myprograms">
+                <div class="dash-section-header">
+                    <h2>My Programs</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-xl-4">
+                        <div class="dash-card dash-enrolled-card">
+                            <div class="dash-enrolled-badge">Enrolled</div>
+                            <div class="dash-program-header" style="background: linear-gradient(135deg, #C41E3A, #8B0000);">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <div class="dash-program-body">
+                                <h4>Strength Training</h4>
+                                <p>Build muscle and increase strength with progressive overload.</p>
+                                <div class="dash-enrolled-progress">
+                                    <div class="dash-progress-header"><span>Progress</span><span>65%</span></div>
+                                    <div class="dash-progress-bar"><div class="dash-progress-fill" style="width:65%"></div></div>
+                                </div>
+                                <div class="dash-program-meta">
+                                    <span><i class="fas fa-calendar"></i> 8 of 12 weeks</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="dash-card dash-enrolled-card">
+                            <div class="dash-enrolled-badge">Enrolled</div>
+                            <div class="dash-program-header" style="background: linear-gradient(135deg, #2A9D8F, #1E7A6E);">
+                                <i class="fas fa-spa"></i>
+                            </div>
+                            <div class="dash-program-body">
+                                <h4>Yoga & Mobility</h4>
+                                <p>Improve flexibility, balance, and mental well-being.</p>
+                                <div class="dash-enrolled-progress">
+                                    <div class="dash-progress-header"><span>Progress</span><span>40%</span></div>
+                                    <div class="dash-progress-bar"><div class="dash-progress-fill" style="width:40%"></div></div>
+                                </div>
+                                <div class="dash-program-meta">
+                                    <span><i class="fas fa-calendar"></i> 4 of 6 weeks</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="dash-card dash-enrolled-card">
+                            <div class="dash-enrolled-badge">Completed</div>
+                            <div class="dash-program-header" style="background: linear-gradient(135deg, #E8572A, #B8451E);">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <div class="dash-program-body">
+                                <h4>HIIT Cardio</h4>
+                                <p>High-intensity intervals to maximize calorie burn.</p>
+                                <div class="dash-enrolled-progress">
+                                    <div class="dash-progress-header"><span>Progress</span><span>100%</span></div>
+                                    <div class="dash-progress-bar"><div class="dash-progress-fill" style="width:100%"></div></div>
+                                </div>
+                                <div class="dash-program-meta">
+                                    <span><i class="fas fa-check-circle"></i> Completed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Workout Plan Section -->
+            <section class="dash-section" id="section-workout">
+                <div class="dash-section-header">
+                    <h2>Workout Plan</h2>
+                    <select class="dash-select">
+                        <option>Today - Lower Body</option>
+                        <option>Tomorrow - Upper Body</option>
+                        <option>Wednesday - Cardio</option>
+                    </select>
+                </div>
+                <div class="row g-4">
+                    <div class="col-xl-8">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">Lower Body Strength</h3>
+                                <div class="dash-workout-timer" id="workoutTimer">
+                                    <i class="fas fa-stopwatch"></i>
+                                    <span>00:00:00</span>
+                                </div>
+                            </div>
+                            <div class="dash-card-body">
+                                <div class="dash-workout-exercises">
+                                    <div class="dash-exercise-item completed">
+                                        <div class="dash-tw-check"><i class="fas fa-check"></i></div>
+                                        <div class="dash-exercise-main">
+                                            <span class="dash-exercise-name">Barbell Squats</span>
+                                            <span class="dash-exercise-detail">4 x 8 reps | 185 lbs</span>
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-accent">Log</button>
+                                    </div>
+                                    <div class="dash-exercise-item completed">
+                                        <div class="dash-tw-check"><i class="fas fa-check"></i></div>
+                                        <div class="dash-exercise-main">
+                                            <span class="dash-exercise-name">Romanian Deadlifts</span>
+                                            <span class="dash-exercise-detail">4 x 10 reps | 155 lbs</span>
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-accent">Log</button>
+                                    </div>
+                                    <div class="dash-exercise-item">
+                                        <div class="dash-tw-check"></div>
+                                        <div class="dash-exercise-main">
+                                            <span class="dash-exercise-name">Leg Press</span>
+                                            <span class="dash-exercise-detail">3 x 12 reps | 270 lbs</span>
+                                        </div>
+                                        <button class="btn btn-sm btn-accent">Log</button>
+                                    </div>
+                                    <div class="dash-exercise-item">
+                                        <div class="dash-tw-check"></div>
+                                        <div class="dash-exercise-main">
+                                            <span class="dash-exercise-name">Walking Lunges</span>
+                                            <span class="dash-exercise-detail">3 x 12 each | 40 lbs</span>
+                                        </div>
+                                        <button class="btn btn-sm btn-accent">Log</button>
+                                    </div>
+                                    <div class="dash-exercise-item">
+                                        <div class="dash-tw-check"></div>
+                                        <div class="dash-exercise-main">
+                                            <span class="dash-exercise-name">Calf Raises</span>
+                                            <span class="dash-exercise-detail">4 x 15 reps | 135 lbs</span>
+                                        </div>
+                                        <button class="btn btn-sm btn-accent">Log</button>
+                                    </div>
+                                </div>
+                                <div class="dash-workout-meta mt-3">
+                                    <span><i class="fas fa-clock"></i> 55 min</span>
+                                    <span><i class="fas fa-fire"></i> 520 cal</span>
+                                    <span><i class="fas fa-signal"></i> Advanced</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">Weekly Schedule</h3>
+                            </div>
+                            <div class="dash-card-body">
+                                <div class="dash-weekly-schedule">
+                                    <div class="dash-schedule-day active">
+                                        <span class="dash-day-name">Mon</span>
+                                        <span class="dash-day-workout">Lower Body</span>
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="dash-schedule-day">
+                                        <span class="dash-day-name">Tue</span>
+                                        <span class="dash-day-workout">Upper Body</span>
+                                    </div>
+                                    <div class="dash-schedule-day">
+                                        <span class="dash-day-name">Wed</span>
+                                        <span class="dash-day-workout">Cardio</span>
+                                    </div>
+                                    <div class="dash-schedule-day rest">
+                                        <span class="dash-day-name">Thu</span>
+                                        <span class="dash-day-workout">Rest Day</span>
+                                    </div>
+                                    <div class="dash-schedule-day">
+                                        <span class="dash-day-name">Fri</span>
+                                        <span class="dash-day-workout">Full Body</span>
+                                    </div>
+                                    <div class="dash-schedule-day">
+                                        <span class="dash-day-name">Sat</span>
+                                        <span class="dash-day-workout">Yoga</span>
+                                    </div>
+                                    <div class="dash-schedule-day rest">
+                                        <span class="dash-day-name">Sun</span>
+                                        <span class="dash-day-workout">Rest Day</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Nutrition Plan Section -->
+            <section class="dash-section" id="section-nutrition">
+                <div class="dash-section-header">
+                    <h2>Nutrition Plan</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="dash-card dash-macro-card">
+                            <div class="dash-macro-circle"><canvas id="dashMacroCalories" width="120" height="120"></canvas></div>
+                            <h4>Calories</h4>
+                            <span class="dash-macro-value">1,850 / 2,200 kcal</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="dash-card dash-macro-card">
+                            <div class="dash-macro-circle"><canvas id="dashMacroProtein" width="120" height="120"></canvas></div>
+                            <h4>Protein</h4>
+                            <span class="dash-macro-value">120g / 150g</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="dash-card dash-macro-card">
+                            <div class="dash-macro-circle"><canvas id="dashMacroCarbs" width="120" height="120"></canvas></div>
+                            <h4>Carbs</h4>
+                            <span class="dash-macro-value">210g / 280g</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dash-card mt-4">
+                    <div class="dash-card-header">
+                        <h3 class="dash-card-title">Today's Meals</h3>
+                    </div>
+                    <div class="dash-card-body">
+                        <div class="dash-meal-list">
+                            <div class="dash-meal-item">
+                                <div class="dash-meal-icon"><i class="fas fa-sun"></i></div>
+                                <div class="dash-meal-info">
+                                    <span class="dash-meal-name">Breakfast</span>
+                                    <span class="dash-meal-desc">Oatmeal with berries, protein shake, banana</span>
+                                </div>
+                                <span class="dash-meal-cal">480 kcal</span>
+                            </div>
+                            <div class="dash-meal-item">
+                                <div class="dash-meal-icon"><i class="fas fa-utensils"></i></div>
+                                <div class="dash-meal-info">
+                                    <span class="dash-meal-name">Lunch</span>
+                                    <span class="dash-meal-desc">Grilled chicken salad, quinoa, avocado</span>
+                                </div>
+                                <span class="dash-meal-cal">620 kcal</span>
+                            </div>
+                            <div class="dash-meal-item">
+                                <div class="dash-meal-icon"><i class="fas fa-cookie-bite"></i></div>
+                                <div class="dash-meal-info">
+                                    <span class="dash-meal-name">Snack</span>
+                                    <span class="dash-meal-desc">Greek yogurt, almonds, apple slices</span>
+                                </div>
+                                <span class="dash-meal-cal">320 kcal</span>
+                            </div>
+                            <div class="dash-meal-item">
+                                <div class="dash-meal-icon"><i class="fas fa-moon"></i></div>
+                                <div class="dash-meal-info">
+                                    <span class="dash-meal-name">Dinner</span>
+                                    <span class="dash-meal-desc">Salmon, sweet potato, steamed broccoli</span>
+                                </div>
+                                <span class="dash-meal-cal">580 kcal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Progress Tracker Section -->
+            <section class="dash-section" id="section-progress">
+                <div class="dash-section-header">
+                    <h2>Progress Tracker</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-xl-8">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">Weight Progress</h3>
+                            </div>
+                            <div class="dash-card-body">
+                                <canvas id="dashWeightChart" height="300"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4">
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="dash-card dash-mini-stat">
+                                    <div class="dash-mini-stat-icon"><i class="fas fa-weight-scale"></i></div>
+                                    <div class="dash-mini-stat-info">
+                                        <span class="dash-mini-stat-value">178 lbs</span>
+                                        <span class="dash-mini-stat-label">Current Weight</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="dash-card dash-mini-stat">
+                                    <div class="dash-mini-stat-icon" style="background:rgba(42,157,143,0.15);color:#2A9D8F;"><i class="fas fa-bullseye"></i></div>
+                                    <div class="dash-mini-stat-info">
+                                        <span class="dash-mini-stat-value">165 lbs</span>
+                                        <span class="dash-mini-stat-label">Goal Weight</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="dash-card dash-mini-stat">
+                                    <div class="dash-mini-stat-icon" style="background:rgba(233,196,106,0.15);color:#E9C46A;"><i class="fas fa-fire"></i></div>
+                                    <div class="dash-mini-stat-info">
+                                        <span class="dash-mini-stat-value">18.2%</span>
+                                        <span class="dash-mini-stat-label">Body Fat</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BMI & Calorie Calculator Section -->
+            <section class="dash-section" id="section-calculator">
+                <div class="dash-section-header">
+                    <h2>BMI & Calorie Calculator</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">BMI Calculator</h3>
+                            </div>
+                            <div class="dash-card-body">
+                                <form class="dash-form" id="dashBmiForm">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="dash-form-label">Unit</label>
+                                            <select class="dash-form-input" id="dashBmiUnit">
+                                                <option value="metric">Metric (kg/cm)</option>
+                                                <option value="imperial">Imperial (lbs/in)</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="dash-form-label">Gender</label>
+                                            <select class="dash-form-input" id="dashBmiGender">
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="dash-form-label">Age</label>
+                                            <input type="number" class="dash-form-input" id="dashBmiAge" value="34">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="dash-form-label" id="dashWeightLabel">Weight (kg)</label>
+                                            <input type="number" class="dash-form-input" id="dashBmiWeight" value="81">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="dash-form-label" id="dashHeightLabel">Height (cm)</label>
+                                            <input type="number" class="dash-form-input" id="dashBmiHeight" value="178">
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-accent">Calculate BMI</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="dash-bmi-result" id="dashBmiResult" style="display:none;">
+                                    <div class="dash-bmi-score" id="dashBmiScore"></div>
+                                    <div class="dash-bmi-category" id="dashBmiCategory"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">Calorie Calculator</h3>
+                            </div>
+                            <div class="dash-card-body">
+                                <form class="dash-form" id="dashCalorieForm">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="dash-form-label">Weight (lbs)</label>
+                                            <input type="number" class="dash-form-input" id="dashCalWeight" value="178">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="dash-form-label">Height (inches)</label>
+                                            <input type="number" class="dash-form-input" id="dashCalHeight" value="70">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="dash-form-label">Age</label>
+                                            <input type="number" class="dash-form-input" id="dashCalAge" value="34">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="dash-form-label">Gender</label>
+                                            <select class="dash-form-input" id="dashCalGender">
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="dash-form-label">Activity Level</label>
+                                            <select class="dash-form-input" id="dashCalActivity">
+                                                <option value="1.2">Sedentary</option>
+                                                <option value="1.375">Lightly Active</option>
+                                                <option value="1.55" selected>Moderately Active</option>
+                                                <option value="1.725">Very Active</option>
+                                                <option value="1.9">Extremely Active</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-accent">Calculate Calories</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="dash-calorie-result" id="dashCalorieResult" style="display:none;">
+                                    <div class="dash-calorie-value" id="dashCalorieValue"></div>
+                                    <div class="dash-calorie-breakdown">
+                                        <div class="dash-calorie-row"><span>Maintenance</span><span id="dashCalMaintenance"></span></div>
+                                        <div class="dash-calorie-row deficit"><span>Weight Loss</span><span id="dashCalLoss"></span></div>
+                                        <div class="dash-calorie-row surplus"><span>Muscle Gain</span><span id="dashCalGain"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Book Appointments Section -->
+            <section class="dash-section" id="section-appointments">
+                <div class="dash-section-header">
+                    <h2>Book Appointments</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">Available Slots</h3>
+                            </div>
+                            <div class="dash-card-body">
+                                <div class="dash-slots-grid">
+                                    <div class="dash-slot-item available">
+                                        <span class="dash-slot-time">8:00 AM</span>
+                                        <span class="dash-slot-trainer">Coach Mike</span>
+                                        <span class="dash-slot-type">Strength</span>
+                                        <button class="btn btn-sm btn-accent">Book</button>
+                                    </div>
+                                    <div class="dash-slot-item available">
+                                        <span class="dash-slot-time">9:00 AM</span>
+                                        <span class="dash-slot-trainer">Coach Mike</span>
+                                        <span class="dash-slot-type">HIIT</span>
+                                        <button class="btn btn-sm btn-accent">Book</button>
+                                    </div>
+                                    <div class="dash-slot-item booked">
+                                        <span class="dash-slot-time">10:00 AM</span>
+                                        <span class="dash-slot-trainer">Coach Sarah</span>
+                                        <span class="dash-slot-type">Yoga</span>
+                                        <span class="dash-slot-status">Booked</span>
+                                    </div>
+                                    <div class="dash-slot-item available">
+                                        <span class="dash-slot-time">11:00 AM</span>
+                                        <span class="dash-slot-trainer">Coach Mike</span>
+                                        <span class="dash-slot-type">PT Session</span>
+                                        <button class="btn btn-sm btn-accent">Book</button>
+                                    </div>
+                                    <div class="dash-slot-item available">
+                                        <span class="dash-slot-time">2:00 PM</span>
+                                        <span class="dash-slot-trainer">Coach Sarah</span>
+                                        <span class="dash-slot-type">Yoga</span>
+                                        <button class="btn btn-sm btn-accent">Book</button>
+                                    </div>
+                                    <div class="dash-slot-item available">
+                                        <span class="dash-slot-time">4:00 PM</span>
+                                        <span class="dash-slot-trainer">Coach Mike</span>
+                                        <span class="dash-slot-type">Cardio</span>
+                                        <button class="btn btn-sm btn-accent">Book</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">My Bookings</h3>
+                            </div>
+                            <div class="dash-card-body">
+                                <div class="dash-appointment-list">
+                                    <div class="dash-appointment-item">
+                                        <div class="dash-appt-icon"><i class="fas fa-dumbbell"></i></div>
+                                        <div class="dash-appt-info">
+                                            <span class="dash-appt-name">Strength Training</span>
+                                            <span class="dash-appt-type">Tomorrow, 9:00 AM</span>
+                                        </div>
+                                    </div>
+                                    <div class="dash-appointment-item">
+                                        <div class="dash-appt-icon"><i class="fas fa-spa"></i></div>
+                                        <div class="dash-appt-info">
+                                            <span class="dash-appt-name">Yoga Session</span>
+                                            <span class="dash-appt-type">Wed, 6:00 PM</span>
+                                        </div>
+                                    </div>
+                                    <div class="dash-appointment-item">
+                                        <div class="dash-appt-icon"><i class="fas fa-heart-pulse"></i></div>
+                                        <div class="dash-appt-info">
+                                            <span class="dash-appt-name">HIIT Cardio</span>
+                                            <span class="dash-appt-type">Fri, 10:00 AM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Payment History Section -->
+            <section class="dash-section" id="section-payments">
+                <div class="dash-section-header">
+                    <h2>Payment History</h2>
+                </div>
+                <div class="dash-card">
+                    <div class="dash-card-body p-0">
+                        <div class="dash-table-responsive">
+                            <table class="dash-table">
+                                <thead>
+                                    <tr>
+                                        <th>Invoice</th>
+                                        <th>Description</th>
+                                        <th>Date</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#INV-2026-042</td>
+                                        <td>Premium Plan - Monthly</td>
+                                        <td>Jul 1, 2026</td>
+                                        <td>$79.00</td>
+                                        <td><span class="dash-status dash-status-active">Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#INV-2026-035</td>
+                                        <td>Premium Plan - Monthly</td>
+                                        <td>Jun 1, 2026</td>
+                                        <td>$79.00</td>
+                                        <td><span class="dash-status dash-status-active">Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#INV-2026-028</td>
+                                        <td>Premium Plan - Monthly</td>
+                                        <td>May 1, 2026</td>
+                                        <td>$79.00</td>
+                                        <td><span class="dash-status dash-status-active">Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#INV-2026-019</td>
+                                        <td>Personal Training - 4 Sessions</td>
+                                        <td>Apr 15, 2026</td>
+                                        <td>$120.00</td>
+                                        <td><span class="dash-status dash-status-active">Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#INV-2026-012</td>
+                                        <td>Premium Plan - Monthly</td>
+                                        <td>Apr 1, 2026</td>
+                                        <td>$79.00</td>
+                                        <td><span class="dash-status dash-status-active">Paid</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Health Tips Section -->
+            <section class="dash-section" id="section-tips">
+                <div class="dash-section-header">
+                    <h2>Health Tips</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-xl-4">
+                        <div class="dash-card dash-tip-card">
+                            <div class="dash-tip-icon"><i class="fas fa-droplet"></i></div>
+                            <h4>Stay Hydrated</h4>
+                            <p>Drink at least 8 glasses of water daily. More if you're training intensely. Proper hydration improves performance and recovery.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="dash-card dash-tip-card">
+                            <div class="dash-tip-icon"><i class="fas fa-bed"></i></div>
+                            <h4>Prioritize Sleep</h4>
+                            <p>Aim for 7-9 hours of quality sleep. Growth hormone is released during deep sleep, which is crucial for muscle recovery.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="dash-card dash-tip-card">
+                            <div class="dash-tip-icon"><i class="fas fa-apple-whole"></i></div>
+                            <h4>Protein Timing</h4>
+                            <p>Consume 20-30g of protein within 30 minutes after your workout to maximize muscle protein synthesis and recovery.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="dash-card dash-tip-card">
+                            <div class="dash-tip-icon"><i class="fas fa-person-running"></i></div>
+                            <h4>Active Recovery</h4>
+                            <p>On rest days, do light activities like walking or stretching. This promotes blood flow and speeds up recovery.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="dash-card dash-tip-card">
+                            <div class="dash-tip-icon"><i class="fas fa-brain"></i></div>
+                            <h4>Mind-Muscle Connection</h4>
+                            <p>Focus on the muscle you're working during each exercise. This mental focus can significantly improve muscle activation.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="dash-card dash-tip-card">
+                            <div class="dash-tip-icon"><i class="fas fa-fire"></i></div>
+                            <h4>Progressive Overload</h4>
+                            <p>Gradually increase weight, reps, or sets over time. This is the key principle for continuous strength and muscle gains.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Notifications Section -->
+            <section class="dash-section" id="section-notifications">
+                <div class="dash-section-header">
+                    <h2>Notifications</h2>
+                    <button class="btn btn-sm btn-outline-accent">Mark All Read</button>
+                </div>
+                <div class="dash-card">
+                    <div class="dash-card-body">
+                        <div class="dash-notif-list">
+                            <div class="dash-notif-item unread">
+                                <div class="dash-notif-icon notif-success"><i class="fas fa-check-circle"></i></div>
+                                <div class="dash-notif-content">
+                                    <p><strong>Workout completed!</strong> You finished today's Lower Body session. Great work!</p>
+                                    <span class="dash-notif-time">10 minutes ago</span>
+                                </div>
+                            </div>
+                            <div class="dash-notif-item unread">
+                                <div class="dash-notif-icon notif-alert"><i class="fas fa-calendar-check"></i></div>
+                                <div class="dash-notif-content">
+                                    <p><strong>Appointment reminder</strong> - Strength Training session with Coach Mike tomorrow at 9:00 AM.</p>
+                                    <span class="dash-notif-time">1 hour ago</span>
+                                </div>
+                            </div>
+                            <div class="dash-notif-item">
+                                <div class="dash-notif-icon notif-info"><i class="fas fa-trophy"></i></div>
+                                <div class="dash-notif-content">
+                                    <p><strong>Achievement unlocked!</strong> You've reached a 14-day workout streak!</p>
+                                    <span class="dash-notif-time">3 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="dash-notif-item">
+                                <div class="dash-notif-icon notif-success"><i class="fas fa-weight-scale"></i></div>
+                                <div class="dash-notif-content">
+                                    <p><strong>Progress update</strong> - You've lost 2 lbs this week. You're 13 lbs away from your goal!</p>
+                                    <span class="dash-notif-time">Yesterday</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section class="dash-section" id="section-settings">
+                <div class="dash-section-header">
+                    <h2>Settings</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">Account Settings</h3>
+                            </div>
+                            <div class="dash-card-body">
+                                <form class="dash-form">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="dash-form-label">Email Notifications</label>
+                                            <div class="dash-toggle-list">
+                                                <label class="dash-toggle">
+                                                    <input type="checkbox" checked><span class="dash-toggle-slider"></span>
+                                                    Workout reminders
+                                                </label>
+                                                <label class="dash-toggle">
+                                                    <input type="checkbox" checked><span class="dash-toggle-slider"></span>
+                                                    Appointment reminders
+                                                </label>
+                                                <label class="dash-toggle">
+                                                    <input type="checkbox"><span class="dash-toggle-slider"></span>
+                                                    Marketing emails
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="dash-form-label">Privacy</label>
+                                            <div class="dash-toggle-list">
+                                                <label class="dash-toggle">
+                                                    <input type="checkbox" checked><span class="dash-toggle-slider"></span>
+                                                    Show profile to trainers
+                                                </label>
+                                                <label class="dash-toggle">
+                                                    <input type="checkbox"><span class="dash-toggle-slider"></span>
+                                                    Share progress publicly
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <button type="button" class="btn btn-accent">Save Settings</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">Danger Zone</h3>
+                            </div>
+                            <div class="dash-card-body">
+                                <p class="text-muted mb-3">These actions are irreversible.</p>
+                                <button class="btn btn-outline-danger w-100 mb-2">Change Password</button>
+                                <button class="btn btn-outline-danger w-100">Delete Account</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // BMI Calculator
+        var bmiForm = document.getElementById('dashBmiForm');
+        if (bmiForm) {
+            bmiForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var unit = document.getElementById('dashBmiUnit').value;
+                var weight = parseFloat(document.getElementById('dashBmiWeight').value);
+                var height = parseFloat(document.getElementById('dashBmiHeight').value);
+                var gender = document.getElementById('dashBmiGender').value;
+                var age = parseInt(document.getElementById('dashBmiAge').value);
+                if (unit === 'imperial') { weight *= 0.453592; height *= 2.54; }
+                var bmi = weight / ((height / 100) * (height / 100));
+                var cat = '', color = '';
+                if (bmi < 18.5) { cat = 'Underweight'; color = '#E9C46A'; }
+                else if (bmi < 25) { cat = 'Normal weight'; color = '#2A9D8F'; }
+                else if (bmi < 30) { cat = 'Overweight'; color = '#E8572A'; }
+                else { cat = 'Obese'; color = '#C41E3A'; }
+                var msg = '';
+                if (age < 25) msg = 'At your age, focus on building a strong foundation.';
+                else if (age < 40) msg = 'Maintaining a healthy BMI is crucial at this stage.';
+                else msg = 'Regular exercise and balanced nutrition are key.';
+                document.getElementById('dashBmiScore').innerHTML = '<span style="color:' + color + '">' + bmi.toFixed(1) + '</span>';
+                document.getElementById('dashBmiCategory').innerHTML = '<span style="color:' + color + '">' + cat + '</span><p class="mt-2 text-muted" style="font-size:0.85rem">' + msg + '</p>';
+                document.getElementById('dashBmiResult').style.display = 'block';
+            });
+        }
+        // Unit toggle
+        var bmiUnit = document.getElementById('dashBmiUnit');
+        if (bmiUnit) {
+            bmiUnit.addEventListener('change', function() {
+                if (this.value === 'imperial') {
+                    document.getElementById('dashWeightLabel').textContent = 'Weight (lbs)';
+                    document.getElementById('dashHeightLabel').textContent = 'Height (inches)';
+                } else {
+                    document.getElementById('dashWeightLabel').textContent = 'Weight (kg)';
+                    document.getElementById('dashHeightLabel').textContent = 'Height (cm)';
+                }
+            });
+        }
+        // Calorie Calculator
+        var calForm = document.getElementById('dashCalorieForm');
+        if (calForm) {
+            calForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var w = parseFloat(document.getElementById('dashCalWeight').value) * 0.453592;
+                var h = parseFloat(document.getElementById('dashCalHeight').value) * 2.54;
+                var a = parseInt(document.getElementById('dashCalAge').value);
+                var g = document.getElementById('dashCalGender').value;
+                var act = parseFloat(document.getElementById('dashCalActivity').value);
+                var bmr = g === 'male' ? (10 * w) + (6.25 * h) - (5 * a) + 5 : (10 * w) + (6.25 * h) - (5 * a) - 161;
+                var tdee = bmr * act;
+                document.getElementById('dashCalorieValue').textContent = Math.round(tdee) + ' kcal/day';
+                document.getElementById('dashCalMaintenance').textContent = Math.round(tdee) + ' kcal';
+                document.getElementById('dashCalLoss').textContent = Math.round(tdee - 500) + ' kcal';
+                document.getElementById('dashCalGain').textContent = Math.round(tdee + 300) + ' kcal';
+                document.getElementById('dashCalorieResult').style.display = 'block';
+            });
+        }
+    });
+    </script>
+</body>
+</html>

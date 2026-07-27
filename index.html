@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly | Personal Training & Fitness</title>
+    <meta name="description" content="Premium personal training and fitness coaching. Transform your body, elevate your life.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo-red.webp" alt="Stackly" class="brand-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-bar"></span>
+                <span class="toggler-bar"></span>
+                <span class="toggler-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="trainers.html">Trainers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="healthy-tips.html">Healthy Tips</a></li>
+                </ul>
+                <a href="login.html" class="btn btn-outline-accent ms-2"><i class="fas fa-sign-in-alt me-1"></i> Login</a>
+                <a href="contact.html" class="btn btn-accent ms-2">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&h=1080&fit=crop">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-man-doing-push-ups-at-the-gym-23456-large.mp4" type="video/mp4">
+        </video>
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-particles" id="heroParticles"></div>
+        <div class="container position-relative h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-lg-7 hero-content">
+                    <div class="hero-badge" data-animate="fade-up">
+                        <i class="fas fa-fire"></i> #1 Rated Fitness Studio
+                    </div>
+                    <h1 class="hero-title" data-animate="fade-up" data-delay="100">
+                        Start Your<br>
+                        <span class="text-gradient">Fitness</span> Journey<br>
+                        <span class="text-stroke">Today</span>
+                    </h1>
+                    <p class="hero-description" data-animate="fade-up" data-delay="200">
+                        Transform your body and mind with world-class personal training. 
+                        Science-backed programs, expert coaches, and a community that drives results.
+                    </p>
+                    <div class="hero-buttons" data-animate="fade-up" data-delay="300">
+                        <a href="contact.html" class="btn btn-accent btn-lg me-3">
+                            Book Free Consultation <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                        <a href="programs.html" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-play me-2"></i> View Programs
+                        </a>
+                    </div>
+                    <div class="hero-stats" data-animate="fade-up" data-delay="400">
+                        <div class="hero-stat">
+                            <span class="hero-stat-number" data-count="15">0</span><span class="text-accent">+</span>
+                            <span class="hero-stat-label">Years Experience</span>
+                        </div>
+                        <div class="hero-stat-divider"></div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number" data-count="5000">0</span><span class="text-accent">+</span>
+                            <span class="hero-stat-label">Members Trained</span>
+                        </div>
+                        <div class="hero-stat-divider"></div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number" data-count="98">0</span><span class="text-accent">%</span>
+                            <span class="hero-stat-label">Success Rate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="hero-visual" data-animate="fade-left">
+                        <div class="hero-shape-1"></div>
+                        <div class="hero-shape-2"></div>
+                        <div class="hero-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=700&fit=crop" alt="Fitness Training" class="hero-img">
+                        </div>
+                        <div class="hero-floating-card card-1">
+                            <i class="fas fa-heartbeat"></i>
+                            <div>
+                                <span class="fc-number">145</span>
+                                <span class="fc-label">BPM Active</span>
+                            </div>
+                        </div>
+                        <div class="hero-floating-card card-2">
+                            <i class="fas fa-fire-flame-curved"></i>
+                            <div>
+                                <span class="fc-number">850</span>
+                                <span class="fc-label">Cal Burned</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <a href="about.html">
+                <span class="scroll-text">Scroll Down</span>
+                <span class="scroll-line"></span>
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-animate="fade-right">
+                    <div class="about-images">
+                        <div class="about-img-main">
+                            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=500&h=600&fit=crop" alt="Training Session" class="img-fluid rounded-4">
+                        </div>
+                        <div class="about-img-secondary">
+                            <img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=300&h=250&fit=crop" alt="Gym Equipment" class="img-fluid rounded-4">
+                        </div>
+                        <div class="about-experience-badge">
+                            <span class="aeb-number">15+</span>
+                            <span class="aeb-text">Years of<br>Excellence</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate="fade-left">
+                    <div class="section-label"><span></span> About Us</div>
+                    <h2 class="section-title">We Help You Build <span class="text-gradient">Perfect Body</span></h2>
+                    <p class="section-description">
+                        At Stackly, we believe fitness is not just about physical transformation 
+                        &mdash; it's about building mental resilience, confidence, and a lifestyle 
+                        that empowers you to be your best self.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="af-icon"><i class="fas fa-check"></i></div>
+                            <div>
+                                <h5>Personalized Programs</h5>
+                                <p>Custom workout and nutrition plans tailored to your unique goals and body type.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="af-icon"><i class="fas fa-check"></i></div>
+                            <div>
+                                <h5>Expert Coaches</h5>
+                                <p>Certified trainers with 10+ years of experience in various fitness disciplines.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="af-icon"><i class="fas fa-check"></i></div>
+                            <div>
+                                <h5>Proven Results</h5>
+                                <p>98% of our members achieve their fitness goals within the first 6 months.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-accent btn-lg mt-4">
+                        Learn More <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="transformations-section section-padding">
+        <div class="container">
+            <div class="text-center mb-5" data-animate="fade-up">
+                <div class="section-label center"><span></span> Client Transformations</div>
+                <h2 class="section-title">Real People, <span class="text-gradient">Real Results</span></h2>
+                <p class="section-description mx-auto">See the incredible transformations our clients have achieved with dedication and our expert guidance.</p>
+            </div>
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="0">
+                    <div class="transformation-card">
+                        <div class="ba-slider" data-before="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=500&fit=crop" data-after="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&h=500&fit=crop">
+                            <div class="ba-before">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=500&fit=crop" alt="Before transformation">
+                                <span class="ba-label">Before</span>
+                            </div>
+                            <div class="ba-after">
+                                <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&h=500&fit=crop" alt="After transformation">
+                                <span class="ba-label">After</span>
+                            </div>
+                            <div class="ba-handle"><i class="fas fa-arrows-left-right"></i></div>
+                        </div>
+                        <div class="tc-info">
+                            <h4>Mike R.</h4>
+                            <p>Lost <span class="text-accent">32 lbs</span> in 4 months</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="100">
+                    <div class="transformation-card">
+                        <div class="ba-slider" data-before="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=500&fit=crop" data-after="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&h=500&fit=crop">
+                            <div class="ba-before">
+                                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=500&fit=crop" alt="Before transformation">
+                                <span class="ba-label">Before</span>
+                            </div>
+                            <div class="ba-after">
+                                <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&h=500&fit=crop" alt="After transformation">
+                                <span class="ba-label">After</span>
+                            </div>
+                            <div class="ba-handle"><i class="fas fa-arrows-left-right"></i></div>
+                        </div>
+                        <div class="tc-info">
+                            <h4>Sarah K.</h4>
+                            <p>Gained <span class="text-accent">15 lbs</span> lean muscle</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="200">
+                    <div class="transformation-card">
+                        <div class="ba-slider" data-before="https://images.unsplash.com/photo-1550345332-09e3ac987658?w=400&h=500&fit=crop" data-after="https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=400&h=500&fit=crop">
+                            <div class="ba-before">
+                                <img src="https://images.unsplash.com/photo-1550345332-09e3ac987658?w=400&h=500&fit=crop" alt="Before transformation">
+                                <span class="ba-label">Before</span>
+                            </div>
+                            <div class="ba-after">
+                                <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=400&h=500&fit=crop" alt="After transformation">
+                                <span class="ba-label">After</span>
+                            </div>
+                            <div class="ba-handle"><i class="fas fa-arrows-left-right"></i></div>
+                        </div>
+                        <div class="tc-info">
+                            <h4>David L.</h4>
+                            <p>Lost <span class="text-accent">48 lbs</span> in 6 months</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="transformation-stats" data-animate="fade-up" data-delay="300">
+                <div class="t-stat">
+                    <span class="t-stat-number" data-count="500">0</span><span class="text-accent">+</span>
+                    <span class="t-stat-label">Transformations</span>
+                </div>
+                <div class="t-stat">
+                    <span class="t-stat-number" data-count="12000">0</span><span class="text-accent">+</span>
+                    <span class="t-stat-label">Pounds Lost</span>
+                </div>
+                <div class="t-stat">
+                    <span class="t-stat-number" data-count="98">0</span><span class="text-accent">%</span>
+                    <span class="t-stat-label">Client Satisfaction</span>
+                </div>
+                <div class="t-stat">
+                    <span class="t-stat-number" data-count="12">0</span><span class="text-accent">+</span>
+                    <span class="t-stat-label">Weeks Average</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose-section section-padding bg-dark-alt">
+        <div class="container">
+            <div class="text-center mb-5" data-animate="fade-up">
+                <div class="section-label center"><span></span> Why Choose Me</div>
+                <h2 class="section-title">What Makes Me <span class="text-gradient">Different</span></h2>
+                <p class="section-description mx-auto">Dedicated to helping you achieve lasting results through personalized coaching and proven methods.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="0">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="fas fa-award"></i></div>
+                        <h4>Certified Trainer</h4>
+                        <p>NASM & ACE certified with 15+ years of hands-on experience transforming bodies and lives.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="100">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="fas fa-clipboard-list"></i></div>
+                        <h4>Personalized Plans</h4>
+                        <p>Every program is custom-built around your goals, schedule, fitness level, and preferences.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="200">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="fas fa-apple-whole"></i></div>
+                        <h4>Nutrition Guidance</h4>
+                        <p>Expert meal planning and dietary coaching to fuel your body for peak performance.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="300">
+                    <div class="why-card">
+                        <div class="why-icon"><i class="fas fa-chart-line"></i></div>
+                        <h4>Progress Tracking</h4>
+                        <p>Advanced body composition analysis and weekly check-ins to keep you on track.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section section-padding">
+        <div class="container">
+            <div class="text-center mb-5" data-animate="fade-up">
+                <div class="section-label center"><span></span> What We Offer</div>
+                <h2 class="section-title">Premium <span class="text-gradient">Services</span></h2>
+                <p class="section-description mx-auto">Comprehensive fitness solutions designed to help you achieve your goals faster and smarter.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="0">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-dumbbell"></i></div>
+                        <h4>Strength Training</h4>
+                        <p>Build lean muscle and increase your metabolic rate with progressive resistance training.</p>
+                        <a href="programs.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="100">
+                    <div class="service-card featured">
+                        <div class="service-icon"><i class="fas fa-person-running"></i></div>
+                        <h4>HIIT Cardio</h4>
+                        <p>Maximize calorie burn with high-intensity interval training sessions that push your limits.</p>
+                        <a href="programs.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-spa"></i></div>
+                        <h4>Yoga & Mobility</h4>
+                        <p>Improve flexibility, balance, and mental clarity through guided yoga and stretching.</p>
+                        <a href="programs.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-apple-whole"></i></div>
+                        <h4>Nutrition Planning</h4>
+                        <p>Fuel your body right with customized meal plans from certified nutritionists.</p>
+                        <a href="programs.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-heart-pulse"></i></div>
+                        <h4>Body Composition</h4>
+                        <p>Track your progress with advanced InBody scans and detailed health assessments.</p>
+                        <a href="programs.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="300">
+                    <div class="service-card featured">
+                        <div class="service-icon"><i class="fas fa-users"></i></div>
+                        <h4>Group Classes</h4>
+                        <p>Join our energetic group sessions from CrossFit to Zumba and find your community.</p>
+                        <a href="programs.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs" class="section-padding">
+        <div class="container">
+            <div class="row align-items-end mb-5">
+                <div class="col-lg-6" data-animate="fade-up">
+                    <div class="section-label"><span></span> Programs Overview</div>
+                    <h2 class="section-title">Find Your Perfect <span class="text-gradient">Program</span></h2>
+                </div>
+                <div class="col-lg-6" data-animate="fade-up" data-delay="100">
+                    <p class="section-description mb-lg-0">Each program is scientifically designed to deliver maximum results in minimum time.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="0">
+                    <div class="program-card">
+                        <div class="program-card-img">
+                            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=300&fit=crop" alt="Weight Loss" class="img-fluid">
+                            <div class="program-card-overlay">
+                                <span class="program-duration"><i class="fas fa-clock"></i> 45 min</span>
+                            </div>
+                        </div>
+                        <div class="program-card-body">
+                            <span class="program-badge cardio">Fat Burn</span>
+                            <h4>Weight Loss</h4>
+                            <p>Science-backed fat loss program combining HIIT, nutrition planning, and accountability coaching.</p>
+                            <div class="program-meta">
+                                <span><i class="fas fa-signal"></i> All Levels</span>
+                                <span><i class="fas fa-fire"></i> 500-700 cal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="100">
+                    <div class="program-card">
+                        <div class="program-card-img">
+                            <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&h=300&fit=crop" alt="Muscle Building" class="img-fluid">
+                            <div class="program-card-overlay">
+                                <span class="program-duration"><i class="fas fa-clock"></i> 60 min</span>
+                            </div>
+                        </div>
+                        <div class="program-card-body">
+                            <span class="program-badge strength">Hypertrophy</span>
+                            <h4>Muscle Building</h4>
+                            <p>Progressive overload training with periodized programming for maximum muscle growth.</p>
+                            <div class="program-meta">
+                                <span><i class="fas fa-signal"></i> Intermediate</span>
+                                <span><i class="fas fa-fire"></i> 400-600 cal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="200">
+                    <div class="program-card">
+                        <div class="program-card-img">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop" alt="Strength Training" class="img-fluid">
+                            <div class="program-card-overlay">
+                                <span class="program-duration"><i class="fas fa-clock"></i> 50 min</span>
+                            </div>
+                        </div>
+                        <div class="program-card-body">
+                            <span class="program-badge strength">Strength</span>
+                            <h4>Strength Training</h4>
+                            <p>Build raw strength and power with compound lifts, progressive resistance, and expert coaching.</p>
+                            <div class="program-meta">
+                                <span><i class="fas fa-signal"></i> Beginner</span>
+                                <span><i class="fas fa-fire"></i> 350-500 cal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="100">
+                    <div class="program-card">
+                        <div class="program-card-img">
+                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop" alt="Fat Loss" class="img-fluid">
+                            <div class="program-card-overlay">
+                                <span class="program-duration"><i class="fas fa-clock"></i> 40 min</span>
+                            </div>
+                        </div>
+                        <div class="program-card-body">
+                            <span class="program-badge cardio">Cardio</span>
+                            <h4>Fat Loss</h4>
+                            <p>High-intensity interval training designed to maximize calorie burn and shred body fat fast.</p>
+                            <div class="program-meta">
+                                <span><i class="fas fa-signal"></i> Intermediate</span>
+                                <span><i class="fas fa-fire"></i> 600-800 cal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="200">
+                    <div class="program-card">
+                        <div class="program-card-img">
+                            <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=400&h=300&fit=crop" alt="Online Coaching" class="img-fluid">
+                            <div class="program-card-overlay">
+                                <span class="program-duration"><i class="fas fa-laptop"></i> Virtual</span>
+                            </div>
+                        </div>
+                        <div class="program-card-body">
+                            <span class="program-badge flexibility">Online</span>
+                            <h4>Online Coaching</h4>
+                            <p>Train anywhere with personalized video coaching, custom plans, and weekly check-ins.</p>
+                            <div class="program-meta">
+                                <span><i class="fas fa-signal"></i> All Levels</span>
+                                <span><i class="fas fa-fire"></i> Custom</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trainer-spotlight section-padding">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-animate="fade-right">
+                    <div class="trainer-spotlight-img">
+                        <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=600&h=700&fit=crop" alt="Head Trainer" class="img-fluid rounded-4">
+                        <div class="trainer-spotlight-badge">
+                            <i class="fas fa-award"></i>
+                            <span>Head Trainer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate="fade-left">
+                    <div class="section-label"><span></span> Meet Your Trainer</div>
+                    <h2 class="section-title">Marcus <span class="text-gradient">Steel</span></h2>
+                    <p class="section-description mb-4">
+                        With over 15 years of experience in personal training and a passion for helping others, 
+                        Marcus has transformed hundreds of lives through science-based coaching and unwavering dedication.
+                    </p>
+                    <div class="trainer-spotlight-details">
+                        <div class="tsd-item">
+                            <div class="tsd-icon"><i class="fas fa-briefcase"></i></div>
+                            <div>
+                                <h5>15+ Years Experience</h5>
+                                <p>Helping clients achieve their fitness goals since 2009.</p>
+                            </div>
+                        </div>
+                        <div class="tsd-item">
+                            <div class="tsd-icon"><i class="fas fa-certificate"></i></div>
+                            <div>
+                                <h5>NASM & ACE Certified</h5>
+                                <p>Multiple certifications in strength, nutrition, and corrective exercise.</p>
+                            </div>
+                        </div>
+                        <div class="tsd-item">
+                            <div class="tsd-icon"><i class="fas fa-users"></i></div>
+                            <div>
+                                <h5>500+ Clients Transformed</h5>
+                                <p>Real results backed by a proven coaching methodology.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-accent btn-lg mt-4">
+                        Learn More <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works-section section-padding bg-dark-alt">
+        <div class="container">
+            <div class="text-center mb-5" data-animate="fade-up">
+                <div class="section-label center"><span></span> How It Works</div>
+                <h2 class="section-title">Your Journey <span class="text-gradient">Starts Here</span></h2>
+                <p class="section-description mx-auto">A simple, proven process to transform your body and lifestyle.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="0">
+                    <div class="hiw-card">
+                        <div class="hiw-step">01</div>
+                        <div class="hiw-icon"><i class="fas fa-comments"></i></div>
+                        <h4>Consultation</h4>
+                        <p>Free 30-minute call to discuss your goals, challenges, and create a roadmap for success.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="100">
+                    <div class="hiw-card">
+                        <div class="hiw-step">02</div>
+                        <div class="hiw-icon"><i class="fas fa-clipboard-check"></i></div>
+                        <h4>Fitness Assessment</h4>
+                        <p>Comprehensive body composition analysis, movement screening, and baseline fitness tests.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="200">
+                    <div class="hiw-card">
+                        <div class="hiw-step">03</div>
+                        <div class="hiw-icon"><i class="fas fa-file-lines"></i></div>
+                        <h4>Custom Plan</h4>
+                        <p>Personalized workout program and nutrition plan designed specifically for your body and goals.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="300">
+                    <div class="hiw-card">
+                        <div class="hiw-step">04</div>
+                        <div class="hiw-icon"><i class="fas fa-chart-line"></i></div>
+                        <h4>Weekly Tracking</h4>
+                        <p>Regular check-ins, progress photos, and plan adjustments to ensure you stay on track.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner section-padding">
+        <div class="cta-bg-pattern"></div>
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-animate="fade-up">
+                    <h2 class="cta-title">Ready to Start Your <span class="text-gradient">Transformation</span>?</h2>
+                    <p class="cta-text">Join 5,000+ members who have already transformed their lives. Your first session is on us.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end" data-animate="fade-up" data-delay="200">
+                    <a href="contact.html" class="btn btn-accent btn-lg">Book Now <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="trainers" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5" data-animate="fade-up">
+                <div class="section-label center"><span></span> Our Team</div>
+                <h2 class="section-title">Meet Our <span class="text-gradient">Expert Trainers</span></h2>
+                <p class="section-description mx-auto">World-class coaches dedicated to helping you become the best version of yourself.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="0">
+                    <div class="trainer-card">
+                        <div class="trainer-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400&h=500&fit=crop" alt="Marcus Steel" class="trainer-img">
+                            <div class="trainer-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="trainer-info">
+                            <h4>Marcus Steel</h4>
+                            <span>Head Coach &mdash; Strength</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="100">
+                    <div class="trainer-card">
+                        <div class="trainer-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&h=500&fit=crop" alt="Sarah Quinn" class="trainer-img">
+                            <div class="trainer-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="trainer-info">
+                            <h4>Sarah Quinn</h4>
+                            <span>Yoga &amp; Mobility Specialist</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="200">
+                    <div class="trainer-card">
+                        <div class="trainer-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&h=500&fit=crop" alt="Jake Morrison" class="trainer-img">
+                            <div class="trainer-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="trainer-info">
+                            <h4>Jake Morrison</h4>
+                            <span>HIIT &amp; Cardio Coach</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="300">
+                    <div class="trainer-card">
+                        <div class="trainer-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=500&fit=crop" alt="Elena Voss" class="trainer-img">
+                            <div class="trainer-social">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="trainer-info">
+                            <h4>Elena Voss</h4>
+                            <span>Nutrition &amp; Wellness Expert</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="counter-section">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-lg-3 col-6" data-animate="fade-up">
+                    <div class="counter-item">
+                        <div class="counter-icon"><i class="fas fa-users"></i></div>
+                        <span class="counter-number" data-count="5280">0</span>
+                        <span class="counter-label">Happy Members</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6" data-animate="fade-up" data-delay="100">
+                    <div class="counter-item">
+                        <div class="counter-icon"><i class="fas fa-trophy"></i></div>
+                        <span class="counter-number" data-count="350">0</span>
+                        <span class="counter-label">Awards Won</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6" data-animate="fade-up" data-delay="200">
+                    <div class="counter-item">
+                        <div class="counter-icon"><i class="fas fa-dumbbell"></i></div>
+                        <span class="counter-number" data-count="24">0</span>
+                        <span class="counter-label">Expert Trainers</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6" data-animate="fade-up" data-delay="300">
+                    <div class="counter-item">
+                        <div class="counter-icon"><i class="fas fa-clock"></i></div>
+                        <span class="counter-number" data-count="18">0</span>
+                        <span class="counter-label">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bmi" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-animate="fade-right">
+                    <div class="section-label"><span></span> Health Tools</div>
+                    <h2 class="section-title">Calculate Your <span class="text-gradient">BMI & Calories</span></h2>
+                    <p class="section-description">
+                        Body Mass Index (BMI) and daily calorie needs are key indicators of your overall health. 
+                        Use our calculators to find out where you stand and get personalized recommendations.
+                    </p>
+                    <div class="bmi-info-cards">
+                        <div class="bmi-info-card">
+                            <span class="bmi-range underweight"></span>
+                            <div>
+                                <strong>Underweight</strong>
+                                <span>BMI &lt; 18.5</span>
+                            </div>
+                        </div>
+                        <div class="bmi-info-card">
+                            <span class="bmi-range normal"></span>
+                            <div>
+                                <strong>Normal</strong>
+                                <span>BMI 18.5 - 24.9</span>
+                            </div>
+                        </div>
+                        <div class="bmi-info-card">
+                            <span class="bmi-range overweight"></span>
+                            <div>
+                                <strong>Overweight</strong>
+                                <span>BMI 25 - 29.9</span>
+                            </div>
+                        </div>
+                        <div class="bmi-info-card">
+                            <span class="bmi-range obese"></span>
+                            <div>
+                                <strong>Obese</strong>
+                                <span>BMI &ge; 30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate="fade-left">
+                    <div class="bmi-calculator-card">
+                        <h3 class="bmi-calc-title"><i class="fas fa-calculator"></i> BMI Calculator</h3>
+                        <form id="bmiForm">
+                            <div class="bmi-unit-toggle">
+                                <button type="button" class="bmi-unit-btn active" data-unit="metric">Metric</button>
+                                <button type="button" class="bmi-unit-btn" data-unit="imperial">Imperial</button>
+                            </div>
+
+                            <div class="bmi-form-group">
+                                <div class="row g-3">
+                                    <div class="col-6">
+                                        <label for="bmiGender">Gender</label>
+                                        <select class="bmi-input" id="bmiGender" required>
+                                            <option value="">Select...</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="bmiAge">Age</label>
+                                        <div class="bmi-input-wrapper">
+                                            <input type="number" class="bmi-input" id="bmiAge" placeholder="30" min="10" max="120" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bmi-form-group" id="metricInputs">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <label for="bmiWeight">Weight (kg)</label>
+                                        <div class="bmi-input-wrapper">
+                                            <input type="number" class="bmi-input" id="bmiWeight" placeholder="70" min="1" max="500" required>
+                                            <span class="bmi-input-unit">kg</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="bmiHeightCm">Height (cm)</label>
+                                        <div class="bmi-input-wrapper">
+                                            <input type="number" class="bmi-input" id="bmiHeightCm" placeholder="175" min="1" max="300" required>
+                                            <span class="bmi-input-unit">cm</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bmi-form-group d-none" id="imperialInputs">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="bmiWeightLbs">Weight (lbs)</label>
+                                        <div class="bmi-input-wrapper">
+                                            <input type="number" class="bmi-input" id="bmiWeightLbs" placeholder="154" min="1" max="1100">
+                                            <span class="bmi-input-unit">lbs</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="bmiWeightSt">Weight (st)</label>
+                                        <div class="bmi-input-wrapper">
+                                            <input type="number" class="bmi-input" id="bmiWeightSt" placeholder="11" min="0" max="80">
+                                            <span class="bmi-input-unit">st</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="bmiHeightFt">Height (ft)</label>
+                                        <div class="bmi-input-wrapper">
+                                            <input type="number" class="bmi-input" id="bmiHeightFt" placeholder="5" min="1" max="9">
+                                            <span class="bmi-input-unit">ft</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="bmiHeightIn">Height (in)</label>
+                                        <div class="bmi-input-wrapper">
+                                            <input type="number" class="bmi-input" id="bmiHeightIn" placeholder="9" min="0" max="11">
+                                            <span class="bmi-input-unit">in</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-accent btn-lg w-100 bmi-calc-btn">
+                                Calculate BMI <i class="fas fa-arrow-right ms-2"></i>
+                            </button>
+                        </form>
+
+                        <div class="bmi-result d-none" id="bmiResult">
+                            <div class="bmi-result-circle" id="bmiResultCircle">
+                                <span class="bmi-result-number" id="bmiResultNumber">0</span>
+                                <span class="bmi-result-label">Your BMI</span>
+                            </div>
+                            <div class="bmi-result-category" id="bmiResultCategory">
+                                <span class="bmi-category-badge" id="bmiCategoryBadge">Normal</span>
+                                <p id="bmiResultMessage">Your BMI is within the healthy range. Keep up the great work!</p>
+                            </div>
+                            <div class="bmi-result-bar">
+                                <div class="bmi-bar-track">
+                                    <div class="bmi-bar-fill" id="bmiBarFill"></div>
+                                    <div class="bmi-bar-marker" id="bmiBarMarker"></div>
+                                </div>
+                                <div class="bmi-bar-labels">
+                                    <span>Underweight</span>
+                                    <span>Normal</span>
+                                    <span>Overweight</span>
+                                    <span>Obese</span>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-outline-accent w-100 mt-3" id="bmiRecalculate">
+                                <i class="fas fa-redo me-2"></i> Calculate Again
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center g-5 mt-5">
+                <div class="col-lg-6" data-animate="fade-right">
+                    <div class="section-label"><span></span> Nutrition Guide</div>
+                    <h2 class="section-title">Understand Your <span class="text-gradient">Daily Calories</span></h2>
+                    <p class="section-description">
+                        Your Total Daily Energy Expenditure (TDEE) determines how many calories your body needs each day.
+                        Knowing this helps you lose weight, maintain, or build muscle effectively.
+                    </p>
+                    <div class="bmi-info-cards">
+                        <div class="bmi-info-card">
+                            <span class="bmi-range deficit"></span>
+                            <div>
+                                <strong>Caloric Deficit</strong>
+                                <span>Eat less than you burn to lose weight</span>
+                            </div>
+                        </div>
+                        <div class="bmi-info-card">
+                            <span class="bmi-range maintenance"></span>
+                            <div>
+                                <strong>Maintenance</strong>
+                                <span>Eat equal to what you burn to stay steady</span>
+                            </div>
+                        </div>
+                        <div class="bmi-info-card">
+                            <span class="bmi-range surplus"></span>
+                            <div>
+                                <strong>Caloric Surplus</strong>
+                                <span>Eat more than you burn to build muscle</span>
+                            </div>
+                        </div>
+                        <div class="bmi-info-card">
+                            <span class="bmi-range activity"></span>
+                            <div>
+                                <strong>Activity Level</strong>
+                                <span>Higher activity = more daily calories needed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate="fade-left">
+                    <div class="bmi-calculator-card">
+                        <h3 class="bmi-calc-title"><i class="fas fa-fire-flame-curved"></i> Calorie Calculator</h3>
+                        <form id="calorieForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="bmi-form-group">
+                                        <label for="calGender">Gender</label>
+                                        <select class="form-select" id="calGender" style="background:var(--dark-alt);border:1px solid var(--dark-border);color:#fff;padding:14px 16px;border-radius:var(--radius-sm);font-size:1rem;">
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="bmi-form-group">
+                                        <label for="calAge">Age</label>
+                                        <div class="bmi-input-wrapper">
+                                            <input type="number" class="bmi-input" id="calAge" placeholder="25" min="10" max="100" required>
+                                            <span class="bmi-input-unit">yrs</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="bmi-form-group">
+                                        <label for="calWeight">Weight (kg)</label>
+                                        <div class="bmi-input-wrapper">
+                                            <input type="number" class="bmi-input" id="calWeight" placeholder="70" min="1" max="500" required>
+                                            <span class="bmi-input-unit">kg</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="bmi-form-group">
+                                        <label for="calHeight">Height (cm)</label>
+                                        <div class="bmi-input-wrapper">
+                                            <input type="number" class="bmi-input" id="calHeight" placeholder="175" min="1" max="300" required>
+                                            <span class="bmi-input-unit">cm</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="bmi-form-group">
+                                        <label for="calActivity">Activity Level</label>
+                                        <select class="form-select" id="calActivity" style="background:var(--dark-alt);border:1px solid var(--dark-border);color:#fff;padding:14px 16px;border-radius:var(--radius-sm);font-size:1rem;">
+                                            <option value="1.2">Sedentary (little or no exercise)</option>
+                                            <option value="1.375">Lightly Active (1-3 days/week)</option>
+                                            <option value="1.55" selected>Moderately Active (3-5 days/week)</option>
+                                            <option value="1.725">Very Active (6-7 days/week)</option>
+                                            <option value="1.9">Extra Active (twice daily)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-accent btn-lg w-100 bmi-calc-btn">
+                                Calculate Calories <i class="fas fa-arrow-right ms-2"></i>
+                            </button>
+                        </form>
+                        <div class="bmi-result d-none" id="calorieResult">
+                            <div class="bmi-result-circle normal" style="border-color:var(--accent);">
+                                <span class="bmi-result-number" id="calorieNumber" style="color:var(--accent);">0</span>
+                                <span class="bmi-result-label">kcal/day</span>
+                            </div>
+                            <div class="bmi-result-category">
+                                <span class="bmi-category-badge normal" style="background:rgba(196,30,58,0.15);color:var(--accent);" id="calorieLabel">Maintenance</span>
+                                <p id="calorieMessage">Your estimated daily calorie needs to maintain your current weight.</p>
+                            </div>
+                            <div class="calorie-breakdown" id="calorieBreakdown">
+                                <div class="calorie-goal">
+                                    <span class="calorie-goal-label">Weight Loss</span>
+                                    <span class="calorie-goal-value" id="calLose">-</span>
+                                </div>
+                                <div class="calorie-goal">
+                                    <span class="calorie-goal-label">Maintenance</span>
+                                    <span class="calorie-goal-value" id="calMaintain">-</span>
+                                </div>
+                                <div class="calorie-goal">
+                                    <span class="calorie-goal-label">Muscle Gain</span>
+                                    <span class="calorie-goal-value" id="calGain">-</span>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-outline-accent w-100 mt-3" id="calorieRecalculate">
+                                <i class="fas fa-redo me-2"></i> Calculate Again
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section section-padding">
+        <div class="container">
+            <div class="text-center mb-5" data-animate="fade-up">
+                <div class="section-label center"><span></span> Transformation Gallery</div>
+                <h2 class="section-title">Witness the <span class="text-gradient">Results</span></h2>
+                <p class="section-description mx-auto">Real transformations from real people. Every journey is unique, every result is earned.</p>
+            </div>
+            <div class="gallery-grid" data-animate="fade-up" data-delay="200">
+                <div class="gallery-item gi-tall">
+                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&h=600&fit=crop" alt="Transformation 1">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">-32 lbs</span>
+                        <h5>Mike R.</h5>
+                        <p>12 Week Program</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=400&fit=crop" alt="Transformation 2">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">+15 lbs muscle</span>
+                        <h5>Sarah K.</h5>
+                        <p>8 Week Program</p>
+                    </div>
+                </div>
+                <div class="gallery-item gi-wide">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=400&fit=crop" alt="Transformation 3">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">-48 lbs</span>
+                        <h5>David L.</h5>
+                        <p>16 Week Program</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&h=400&fit=crop" alt="Transformation 4">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">-25 lbs</span>
+                        <h5>Emma W.</h5>
+                        <p>10 Week Program</p>
+                    </div>
+                </div>
+                <div class="gallery-item gi-tall">
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=400&h=600&fit=crop" alt="Transformation 5">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Body Recomp</span>
+                        <h5>James P.</h5>
+                        <p>12 Week Program</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop" alt="Transformation 6">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">-35 lbs</span>
+                        <h5>Lisa M.</h5>
+                        <p>14 Week Program</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section-padding bg-dark-alt">
+        <div class="container">
+            <div class="text-center mb-5" data-animate="fade-up">
+                <div class="section-label center"><span></span> Testimonials</div>
+                <h2 class="section-title">What Our <span class="text-gradient">Members Say</span></h2>
+            </div>
+            <div class="testimonial-slider" data-animate="fade-up" data-delay="200">
+                <div class="row g-4" id="testimonialTrack">
+                    <div class="col-lg-4">
+                        <div class="testimonial-card">
+                            <div class="tc-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p>"Stackly completely changed my life. I lost 40 pounds in 6 months and gained confidence I never knew I had. The trainers are incredible!"</p>
+                            <div class="tc-author">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="David Chen" class="tc-avatar">
+                                <div>
+                                    <h5>David Chen</h5>
+                                    <span>Lost 40 lbs in 6 months</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial-card featured">
+                            <div class="tc-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p>"The personalized nutrition plan and training program were game changers. I've never felt stronger or more energetic. Highly recommend!"</p>
+                            <div class="tc-author">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Maria Santos" class="tc-avatar">
+                                <div>
+                                    <h5>Maria Santos</h5>
+                                    <span>Gained lean muscle mass</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial-card">
+                            <div class="tc-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p>"As a beginner, I was nervous. But the team made me feel welcome from day one. The group classes are addictive and the results speak for themselves."</p>
+                            <div class="tc-author">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" alt="James Wilson" class="tc-avatar">
+                                <div>
+                                    <h5>James Wilson</h5>
+                                    <span>From beginner to beast mode</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <button class="tn-btn" id="prevTestimonial"><i class="fas fa-arrow-left"></i></button>
+                    <div class="tn-dots">
+                        <span class="tn-dot active"></span>
+                        <span class="tn-dot"></span>
+                        <span class="tn-dot"></span>
+                    </div>
+                    <button class="tn-btn" id="nextTestimonial"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5" data-animate="fade-up">
+                <div class="section-label center"><span></span> Pricing Plans</div>
+                <h2 class="section-title">Choose Your <span class="text-gradient">Plan</span></h2>
+                <p class="section-description mx-auto">Flexible pricing to fit every budget. All plans include access to our state-of-the-art facilities.</p>
+            </div>
+            <div class="row g-4 justify-content-center" data-animate="fade-up" data-delay="200">
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <span class="pricing-tag">Starter</span>
+                            <div class="pricing-price">
+                                <span class="currency">$</span>
+                                <span class="amount">29</span>
+                                <span class="period">/month</span>
+                            </div>
+                        </div>
+                        <div class="pricing-body">
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> Access to Gym Floor</li>
+                                <li><i class="fas fa-check"></i> Locker Room Access</li>
+                                <li><i class="fas fa-check"></i> Basic Fitness Assessment</li>
+                                <li><i class="fas fa-check"></i> WiFi Included</li>
+                                <li class="disabled"><i class="fas fa-xmark"></i> Personal Training Sessions</li>
+                                <li class="disabled"><i class="fas fa-xmark"></i> Nutrition Planning</li>
+                                <li class="disabled"><i class="fas fa-xmark"></i> Recovery Suite</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-outline-accent btn-lg w-100">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card popular">
+                        <div class="pricing-popular-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <span class="pricing-tag">Pro</span>
+                            <div class="pricing-price">
+                                <span class="currency">$</span>
+                                <span class="amount">79</span>
+                                <span class="period">/month</span>
+                            </div>
+                        </div>
+                        <div class="pricing-body">
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> Full Gym Access 24/7</li>
+                                <li><i class="fas fa-check"></i> 4 Personal Training Sessions</li>
+                                <li><i class="fas fa-check"></i> Custom Nutrition Plan</li>
+                                <li><i class="fas fa-check"></i> All Group Classes</li>
+                                <li><i class="fas fa-check"></i> InBody Assessment Monthly</li>
+                                <li><i class="fas fa-check"></i> Recovery Suite Access</li>
+                                <li class="disabled"><i class="fas fa-xmark"></i> Private Coaching</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-accent btn-lg w-100">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <span class="pricing-tag">Elite</span>
+                            <div class="pricing-price">
+                                <span class="currency">$</span>
+                                <span class="amount">149</span>
+                                <span class="period">/month</span>
+                            </div>
+                        </div>
+                        <div class="pricing-body">
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check"></i> Everything in Pro</li>
+                                <li><i class="fas fa-check"></i> 12 Personal Training Sessions</li>
+                                <li><i class="fas fa-check"></i> Premium Nutrition Coaching</li>
+                                <li><i class="fas fa-check"></i> Priority Class Booking</li>
+                                <li><i class="fas fa-check"></i> Quarterly Body Analysis</li>
+                                <li><i class="fas fa-check"></i> Sauna &amp; Cryotherapy</li>
+                                <li><i class="fas fa-check"></i> Guest Passes (2/month)</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-outline-accent btn-lg w-100">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section section-padding">
+        <div class="container">
+            <div class="text-center mb-5" data-animate="fade-up">
+                <div class="section-label center"><span></span> FAQ</div>
+                <h2 class="section-title">Frequently Asked <span class="text-gradient">Questions</span></h2>
+                <p class="section-description mx-auto">Got questions? We've got answers. Here are the most common things people ask.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-animate="fade-up" data-delay="200">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Do I need to be fit before starting?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Not at all! We work with people at every fitness level. Your program will be customized to your current abilities and gradually progress as you get stronger.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    How soon will I see results?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Most clients notice visible changes within 2-4 weeks. Significant transformations typically occur within 8-12 weeks when following the program consistently.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Is nutrition coaching included?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! All Pro and Elite plans include personalized nutrition coaching with custom meal plans, grocery lists, and dietary guidance tailored to your goals.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Can I train online instead of in-person?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Absolutely! Our Online Coaching program gives you the same personalized programming, video check-ins, and support â€” all from the comfort of your home or any gym worldwide.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    What's included in the free consultation?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Your free 30-minute consultation includes a goal-setting discussion, fitness assessment overview, and a customized plan recommendation. No commitment required.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner section-padding">
+        <div class="cta-bg-pattern"></div>
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-animate="fade-up">
+                    <h2 class="cta-title">Ready to <span class="text-gradient">Transform</span>?</h2>
+                    <p class="cta-text">Your future self will thank you. Take the first step today and start your transformation journey.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end" data-animate="fade-up" data-delay="200">
+                    <a href="contact.html" class="btn btn-accent btn-lg">Book Now <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="instagram-section section-padding">
+        <div class="container">
+            <div class="text-center mb-5" data-animate="fade-up">
+                <div class="section-label center"><span></span> Instagram</div>
+                <h2 class="section-title">Follow Our <span class="text-gradient">Journey</span></h2>
+                <p class="section-description mx-auto">Daily inspiration, tips, and behind-the-scenes from the gym. Join our community.</p>
+            </div>
+            <div class="instagram-grid" data-animate="fade-up" data-delay="200">
+                <div class="ig-item">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=400&fit=crop" alt="Instagram 1">
+                    <div class="ig-overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="ig-item">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=400&fit=crop" alt="Instagram 2">
+                    <div class="ig-overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="ig-item">
+                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&h=400&fit=crop" alt="Instagram 3">
+                    <div class="ig-overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="ig-item">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=400&fit=crop" alt="Instagram 4">
+                    <div class="ig-overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="ig-item">
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=400&h=400&fit=crop" alt="Instagram 5">
+                    <div class="ig-overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+                <div class="ig-item">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop" alt="Instagram 6">
+                    <div class="ig-overlay"><i class="fab fa-instagram"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-cta-section">
+        <div class="contact-cta-bg"></div>
+        <div class="container position-relative">
+            <div class="contact-cta-content text-center" data-animate="fade-up">
+                <h2 class="contact-cta-title">Let's Talk About <span class="text-gradient">Your Goals</span></h2>
+                <p class="contact-cta-text">Ready to start? Contact us today for a free consultation and take the first step toward a healthier, stronger you.</p>
+                <div class="contact-cta-buttons">
+                    <a href="contact.html" class="btn btn-accent btn-lg me-3">
+                        Contact Us <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                    <a href="tel:+15551234567" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-phone me-2"></i> +1 (555) 123-4567
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4 pb-5">
+                <div class="col-lg-3 col-md-6">
+                    <a class="footer-brand" href="index.html">
+                        <img src="img/logo-red.webp" alt="Stackly" class="brand-logo">
+                    </a>
+                    <p class="footer-about">Premium personal training and fitness coaching. Transform your body, elevate your life. Science-backed programs that deliver real results.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="trainers.html">Trainers</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Programs</h5>
+                    <ul class="footer-links">
+                        <li><a href="programs.html">Strength Training</a></li>
+                        <li><a href="programs.html">HIIT Cardio</a></li>
+                        <li><a href="programs.html">Yoga & Mobility</a></li>
+                        <li><a href="programs.html">Nutrition Planning</a></li>
+                        <li><a href="programs.html">Group Classes</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Contact Us</h5>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> hello@Stackly.com</li>
+                        <li><i class="fas fa-location-dot"></i> 123 Fitness Avenue, Downtown, NY 10001</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Working Hours</h5>
+                    <ul class="footer-hours">
+                        <li><span>Monday - Friday</span><span>5:00 AM - 11:00 PM</span></li>
+                        <li><span>Saturday</span><span>6:00 AM - 10:00 PM</span></li>
+                        <li><span>Sunday</span><span>7:00 AM - 9:00 PM</span></li>
+                        <li><span>Holidays</span><span>8:00 AM - 6:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p>&copy; 2026 Stackly. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

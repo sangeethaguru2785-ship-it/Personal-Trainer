@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly | Trainer Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+
+    <!-- Sidebar -->
+    <aside class="dash-sidebar" id="dashSidebar">
+        <div class="dash-sidebar-header">
+            <a href="index.html" class="dash-sidebar-brand">
+                <img src="img/logo-red.webp" alt="Stackly" class="brand-logo">
+                <span class="dash-brand-text">Stackly</span>
+            </a>
+            <button class="dash-sidebar-close" id="sidebarClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="dash-sidebar-user">
+            <div class="dash-user-avatar"><i class="fas fa-user-tie"></i></div>
+            <div class="dash-user-info">
+                <span class="dash-user-name">Coach Mike</span>
+                <span class="dash-user-role">Head Trainer</span>
+            </div>
+        </div>
+        <nav class="dash-sidebar-nav">
+            <a href="#" class="dash-nav-link active" data-section="overview"><i class="fas fa-th-large"></i><span>Dashboard</span></a>
+            <a href="#" class="dash-nav-link" data-section="members"><i class="fas fa-users"></i><span>Members</span></a>
+            <a href="#" class="dash-nav-link" data-section="programs"><i class="fas fa-dumbbell"></i><span>Programs</span></a>
+            <a href="#" class="dash-nav-link" data-section="appointments"><i class="fas fa-calendar-check"></i><span>Appointments</span></a>
+            <a href="#" class="dash-nav-link" data-section="workouts"><i class="fas fa-heart-pulse"></i><span>Workout Plans</span></a>
+            <a href="#" class="dash-nav-link" data-section="nutrition"><i class="fas fa-apple-whole"></i><span>Nutrition Plans</span></a>
+            <a href="#" class="dash-nav-link" data-section="progress"><i class="fas fa-chart-line"></i><span>Progress Tracking</span></a>
+            <a href="#" class="dash-nav-link" data-section="reviews"><i class="fas fa-star"></i><span>Reviews</span></a>
+            <a href="#" class="dash-nav-link" data-section="messages"><i class="fas fa-envelope"></i><span>Messages</span><span class="dash-badge">5</span></a>
+            <a href="#" class="dash-nav-link" data-section="notifications"><i class="fas fa-bell"></i><span>Notifications</span><span class="dash-badge">3</span></a>
+            <div class="dash-nav-divider"></div>
+            <a href="#" class="dash-nav-link" data-section="settings"><i class="fas fa-gear"></i><span>Settings</span></a>
+            <a href="index.html" class="dash-nav-link"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="dash-main" id="dashMain">
+        <!-- Top Bar -->
+        <header class="dash-topbar">
+            <div class="dash-topbar-left">
+                <button class="dash-sidebar-toggle" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+                <div class="dash-breadcrumb">
+                    <span class="dash-breadcrumb-page" id="pageTitle">Dashboard Overview</span>
+                </div>
+            </div>
+            <div class="dash-topbar-right">
+                <div class="dash-search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search..." class="dash-search-input">
+                </div>
+                <div class="dash-topbar-actions">
+                    <button class="dash-action-btn" id="themeToggle"><i class="fas fa-moon"></i></button>
+                    <button class="dash-action-btn dash-notif-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="dash-notif-dot"></span>
+                    </button>
+                    <div class="dash-topbar-user">
+                        <div class="dash-topbar-avatar"><i class="fas fa-user-tie"></i></div>
+                        <span class="dash-topbar-name">Coach Mike</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content Area -->
+        <div class="dash-content">
+
+            <!-- Overview Section -->
+            <section class="dash-section active" id="section-overview">
+                <div class="row g-4 dash-stats-row">
+                    <div class="col-xl-3 col-sm-6">
+                        <div class="dash-stat-card">
+                            <div class="dash-stat-icon stat-members"><i class="fas fa-users"></i></div>
+                            <div class="dash-stat-info">
+                                <span class="dash-stat-value" data-count="248">0</span>
+                                <span class="dash-stat-label">Total Members</span>
+                            </div>
+                            <div class="dash-stat-trend trend-up"><i class="fas fa-arrow-up"></i> 12%</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6">
+                        <div class="dash-stat-card">
+                            <div class="dash-stat-icon stat-programs"><i class="fas fa-dumbbell"></i></div>
+                            <div class="dash-stat-info">
+                                <span class="dash-stat-value" data-count="36">0</span>
+                                <span class="dash-stat-label">Active Programs</span>
+                            </div>
+                            <div class="dash-stat-trend trend-up"><i class="fas fa-arrow-up"></i> 8%</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6">
+                        <div class="dash-stat-card">
+                            <div class="dash-stat-icon stat-appointments"><i class="fas fa-calendar-check"></i></div>
+                            <div class="dash-stat-info">
+                                <span class="dash-stat-value" data-count="18">0</span>
+                                <span class="dash-stat-label">Today's Sessions</span>
+                            </div>
+                            <div class="dash-stat-trend trend-down"><i class="fas fa-arrow-down"></i> 3%</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6">
+                        <div class="dash-stat-card">
+                            <div class="dash-stat-icon stat-revenue"><i class="fas fa-dollar-sign"></i></div>
+                            <div class="dash-stat-info">
+                                <span class="dash-stat-value">$<span data-count="12450">0</span></span>
+                                <span class="dash-stat-label">Monthly Revenue</span>
+                            </div>
+                            <div class="dash-stat-trend trend-up"><i class="fas fa-arrow-up"></i> 22%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 mt-1">
+                    <div class="col-xl-8">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">Member Growth</h3>
+                                <div class="dash-card-filter">
+                                    <button class="dash-filter-btn active">Week</button>
+                                    <button class="dash-filter-btn">Month</button>
+                                    <button class="dash-filter-btn">Year</button>
+                                </div>
+                            </div>
+                            <div class="dash-card-body">
+                                <canvas id="memberGrowthChart" height="280"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">Program Distribution</h3>
+                            </div>
+                            <div class="dash-card-body">
+                                <canvas id="programDistChart" height="280"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 mt-1">
+                    <div class="col-xl-6">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">Upcoming Appointments</h3>
+                                <a href="#" class="dash-card-link">View All</a>
+                            </div>
+                            <div class="dash-card-body">
+                                <div class="dash-appointment-list">
+                                    <div class="dash-appointment-item">
+                                        <div class="dash-appt-avatar"><i class="fas fa-user"></i></div>
+                                        <div class="dash-appt-info">
+                                            <span class="dash-appt-name">Sarah Johnson</span>
+                                            <span class="dash-appt-type">Strength Training</span>
+                                        </div>
+                                        <div class="dash-appt-time">
+                                            <span class="dash-appt-hour">9:00 AM</span>
+                                            <span class="dash-appt-date">Today</span>
+                                        </div>
+                                        <span class="dash-appt-status status-confirmed">Confirmed</span>
+                                    </div>
+                                    <div class="dash-appointment-item">
+                                        <div class="dash-appt-avatar"><i class="fas fa-user"></i></div>
+                                        <div class="dash-appt-info">
+                                            <span class="dash-appt-name">David Chen</span>
+                                            <span class="dash-appt-type">HIIT Session</span>
+                                        </div>
+                                        <div class="dash-appt-time">
+                                            <span class="dash-appt-hour">11:30 AM</span>
+                                            <span class="dash-appt-date">Today</span>
+                                        </div>
+                                        <span class="dash-appt-status status-pending">Pending</span>
+                                    </div>
+                                    <div class="dash-appointment-item">
+                                        <div class="dash-appt-avatar"><i class="fas fa-user"></i></div>
+                                        <div class="dash-appt-info">
+                                            <span class="dash-appt-name">Emily Davis</span>
+                                            <span class="dash-appt-type">Yoga Session</span>
+                                        </div>
+                                        <div class="dash-appt-time">
+                                            <span class="dash-appt-hour">2:00 PM</span>
+                                            <span class="dash-appt-date">Tomorrow</span>
+                                        </div>
+                                        <span class="dash-appt-status status-confirmed">Confirmed</span>
+                                    </div>
+                                    <div class="dash-appointment-item">
+                                        <div class="dash-appt-avatar"><i class="fas fa-user"></i></div>
+                                        <div class="dash-appt-info">
+                                            <span class="dash-appt-name">Mike Rivera</span>
+                                            <span class="dash-appt-type">Personal Training</span>
+                                        </div>
+                                        <div class="dash-appt-time">
+                                            <span class="dash-appt-hour">4:30 PM</span>
+                                            <span class="dash-appt-date">Tomorrow</span>
+                                        </div>
+                                        <span class="dash-appt-status status-cancelled">Cancelled</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">Recent Messages</h3>
+                                <a href="#" class="dash-card-link">View All</a>
+                            </div>
+                            <div class="dash-card-body">
+                                <div class="dash-message-list">
+                                    <div class="dash-message-item unread">
+                                        <div class="dash-msg-avatar"><i class="fas fa-user"></i></div>
+                                        <div class="dash-msg-content">
+                                            <div class="dash-msg-header">
+                                                <span class="dash-msg-name">Sarah Johnson</span>
+                                                <span class="dash-msg-time">2m ago</span>
+                                            </div>
+                                            <p class="dash-msg-text">Hey Coach, can we reschedule Thursday's session to Friday?</p>
+                                        </div>
+                                    </div>
+                                    <div class="dash-message-item unread">
+                                        <div class="dash-msg-avatar"><i class="fas fa-user"></i></div>
+                                        <div class="dash-msg-content">
+                                            <div class="dash-msg-header">
+                                                <span class="dash-msg-name">David Chen</span>
+                                                <span class="dash-msg-time">15m ago</span>
+                                            </div>
+                                            <p class="dash-msg-text">Thanks for the new workout plan! Feeling great after day 1.</p>
+                                        </div>
+                                    </div>
+                                    <div class="dash-message-item">
+                                        <div class="dash-msg-avatar"><i class="fas fa-user"></i></div>
+                                        <div class="dash-msg-content">
+                                            <div class="dash-msg-header">
+                                                <span class="dash-msg-name">Emily Davis</span>
+                                                <span class="dash-msg-time">1h ago</span>
+                                            </div>
+                                            <p class="dash-msg-text">What should I eat before the morning yoga session?</p>
+                                        </div>
+                                    </div>
+                                    <div class="dash-message-item">
+                                        <div class="dash-msg-avatar"><i class="fas fa-user"></i></div>
+                                        <div class="dash-msg-content">
+                                            <div class="dash-msg-header">
+                                                <span class="dash-msg-name">Mike Rivera</span>
+                                                <span class="dash-msg-time">3h ago</span>
+                                            </div>
+                                            <p class="dash-msg-text">I hit a new PR on deadlifts today! 315 lbs!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Members Section -->
+            <section class="dash-section" id="section-members">
+                <div class="dash-section-header">
+                    <h2>Member Management</h2>
+                    <div class="dash-section-actions">
+                        <div class="dash-search-box dash-search-sm">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search members..." class="dash-search-input">
+                        </div>
+                        <button class="btn btn-accent"><i class="fas fa-plus me-2"></i>Add Member</button>
+                    </div>
+                </div>
+                <div class="dash-card">
+                    <div class="dash-card-body p-0">
+                        <div class="dash-table-responsive">
+                            <table class="dash-table">
+                                <thead>
+                                    <tr>
+                                        <th><input type="checkbox" class="dash-check"></th>
+                                        <th>Member</th>
+                                        <th>Program</th>
+                                        <th>Start Date</th>
+                                        <th>Progress</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" class="dash-check"></td>
+                                        <td>
+                                            <div class="dash-table-user">
+                                                <div class="dash-table-avatar"><i class="fas fa-user"></i></div>
+                                                <div>
+                                                    <span class="dash-table-name">Sarah Johnson</span>
+                                                    <span class="dash-table-email">sarah@email.com</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Strength Training</td>
+                                        <td>Jan 15, 2026</td>
+                                        <td>
+                                            <div class="dash-progress-bar"><div class="dash-progress-fill" style="width:78%"></div></div>
+                                            <span class="dash-progress-text">78%</span>
+                                        </td>
+                                        <td><span class="dash-status dash-status-active">Active</span></td>
+                                        <td>
+                                            <div class="dash-table-actions">
+                                                <button class="dash-action-icon" title="View"><i class="fas fa-eye"></i></button>
+                                                <button class="dash-action-icon" title="Edit"><i class="fas fa-pen"></i></button>
+                                                <button class="dash-action-icon" title="Delete"><i class="fas fa-trash"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="dash-check"></td>
+                                        <td>
+                                            <div class="dash-table-user">
+                                                <div class="dash-table-avatar"><i class="fas fa-user"></i></div>
+                                                <div>
+                                                    <span class="dash-table-name">David Chen</span>
+                                                    <span class="dash-table-email">david@email.com</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>HIIT Cardio</td>
+                                        <td>Feb 3, 2026</td>
+                                        <td>
+                                            <div class="dash-progress-bar"><div class="dash-progress-fill" style="width:62%"></div></div>
+                                            <span class="dash-progress-text">62%</span>
+                                        </td>
+                                        <td><span class="dash-status dash-status-active">Active</span></td>
+                                        <td>
+                                            <div class="dash-table-actions">
+                                                <button class="dash-action-icon" title="View"><i class="fas fa-eye"></i></button>
+                                                <button class="dash-action-icon" title="Edit"><i class="fas fa-pen"></i></button>
+                                                <button class="dash-action-icon" title="Delete"><i class="fas fa-trash"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="dash-check"></td>
+                                        <td>
+                                            <div class="dash-table-user">
+                                                <div class="dash-table-avatar"><i class="fas fa-user"></i></div>
+                                                <div>
+                                                    <span class="dash-table-name">Emily Davis</span>
+                                                    <span class="dash-table-email">emily@email.com</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Yoga & Mobility</td>
+                                        <td>Mar 10, 2026</td>
+                                        <td>
+                                            <div class="dash-progress-bar"><div class="dash-progress-fill" style="width:91%"></div></div>
+                                            <span class="dash-progress-text">91%</span>
+                                        </td>
+                                        <td><span class="dash-status dash-status-active">Active</span></td>
+                                        <td>
+                                            <div class="dash-table-actions">
+                                                <button class="dash-action-icon" title="View"><i class="fas fa-eye"></i></button>
+                                                <button class="dash-action-icon" title="Edit"><i class="fas fa-pen"></i></button>
+                                                <button class="dash-action-icon" title="Delete"><i class="fas fa-trash"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="dash-check"></td>
+                                        <td>
+                                            <div class="dash-table-user">
+                                                <div class="dash-table-avatar"><i class="fas fa-user"></i></div>
+                                                <div>
+                                                    <span class="dash-table-name">Mike Rivera</span>
+                                                    <span class="dash-table-email">mike@email.com</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Personal Training</td>
+                                        <td>Apr 1, 2026</td>
+                                        <td>
+                                            <div class="dash-progress-bar"><div class="dash-progress-fill" style="width:45%"></div></div>
+                                            <span class="dash-progress-text">45%</span>
+                                        </td>
+                                        <td><span class="dash-status dash-status-paused">Paused</span></td>
+                                        <td>
+                                            <div class="dash-table-actions">
+                                                <button class="dash-action-icon" title="View"><i class="fas fa-eye"></i></button>
+                                                <button class="dash-action-icon" title="Edit"><i class="fas fa-pen"></i></button>
+                                                <button class="dash-action-icon" title="Delete"><i class="fas fa-trash"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="dash-check"></td>
+                                        <td>
+                                            <div class="dash-table-user">
+                                                <div class="dash-table-avatar"><i class="fas fa-user"></i></div>
+                                                <div>
+                                                    <span class="dash-table-name">Lisa Thompson</span>
+                                                    <span class="dash-table-email">lisa@email.com</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Group Classes</td>
+                                        <td>May 12, 2026</td>
+                                        <td>
+                                            <div class="dash-progress-bar"><div class="dash-progress-fill" style="width:33%"></div></div>
+                                            <span class="dash-progress-text">33%</span>
+                                        </td>
+                                        <td><span class="dash-status dash-status-inactive">Inactive</span></td>
+                                        <td>
+                                            <div class="dash-table-actions">
+                                                <button class="dash-action-icon" title="View"><i class="fas fa-eye"></i></button>
+                                                <button class="dash-action-icon" title="Edit"><i class="fas fa-pen"></i></button>
+                                                <button class="dash-action-icon" title="Delete"><i class="fas fa-trash"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="dash-table-footer">
+                            <span class="dash-table-info">Showing 1-5 of 248 members</span>
+                            <div class="dash-pagination">
+                                <button class="dash-page-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                                <button class="dash-page-btn active">1</button>
+                                <button class="dash-page-btn">2</button>
+                                <button class="dash-page-btn">3</button>
+                                <button class="dash-page-btn">...</button>
+                                <button class="dash-page-btn">50</button>
+                                <button class="dash-page-btn"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Programs Section -->
+            <section class="dash-section" id="section-programs">
+                <div class="dash-section-header">
+                    <h2>Program Management</h2>
+                    <button class="btn btn-accent"><i class="fas fa-plus me-2"></i>Create Program</button>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-xl-4">
+                        <div class="dash-program-card">
+                            <div class="dash-program-header" style="background: linear-gradient(135deg, #C41E3A, #8B0000);">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <div class="dash-program-body">
+                                <h4>Strength Training</h4>
+                                <p>Build muscle and increase strength with progressive overload training.</p>
+                                <div class="dash-program-meta">
+                                    <span><i class="fas fa-users"></i> 86 members</span>
+                                    <span><i class="fas fa-clock"></i> 12 weeks</span>
+                                </div>
+                                <div class="dash-program-footer">
+                                    <span class="dash-status dash-status-active">Active</span>
+                                    <button class="btn btn-sm btn-outline-accent">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="dash-program-card">
+                            <div class="dash-program-header" style="background: linear-gradient(135deg, #E8572A, #B8451E);">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <div class="dash-program-body">
+                                <h4>HIIT Cardio</h4>
+                                <p>High-intensity intervals to maximize calorie burn and endurance.</p>
+                                <div class="dash-program-meta">
+                                    <span><i class="fas fa-users"></i> 72 members</span>
+                                    <span><i class="fas fa-clock"></i> 8 weeks</span>
+                                </div>
+                                <div class="dash-program-footer">
+                                    <span class="dash-status dash-status-active">Active</span>
+                                    <button class="btn btn-sm btn-outline-accent">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="dash-program-card">
+                            <div class="dash-program-header" style="background: linear-gradient(135deg, #2A9D8F, #1E7A6E);">
+                                <i class="fas fa-spa"></i>
+                            </div>
+                            <div class="dash-program-body">
+                                <h4>Yoga & Mobility</h4>
+                                <p>Improve flexibility, balance, and mental well-being through yoga.</p>
+                                <div class="dash-program-meta">
+                                    <span><i class="fas fa-users"></i> 54 members</span>
+                                    <span><i class="fas fa-clock"></i> 6 weeks</span>
+                                </div>
+                                <div class="dash-program-footer">
+                                    <span class="dash-status dash-status-active">Active</span>
+                                    <button class="btn btn-sm btn-outline-accent">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="dash-program-card">
+                            <div class="dash-program-header" style="background: linear-gradient(135deg, #264653, #1A323D);">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="dash-program-body">
+                                <h4>Nutrition Planning</h4>
+                                <p>Customized meal plans to support your fitness goals.</p>
+                                <div class="dash-program-meta">
+                                    <span><i class="fas fa-users"></i> 98 members</span>
+                                    <span><i class="fas fa-clock"></i> Ongoing</span>
+                                </div>
+                                <div class="dash-program-footer">
+                                    <span class="dash-status dash-status-active">Active</span>
+                                    <button class="btn btn-sm btn-outline-accent">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="dash-program-card">
+                            <div class="dash-program-header" style="background: linear-gradient(135deg, #E9C46A, #D4A843);">
+                                <i class="fas fa-people-group"></i>
+                            </div>
+                            <div class="dash-program-body">
+                                <h4>Group Classes</h4>
+                                <p>Fun group sessions including Zumba, spin, and bootcamp.</p>
+                                <div class="dash-program-meta">
+                                    <span><i class="fas fa-users"></i> 42 members</span>
+                                    <span><i class="fas fa-clock"></i> Weekly</span>
+                                </div>
+                                <div class="dash-program-footer">
+                                    <span class="dash-status dash-status-paused">Paused</span>
+                                    <button class="btn btn-sm btn-outline-accent">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Appointments Section -->
+            <section class="dash-section" id="section-appointments">
+                <div class="dash-section-header">
+                    <h2>Appointment Management</h2>
+                    <button class="btn btn-accent"><i class="fas fa-plus me-2"></i>New Appointment</button>
+                </div>
+                <div class="dash-card">
+                    <div class="dash-card-body">
+                        <div class="dash-calendar-header">
+                            <button class="dash-cal-nav"><i class="fas fa-chevron-left"></i></button>
+                            <h3>July 2026</h3>
+                            <button class="dash-cal-nav"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="dash-appointment-timeline">
+                            <div class="dash-timeline-item">
+                                <div class="dash-timeline-dot"></div>
+                                <div class="dash-timeline-time">8:00 AM</div>
+                                <div class="dash-timeline-card">
+                                    <div class="dash-tl-header">
+                                        <span class="dash-tl-title">Morning Bootcamp</span>
+                                        <span class="dash-appt-status status-confirmed">Confirmed</span>
+                                    </div>
+                                    <p class="dash-tl-desc">Group session - 12 participants</p>
+                                    <div class="dash-tl-meta"><i class="fas fa-map-marker-alt"></i> Main Gym Floor</div>
+                                </div>
+                            </div>
+                            <div class="dash-timeline-item">
+                                <div class="dash-timeline-dot active"></div>
+                                <div class="dash-timeline-time">9:00 AM</div>
+                                <div class="dash-timeline-card">
+                                    <div class="dash-tl-header">
+                                        <span class="dash-tl-title">Sarah Johnson - PT Session</span>
+                                        <span class="dash-appt-status status-confirmed">Confirmed</span>
+                                    </div>
+                                    <p class="dash-tl-desc">Strength Training - Upper Body Focus</p>
+                                    <div class="dash-tl-meta"><i class="fas fa-map-marker-alt"></i> Training Room A</div>
+                                </div>
+                            </div>
+                            <div class="dash-timeline-item">
+                                <div class="dash-timeline-dot"></div>
+                                <div class="dash-timeline-time">11:30 AM</div>
+                                <div class="dash-timeline-card">
+                                    <div class="dash-tl-header">
+                                        <span class="dash-tl-title">David Chen - HIIT Session</span>
+                                        <span class="dash-appt-status status-pending">Pending</span>
+                                    </div>
+                                    <p class="dash-tl-desc">High-Intensity Interval Training</p>
+                                    <div class="dash-tl-meta"><i class="fas fa-map-marker-alt"></i> Cardio Zone</div>
+                                </div>
+                            </div>
+                            <div class="dash-timeline-item">
+                                <div class="dash-timeline-dot"></div>
+                                <div class="dash-timeline-time">2:00 PM</div>
+                                <div class="dash-timeline-card">
+                                    <div class="dash-tl-header">
+                                        <span class="dash-tl-title">Emily Davis - Yoga</span>
+                                        <span class="dash-appt-status status-confirmed">Confirmed</span>
+                                    </div>
+                                    <p class="dash-tl-desc">Vinyasa Flow - Flexibility Focus</p>
+                                    <div class="dash-tl-meta"><i class="fas fa-map-marker-alt"></i> Yoga Studio</div>
+                                </div>
+                            </div>
+                            <div class="dash-timeline-item">
+                                <div class="dash-timeline-dot cancelled"></div>
+                                <div class="dash-timeline-time">4:30 PM</div>
+                                <div class="dash-timeline-card">
+                                    <div class="dash-tl-header">
+                                        <span class="dash-tl-title">Mike Rivera - Personal Training</span>
+                                        <span class="dash-appt-status status-cancelled">Cancelled</span>
+                                    </div>
+                                    <p class="dash-tl-desc">Full Body Workout</p>
+                                    <div class="dash-tl-meta"><i class="fas fa-map-marker-alt"></i> Training Room B</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Workout Plans Section -->
+            <section class="dash-section" id="section-workouts">
+                <div class="dash-section-header">
+                    <h2>Workout Plans</h2>
+                    <button class="btn btn-accent"><i class="fas fa-plus me-2"></i>Create Plan</button>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="dash-card dash-workout-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">Upper Body Power</h3>
+                                <span class="dash-status dash-status-active">Active</span>
+                            </div>
+                            <div class="dash-card-body">
+                                <div class="dash-workout-exercises">
+                                    <div class="dash-exercise-item">
+                                        <span class="dash-exercise-name">Bench Press</span>
+                                        <span class="dash-exercise-detail">4 x 8 reps</span>
+                                    </div>
+                                    <div class="dash-exercise-item">
+                                        <span class="dash-exercise-name">Overhead Press</span>
+                                        <span class="dash-exercise-detail">3 x 10 reps</span>
+                                    </div>
+                                    <div class="dash-exercise-item">
+                                        <span class="dash-exercise-name">Barbell Rows</span>
+                                        <span class="dash-exercise-detail">4 x 8 reps</span>
+                                    </div>
+                                    <div class="dash-exercise-item">
+                                        <span class="dash-exercise-name">Lateral Raises</span>
+                                        <span class="dash-exercise-detail">3 x 12 reps</span>
+                                    </div>
+                                    <div class="dash-exercise-item">
+                                        <span class="dash-exercise-name">Bicep Curls</span>
+                                        <span class="dash-exercise-detail">3 x 12 reps</span>
+                                    </div>
+                                </div>
+                                <div class="dash-workout-meta">
+                                    <span><i class="fas fa-clock"></i> 60 min</span>
+                                    <span><i class="fas fa-fire"></i> 450 cal</span>
+                                    <span><i class="fas fa-signal"></i> Intermediate</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="dash-card dash-workout-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">Lower Body Strength</h3>
+                                <span class="dash-status dash-status-active">Active</span>
+                            </div>
+                            <div class="dash-card-body">
+                                <div class="dash-workout-exercises">
+                                    <div class="dash-exercise-item">
+                                        <span class="dash-exercise-name">Barbell Squats</span>
+                                        <span class="dash-exercise-detail">4 x 8 reps</span>
+                                    </div>
+                                    <div class="dash-exercise-item">
+                                        <span class="dash-exercise-name">Romanian Deadlifts</span>
+                                        <span class="dash-exercise-detail">4 x 10 reps</span>
+                                    </div>
+                                    <div class="dash-exercise-item">
+                                        <span class="dash-exercise-name">Leg Press</span>
+                                        <span class="dash-exercise-detail">3 x 12 reps</span>
+                                    </div>
+                                    <div class="dash-exercise-item">
+                                        <span class="dash-exercise-name">Walking Lunges</span>
+                                        <span class="dash-exercise-detail">3 x 12 each</span>
+                                    </div>
+                                    <div class="dash-exercise-item">
+                                        <span class="dash-exercise-name">Calf Raises</span>
+                                        <span class="dash-exercise-detail">4 x 15 reps</span>
+                                    </div>
+                                </div>
+                                <div class="dash-workout-meta">
+                                    <span><i class="fas fa-clock"></i> 55 min</span>
+                                    <span><i class="fas fa-fire"></i> 520 cal</span>
+                                    <span><i class="fas fa-signal"></i> Advanced</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Nutrition Section -->
+            <section class="dash-section" id="section-nutrition">
+                <div class="dash-section-header">
+                    <h2>Nutrition Plans</h2>
+                    <button class="btn btn-accent"><i class="fas fa-plus me-2"></i>Create Plan</button>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="dash-card dash-macro-card">
+                            <div class="dash-macro-circle" data-value="65" data-color="#C41E3A">
+                                <canvas id="macroCalories" width="120" height="120"></canvas>
+                            </div>
+                            <h4>Calories</h4>
+                            <span class="dash-macro-value">2,400 / 2,600 kcal</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="dash-card dash-macro-card">
+                            <div class="dash-macro-circle">
+                                <canvas id="macroProtein" width="120" height="120"></canvas>
+                            </div>
+                            <h4>Protein</h4>
+                            <span class="dash-macro-value">145g / 160g</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="dash-card dash-macro-card">
+                            <div class="dash-macro-circle">
+                                <canvas id="macroCarbs" width="120" height="120"></canvas>
+                            </div>
+                            <h4>Carbs</h4>
+                            <span class="dash-macro-value">280g / 320g</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dash-card mt-4">
+                    <div class="dash-card-header">
+                        <h3 class="dash-card-title">Today's Meal Plan</h3>
+                    </div>
+                    <div class="dash-card-body">
+                        <div class="dash-meal-list">
+                            <div class="dash-meal-item">
+                                <div class="dash-meal-icon"><i class="fas fa-sun"></i></div>
+                                <div class="dash-meal-info">
+                                    <span class="dash-meal-name">Breakfast</span>
+                                    <span class="dash-meal-desc">Oatmeal with berries, protein shake, banana</span>
+                                </div>
+                                <span class="dash-meal-cal">520 kcal</span>
+                            </div>
+                            <div class="dash-meal-item">
+                                <div class="dash-meal-icon"><i class="fas fa-cloud-sun"></i></div>
+                                <div class="dash-meal-info">
+                                    <span class="dash-meal-name">Mid-Morning Snack</span>
+                                    <span class="dash-meal-desc">Greek yogurt, almonds, apple</span>
+                                </div>
+                                <span class="dash-meal-cal">340 kcal</span>
+                            </div>
+                            <div class="dash-meal-item">
+                                <div class="dash-meal-icon"><i class="fas fa-utensils"></i></div>
+                                <div class="dash-meal-info">
+                                    <span class="dash-meal-name">Lunch</span>
+                                    <span class="dash-meal-desc">Grilled chicken breast, brown rice, mixed vegetables</span>
+                                </div>
+                                <span class="dash-meal-cal">680 kcal</span>
+                            </div>
+                            <div class="dash-meal-item">
+                                <div class="dash-meal-icon"><i class="fas fa-cookie-bite"></i></div>
+                                <div class="dash-meal-info">
+                                    <span class="dash-meal-name">Afternoon Snack</span>
+                                    <span class="dash-meal-desc">Protein bar, mixed nuts</span>
+                                </div>
+                                <span class="dash-meal-cal">320 kcal</span>
+                            </div>
+                            <div class="dash-meal-item">
+                                <div class="dash-meal-icon"><i class="fas fa-moon"></i></div>
+                                <div class="dash-meal-info">
+                                    <span class="dash-meal-name">Dinner</span>
+                                    <span class="dash-meal-desc">Salmon fillet, sweet potato, steamed broccoli</span>
+                                </div>
+                                <span class="dash-meal-cal">540 kcal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Progress Section -->
+            <section class="dash-section" id="section-progress">
+                <div class="dash-section-header">
+                    <h2>Progress Tracking</h2>
+                    <div class="dash-section-actions">
+                        <select class="dash-select">
+                            <option>Sarah Johnson</option>
+                            <option>David Chen</option>
+                            <option>Emily Davis</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-xl-8">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">Weight Progress</h3>
+                            </div>
+                            <div class="dash-card-body">
+                                <canvas id="weightProgressChart" height="300"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4">
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="dash-card dash-mini-stat">
+                                    <div class="dash-mini-stat-icon"><i class="fas fa-weight-scale"></i></div>
+                                    <div class="dash-mini-stat-info">
+                                        <span class="dash-mini-stat-value">-12 lbs</span>
+                                        <span class="dash-mini-stat-label">Weight Lost</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="dash-card dash-mini-stat">
+                                    <div class="dash-mini-stat-icon" style="background:rgba(42,157,143,0.15);color:#2A9D8F;"><i class="fas fa-fire"></i></div>
+                                    <div class="dash-mini-stat-info">
+                                        <span class="dash-mini-stat-value">24,500</span>
+                                        <span class="dash-mini-stat-label">Calories Burned</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="dash-card dash-mini-stat">
+                                    <div class="dash-mini-stat-icon" style="background:rgba(233,196,106,0.15);color:#E9C46A;"><i class="fas fa-clock"></i></div>
+                                    <div class="dash-mini-stat-info">
+                                        <span class="dash-mini-stat-value">48 hrs</span>
+                                        <span class="dash-mini-stat-label">Training Time</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reviews Section -->
+            <section class="dash-section" id="section-reviews">
+                <div class="dash-section-header">
+                    <h2>Reviews Management</h2>
+                </div>
+                <div class="dash-reviews-summary">
+                    <div class="dash-review-avg">
+                        <span class="dash-review-score">4.8</span>
+                        <div class="dash-review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="dash-review-count">Based on 124 reviews</span>
+                    </div>
+                </div>
+                <div class="row g-4 mt-2">
+                    <div class="col-md-6">
+                        <div class="dash-card dash-review-card">
+                            <div class="dash-review-header">
+                                <div class="dash-review-user">
+                                    <div class="dash-table-avatar"><i class="fas fa-user"></i></div>
+                                    <div>
+                                        <span class="dash-table-name">Sarah Johnson</span>
+                                        <span class="dash-review-date">Jul 20, 2026</span>
+                                    </div>
+                                </div>
+                                <div class="dash-review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                            <p class="dash-review-text">Coach Mike is amazing! His strength training program completely transformed my body. I've lost 15 lbs and gained significant muscle mass in just 3 months.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="dash-card dash-review-card">
+                            <div class="dash-review-header">
+                                <div class="dash-review-user">
+                                    <div class="dash-table-avatar"><i class="fas fa-user"></i></div>
+                                    <div>
+                                        <span class="dash-table-name">David Chen</span>
+                                        <span class="dash-review-date">Jul 18, 2026</span>
+                                    </div>
+                                </div>
+                                <div class="dash-review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                            </div>
+                            <p class="dash-review-text">Great HIIT program! The sessions are intense but effective. My cardio endurance has improved dramatically. Highly recommend for anyone looking to get fit fast.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="dash-card dash-review-card">
+                            <div class="dash-review-header">
+                                <div class="dash-review-user">
+                                    <div class="dash-table-avatar"><i class="fas fa-user"></i></div>
+                                    <div>
+                                        <span class="dash-table-name">Emily Davis</span>
+                                        <span class="dash-review-date">Jul 15, 2026</span>
+                                    </div>
+                                </div>
+                                <div class="dash-review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                            <p class="dash-review-text">The yoga sessions are incredible. I've never felt more flexible and relaxed. The nutrition plan that came with it is also top-notch. Best investment in my health!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Messages Section -->
+            <section class="dash-section" id="section-messages">
+                <div class="dash-section-header">
+                    <h2>Messages</h2>
+                </div>
+                <div class="dash-card">
+                    <div class="dash-card-body p-0">
+                        <div class="dash-messages-layout">
+                            <div class="dash-msg-sidebar">
+                                <div class="dash-msg-search">
+                                    <input type="text" placeholder="Search conversations...">
+                                </div>
+                                <div class="dash-msg-contact active unread">
+                                    <div class="dash-table-avatar"><i class="fas fa-user"></i></div>
+                                    <div class="dash-msg-contact-info">
+                                        <span class="dash-msg-contact-name">Sarah Johnson</span>
+                                        <span class="dash-msg-contact-preview">Can we reschedule...</span>
+                                    </div>
+                                    <span class="dash-msg-contact-time">2m</span>
+                                </div>
+                                <div class="dash-msg-contact unread">
+                                    <div class="dash-table-avatar"><i class="fas fa-user"></i></div>
+                                    <div class="dash-msg-contact-info">
+                                        <span class="dash-msg-contact-name">David Chen</span>
+                                        <span class="dash-msg-contact-preview">Thanks for the plan!</span>
+                                    </div>
+                                    <span class="dash-msg-contact-time">15m</span>
+                                </div>
+                                <div class="dash-msg-contact">
+                                    <div class="dash-table-avatar"><i class="fas fa-user"></i></div>
+                                    <div class="dash-msg-contact-info">
+                                        <span class="dash-msg-contact-name">Emily Davis</span>
+                                        <span class="dash-msg-contact-preview">What should I eat...</span>
+                                    </div>
+                                    <span class="dash-msg-contact-time">1h</span>
+                                </div>
+                                <div class="dash-msg-contact">
+                                    <div class="dash-table-avatar"><i class="fas fa-user"></i></div>
+                                    <div class="dash-msg-contact-info">
+                                        <span class="dash-msg-contact-name">Mike Rivera</span>
+                                        <span class="dash-msg-contact-preview">New PR today!</span>
+                                    </div>
+                                    <span class="dash-msg-contact-time">3h</span>
+                                </div>
+                            </div>
+                            <div class="dash-msg-chat">
+                                <div class="dash-chat-header">
+                                    <div class="dash-table-avatar"><i class="fas fa-user"></i></div>
+                                    <div>
+                                        <span class="dash-msg-contact-name">Sarah Johnson</span>
+                                        <span class="dash-chat-status">Online</span>
+                                    </div>
+                                </div>
+                                <div class="dash-chat-body">
+                                    <div class="dash-chat-bubble received">
+                                        <p>Hey Coach, can we reschedule Thursday's session to Friday?</p>
+                                        <span class="dash-chat-time">9:42 AM</span>
+                                    </div>
+                                    <div class="dash-chat-bubble sent">
+                                        <p>Sure Sarah! Friday works for me. Same time at 9 AM?</p>
+                                        <span class="dash-chat-time">9:45 AM</span>
+                                    </div>
+                                    <div class="dash-chat-bubble received">
+                                        <p>Perfect! See you then. Should I do anything different for warm-up?</p>
+                                        <span class="dash-chat-time">9:47 AM</span>
+                                    </div>
+                                </div>
+                                <div class="dash-chat-footer">
+                                    <input type="text" placeholder="Type a message..." class="dash-chat-input">
+                                    <button class="btn btn-accent"><i class="fas fa-paper-plane"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Notifications Section -->
+            <section class="dash-section" id="section-notifications">
+                <div class="dash-section-header">
+                    <h2>Notifications</h2>
+                    <button class="btn btn-sm btn-outline-accent">Mark All Read</button>
+                </div>
+                <div class="dash-card">
+                    <div class="dash-card-body">
+                        <div class="dash-notif-list">
+                            <div class="dash-notif-item unread">
+                                <div class="dash-notif-icon notif-alert"><i class="fas fa-user-plus"></i></div>
+                                <div class="dash-notif-content">
+                                    <p><strong>New member registered</strong> - Lisa Thompson has joined Strength Training program.</p>
+                                    <span class="dash-notif-time">5 minutes ago</span>
+                                </div>
+                            </div>
+                            <div class="dash-notif-item unread">
+                                <div class="dash-notif-icon notif-success"><i class="fas fa-check-circle"></i></div>
+                                <div class="dash-notif-content">
+                                    <p><strong>Session completed</strong> - Sarah Johnson completed today's strength training session.</p>
+                                    <span class="dash-notif-time">30 minutes ago</span>
+                                </div>
+                            </div>
+                            <div class="dash-notif-item unread">
+                                <div class="dash-notif-icon notif-warning"><i class="fas fa-exclamation-triangle"></i></div>
+                                <div class="dash-notif-content">
+                                    <p><strong>Appointment cancelled</strong> - Mike Rivera cancelled his 4:30 PM session.</p>
+                                    <span class="dash-notif-time">1 hour ago</span>
+                                </div>
+                            </div>
+                            <div class="dash-notif-item">
+                                <div class="dash-notif-icon notif-info"><i class="fas fa-star"></i></div>
+                                <div class="dash-notif-content">
+                                    <p><strong>New review received</strong> - David Chen left a 4-star review.</p>
+                                    <span class="dash-notif-time">2 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="dash-notif-item">
+                                <div class="dash-notif-icon notif-success"><i class="fas fa-trophy"></i></div>
+                                <div class="dash-notif-content">
+                                    <p><strong>Goal achieved</strong> - Emily Davis reached her 30-day yoga streak!</p>
+                                    <span class="dash-notif-time">5 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section class="dash-section" id="section-settings">
+                <div class="dash-section-header">
+                    <h2>Profile Settings</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">Personal Information</h3>
+                            </div>
+                            <div class="dash-card-body">
+                                <form class="dash-form">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="dash-form-label">First Name</label>
+                                            <input type="text" class="dash-form-input" value="Mike">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="dash-form-label">Last Name</label>
+                                            <input type="text" class="dash-form-input" value="Thompson">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="dash-form-label">Email</label>
+                                            <input type="email" class="dash-form-input" value="mike@Stackly.com">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="dash-form-label">Phone</label>
+                                            <input type="tel" class="dash-form-input" value="+1 (555) 987-6543">
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="dash-form-label">Bio</label>
+                                            <textarea class="dash-form-input dash-form-textarea" rows="4">Certified personal trainer with 15+ years of experience in strength training, HIIT, and nutrition coaching.</textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="button" class="btn btn-accent">Save Changes</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="dash-card">
+                            <div class="dash-card-header">
+                                <h3 class="dash-card-title">Profile Photo</h3>
+                            </div>
+                            <div class="dash-card-body text-center">
+                                <div class="dash-settings-avatar"><i class="fas fa-user-tie"></i></div>
+                                <button class="btn btn-sm btn-outline-accent mt-3">Upload Photo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

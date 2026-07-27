@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly | 404 - Page Not Found</title>
+    <meta name="description" content="Oops! The page you're looking for doesn't exist.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ========== 404 Error Section ========== -->
+    <section class="error-section">
+        <div class="hero-bg-overlay"></div>
+        <div class="error-particles" id="errorParticles"></div>
+        <div class="container position-relative">
+            <div class="error-content">
+                <div class="error-icon-wrapper" id="errorIcon">
+                    <div class="error-icon-ring"></div>
+                    <div class="error-icon-ring ring-2"></div>
+                    <div class="error-icon-inner">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                </div>
+
+                <h1 class="error-code" id="errorCode">4<span class="text-gradient">0</span>4</h1>
+
+                <h2 class="error-title" id="errorTitle">Page Not Found</h2>
+                <p class="error-message" id="errorMessage">
+                    Oops! The page you're looking for has been moved, deleted, or doesn't exist.
+                    Let's get you back on track with your fitness journey.
+                </p>
+
+                <div class="error-buttons" id="errorButtons">
+                    <a href="index.html" class="btn btn-accent btn-lg error-btn-primary">
+                        <i class="fas fa-home me-2"></i> Back to Home
+                    </a>
+                    <button onclick="history.back()" class="btn btn-outline-light btn-lg error-btn-secondary">
+                        <i class="fas fa-arrow-left me-2"></i> Go Back
+                    </button>
+                </div>
+
+                <div class="error-search" id="errorSearch">
+                    <p>Or try searching:</p>
+                    <form class="error-search-form" onsubmit="window.location.href='index.html'">
+                        <input type="text" placeholder="Search our site..." class="error-search-input">
+                        <button type="submit" class="btn btn-accent">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Particles
+            var pc = document.getElementById('errorParticles');
+            if (pc) {
+                for (var i = 0; i < 30; i++) {
+                    var d = document.createElement('div');
+                    d.className = 'error-particle';
+                    d.style.left = Math.random() * 100 + '%';
+                    d.style.top = Math.random() * 100 + '%';
+                    d.style.width = d.style.height = (Math.random() * 4 + 2) + 'px';
+                    d.style.animationDelay = Math.random() * 5 + 's';
+                    d.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                    pc.appendChild(d);
+                }
+            }
+
+            // GSAP Timeline
+            var tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+            tl.from('#errorIcon', { scale: 0, opacity: 0, duration: 0.8, ease: 'back.out(1.7)' })
+              .from('#errorCode', { y: 60, opacity: 0, duration: 0.7 }, '-=0.3')
+              .from('#errorTitle', { y: 40, opacity: 0, duration: 0.6 }, '-=0.3')
+              .from('#errorMessage', { y: 30, opacity: 0, duration: 0.6 }, '-=0.2')
+              .from('#errorButtons', { y: 30, opacity: 0, duration: 0.6 }, '-=0.2')
+              .from('#errorSearch', { y: 20, opacity: 0, duration: 0.5 }, '-=0.1');
+
+            // Floating icon animation
+            gsap.to('.error-icon-inner', {
+                y: -10,
+                duration: 2,
+                repeat: -1,
+                yoyo: true,
+                ease: 'sine.inOut'
+            });
+
+            // Ring pulse
+            gsap.to('.error-icon-ring', {
+                scale: 1.15,
+                opacity: 0.3,
+                duration: 1.5,
+                repeat: -1,
+                yoyo: true,
+                ease: 'sine.inOut'
+            });
+
+            gsap.to('.ring-2', {
+                scale: 1.25,
+                opacity: 0.15,
+                duration: 2,
+                repeat: -1,
+                yoyo: true,
+                ease: 'sine.inOut',
+                delay: 0.5
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly | Healthy Tips</title>
+    <meta name="description" content="Expert health, fitness, and nutrition tips from Stackly trainers to help you live a stronger, healthier life.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top nav-page" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo-red.webp" alt="Stackly" class="brand-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-bar"></span>
+                <span class="toggler-bar"></span>
+                <span class="toggler-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="trainers.html">Trainers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="healthy-tips.html">Healthy Tips</a></li>
+                </ul>
+                <a href="login.html" class="btn btn-outline-accent ms-2"><i class="fas fa-sign-in-alt me-1"></i> Login</a>
+                <a href="contact.html" class="btn btn-accent ms-2">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section class="page-hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="container position-relative">
+            <div class="page-hero-content" data-animate="fade-up">
+                <div class="hero-badge" style="display:inline-flex;align-items:center;gap:8px;background:rgba(196,30,58,0.12);border:1px solid rgba(196,30,58,0.25);padding:8px 20px;border-radius:50px;color:#C41E3A;font-size:0.85rem;font-weight:600;margin-bottom:20px;">
+                    <i class="fas fa-heart-pulse"></i> Health & Wellness
+                </div>
+                <h1 class="page-hero-title">Health & Fitness <span class="text-gradient">Tips</span></h1>
+                <p class="page-hero-subtitle">Simple tips to help you stay healthy, fit, and motivated.</p>
+                <nav class="breadcrumb-nav" data-animate="fade-up" data-delay="100">
+                    <a href="index.html">Home</a>
+                    <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                    <span class="current">Healthy Tips</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Featured Health Tip -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5" data-animate="fade-up">
+                <div class="section-label center"><span></span> Featured Tip</div>
+                <h2 class="section-title">Today's <span class="text-gradient">Must Read</span></h2>
+            </div>
+            <div class="featured-tip-card" data-animate="fade-up">
+                <div class="row g-0 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="ftc-image">
+                            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=640&h=440&fit=crop" alt="Healthy Meal Prep" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="ftc-content">
+                            <span class="ftc-badge">Nutrition</span>
+                            <h3>Why Meal Prepping Is the #1 Habit for Lasting Results</h3>
+                            <p>Meal prepping isn't just for bodybuilders. Planning your meals ahead of time removes decision fatigue, keeps you on track with your nutrition goals, and saves money. Start with just 2-3 days of meals and watch how much easier your health journey becomes.</p>
+                            <a href="#" class="btn btn-accent">Read More <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Health Tips Categories -->
+    <section class="section-padding bg-dark-alt">
+        <div class="container">
+            <div class="text-center mb-5" data-animate="fade-up">
+                <div class="section-label center"><span></span> Categories</div>
+                <h2 class="section-title">Browse by <span class="text-gradient">Topic</span></h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="0">
+                    <div class="tip-category-card">
+                        <div class="tcc-emoji">ðŸ¥—</div>
+                        <h4>Nutrition Tips</h4>
+                        <p>Fuel your body right with expert diet and meal planning advice.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="100">
+                    <div class="tip-category-card">
+                        <div class="tcc-emoji">ðŸ’ª</div>
+                        <h4>Workout Tips</h4>
+                        <p>Maximize every session with form cues, programming, and intensity strategies.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="200">
+                    <div class="tip-category-card">
+                        <div class="tcc-emoji">ðŸ˜´</div>
+                        <h4>Sleep & Recovery</h4>
+                        <p>Recovery is where the magic happens. Optimize your rest for better results.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="300">
+                    <div class="tip-category-card">
+                        <div class="tcc-emoji">ðŸ’§</div>
+                        <h4>Hydration</h4>
+                        <p>Water is the most underrated performance enhancer. Learn how much you really need.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="400">
+                    <div class="tip-category-card">
+                        <div class="tcc-emoji">ðŸ§˜</div>
+                        <h4>Mental Wellness</h4>
+                        <p>Mindset matters. Techniques for stress management, focus, and motivation.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="500">
+                    <div class="tip-category-card">
+                        <div class="tcc-emoji">â¤ï¸</div>
+                        <h4>Heart Health</h4>
+                        <p>Keep your cardiovascular system strong with targeted cardio and lifestyle tips.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="600">
+                    <div class="tip-category-card">
+                        <div class="tcc-emoji">ðŸ¦´</div>
+                        <h4>Bone & Joint Care</h4>
+                        <p>Protect your joints, improve mobility, and prevent injury at any age.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="700">
+                    <div class="tip-category-card">
+                        <div class="tcc-emoji">ðŸƒ</div>
+                        <h4>Weight Loss Tips</h4>
+                        <p>Sustainable fat loss strategies that actually work â€” no crash diets required.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Latest Articles -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5" data-animate="fade-up">
+                <div class="section-label center"><span></span> Latest Articles</div>
+                <h2 class="section-title">Fresh From the <span class="text-gradient">Blog</span></h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="0">
+                    <div class="article-card">
+                        <div class="ac-image">
+                            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=260&fit=crop" alt="Muscle Growth Foods" class="img-fluid">
+                            <span class="ac-category">Nutrition</span>
+                        </div>
+                        <div class="ac-body">
+                            <h4>10 Best Foods for Muscle Growth</h4>
+                            <p>Discover the top muscle-building foods that every lifter should have in their kitchen.</p>
+                            <a href="#" class="btn btn-sm btn-outline-accent">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="100">
+                    <div class="article-card">
+                        <div class="ac-image">
+                            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400&h=260&fit=crop" alt="Natural Weight Loss" class="img-fluid">
+                            <span class="ac-category">Weight Loss</span>
+                        </div>
+                        <div class="ac-body">
+                            <h4>How to Lose Weight Naturally</h4>
+                            <p>No pills, no gimmicks â€” just science-backed strategies for sustainable fat loss.</p>
+                            <a href="#" class="btn btn-sm btn-outline-accent">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="200">
+                    <div class="article-card">
+                        <div class="ac-image">
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=260&fit=crop" alt="Rest Days" class="img-fluid">
+                            <span class="ac-category">Recovery</span>
+                        </div>
+                        <div class="ac-body">
+                            <h4>Why Rest Days Matter</h4>
+                            <p>Skip rest days and you'll sabotage your progress. Here's why recovery is non-negotiable.</p>
+                            <a href="#" class="btn btn-sm btn-outline-accent">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="300">
+                    <div class="article-card">
+                        <div class="ac-image">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=260&fit=crop" alt="Strength Training" class="img-fluid">
+                            <span class="ac-category">Training</span>
+                        </div>
+                        <div class="ac-body">
+                            <h4>Benefits of Strength Training</h4>
+                            <p>From bone density to metabolism â€” why lifting weights is the best investment you can make.</p>
+                            <a href="#" class="btn btn-sm btn-outline-accent">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Daily Health Tip -->
+    <section class="section-padding bg-dark-alt">
+        <div class="container">
+            <div class="daily-tip-banner" data-animate="fade-up">
+                <div class="dtb-icon"><i class="fas fa-lightbulb"></i></div>
+                <div class="dtb-content">
+                    <span class="dtb-label">Daily Health Tip</span>
+                    <h3>Drink at least 2â€“3 liters of water every day to stay hydrated. Proper hydration improves energy, focus, and workout performance.</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Healthy Habits Checklist -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-animate="fade-right">
+                    <div class="section-label"><span></span> Daily Habits</div>
+                    <h2 class="section-title">Healthy Habits <span class="text-gradient">Checklist</span></h2>
+                    <p class="section-description">Small daily habits compound into life-changing results. Start checking these off every day.</p>
+                </div>
+                <div class="col-lg-6" data-animate="fade-left">
+                    <div class="habits-checklist">
+                        <div class="habit-item"><i class="fas fa-check-circle"></i><span>Drink enough water</span></div>
+                        <div class="habit-item"><i class="fas fa-check-circle"></i><span>Exercise 30â€“45 minutes</span></div>
+                        <div class="habit-item"><i class="fas fa-check-circle"></i><span>Sleep 7â€“8 hours</span></div>
+                        <div class="habit-item"><i class="fas fa-check-circle"></i><span>Eat more fruits and vegetables</span></div>
+                        <div class="habit-item"><i class="fas fa-check-circle"></i><span>Avoid sugary drinks</span></div>
+                        <div class="habit-item"><i class="fas fa-check-circle"></i><span>Stretch before workouts</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Nutrition Guide -->
+    <section class="section-padding bg-dark-alt">
+        <div class="container">
+            <div class="text-center mb-5" data-animate="fade-up">
+                <div class="section-label center"><span></span> Nutrition</div>
+                <h2 class="section-title">Nutrition <span class="text-gradient">Guide</span></h2>
+                <p class="section-description mx-auto">Understand what your body needs to perform at its best.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="0">
+                    <div class="nutrition-guide-card">
+                        <div class="ngc-icon"><i class="fas fa-drumstick-bite"></i></div>
+                        <h4>Protein-Rich Foods</h4>
+                        <p>Chicken, fish, eggs, Greek yogurt, tofu, and legumes. Aim for 1.6â€“2.2g per kg of bodyweight for muscle growth.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="100">
+                    <div class="nutrition-guide-card">
+                        <div class="ngc-icon"><i class="fas fa-bread-slice"></i></div>
+                        <h4>Healthy Carbohydrates</h4>
+                        <p>Oats, brown rice, sweet potatoes, quinoa, and whole-grain bread. Carbs fuel your workouts and recovery.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="200">
+                    <div class="nutrition-guide-card">
+                        <div class="ngc-icon"><i class="fas fa-cheese"></i></div>
+                        <h4>Healthy Fats</h4>
+                        <p>Avocados, nuts, olive oil, salmon, and chia seeds. Essential for hormones, brain function, and absorption of vitamins.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="300">
+                    <div class="nutrition-guide-card">
+                        <div class="ngc-icon"><i class="fas fa-capsules"></i></div>
+                        <h4>Vitamins & Minerals</h4>
+                        <p>Eat the rainbow â€” colorful fruits and vegetables provide micronutrients that support immunity and recovery.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="400">
+                    <div class="nutrition-guide-card">
+                        <div class="ngc-icon"><i class="fas fa-seedling"></i></div>
+                        <h4>Fiber-Rich Foods</h4>
+                        <p>Vegetables, fruits, beans, and whole grains. Fiber supports digestion, keeps you full, and stabilizes blood sugar.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="500">
+                    <div class="nutrition-guide-card">
+                        <div class="ngc-icon"><i class="fas fa-fire"></i></div>
+                        <h4>Calorie Balance</h4>
+                        <p>Understand your TDEE. Eat in a slight surplus to build muscle, or a moderate deficit to lose fat â€” consistency is key.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. BMI & Calorie Calculator -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-animate="fade-right">
+                    <div class="section-label"><span></span> Health Tools</div>
+                    <h2 class="section-title">Calculate Your <span class="text-gradient">BMI & Calories</span></h2>
+                    <p class="section-description">
+                        Body Mass Index (BMI) and daily calorie needs are key indicators of your overall health. 
+                        Use our calculators to find out where you stand and get personalized recommendations.
+                    </p>
+                    <div class="bmi-info-cards">
+                        <div class="bmi-info-card">
+                            <span class="bmi-range underweight"></span>
+                            <div>
+                                <strong>Underweight</strong>
+                                <span>BMI &lt; 18.5</span>
+                            </div>
+                        </div>
+                        <div class="bmi-info-card">
+                            <span class="bmi-range normal"></span>
+                            <div>
+                                <strong>Normal</strong>
+                                <span>BMI 18.5 - 24.9</span>
+                            </div>
+                        </div>
+                        <div class="bmi-info-card">
+                            <span class="bmi-range overweight"></span>
+                            <div>
+                                <strong>Overweight</strong>
+                                <span>BMI 25 - 29.9</span>
+                            </div>
+                        </div>
+                        <div class="bmi-info-card">
+                            <span class="bmi-range obese"></span>
+                            <div>
+                                <strong>Obese</strong>
+                                <span>BMI &ge; 30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate="fade-left">
+                    <div class="bmi-calculator-card">
+                        <h3 class="bmi-calc-title"><i class="fas fa-calculator"></i> BMI Calculator</h3>
+                        <form id="bmiForm">
+                            <div class="bmi-unit-toggle">
+                                <button type="button" class="bmi-unit-btn active" data-unit="metric">Metric</button>
+                                <button type="button" class="bmi-unit-btn" data-unit="imperial">Imperial</button>
+                            </div>
+
+                            <div class="bmi-form-group">
+                                <div class="row g-3">
+                                    <div class="col-6">
+                                        <label for="bmiGender">Gender</label>
+                                        <select class="bmi-input" id="bmiGender" required>
+                                            <option value="">Select...</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="bmiAge">Age</label>
+                                        <div class="bmi-input-wrapper">
+                                            <input type="number" class="bmi-input" id="bmiAge" placeholder="30" min="10" max="120" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bmi-form-group" id="metricInputs">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <label for="bmiWeight">Weight (kg)</label>
+                                        <div class="bmi-input-wrapper">
+                                            <input type="number" class="bmi-input" id="bmiWeight" placeholder="70" min="1" max="500" required>
+                                            <span class="bmi-input-unit">kg</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="bmiHeightCm">Height (cm)</label>
+                                        <div class="bmi-input-wrapper">
+                                            <input type="number" class="bmi-input" id="bmiHeightCm" placeholder="175" min="1" max="300" required>
+                                            <span class="bmi-input-unit">cm</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bmi-form-group d-none" id="imperialInputs">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="bmiWeightLbs">Weight (lbs)</label>
+                                        <div class="bmi-input-wrapper">
+                                            <input type="number" class="bmi-input" id="bmiWeightLbs" placeholder="154" min="1" max="1100">
+                                            <span class="bmi-input-unit">lbs</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="bmiWeightSt">Weight (st)</label>
+                                        <div class="bmi-input-wrapper">
+                                            <input type="number" class="bmi-input" id="bmiWeightSt" placeholder="11" min="0" max="80">
+                                            <span class="bmi-input-unit">st</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="bmiHeightFt">Height (ft)</label>
+                                        <div class="bmi-input-wrapper">
+                                            <input type="number" class="bmi-input" id="bmiHeightFt" placeholder="5" min="1" max="9">
+                                            <span class="bmi-input-unit">ft</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="bmiHeightIn">Height (in)</label>
+                                        <div class="bmi-input-wrapper">
+                                            <input type="number" class="bmi-input" id="bmiHeightIn" placeholder="9" min="0" max="11">
+                                            <span class="bmi-input-unit">in</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-accent btn-lg w-100 bmi-calc-btn">
+                                Calculate BMI <i class="fas fa-arrow-right ms-2"></i>
+                            </button>
+                        </form>
+
+                        <div class="bmi-result d-none" id="bmiResult">
+                            <div class="bmi-result-circle" id="bmiResultCircle">
+                                <span class="bmi-result-number" id="bmiResultNumber">0</span>
+                                <span class="bmi-result-label">Your BMI</span>
+                            </div>
+                            <div class="bmi-result-category" id="bmiResultCategory">
+                                <span class="bmi-category-badge" id="bmiCategoryBadge">Normal</span>
+                                <p id="bmiResultMessage">Your BMI is within the healthy range. Keep up the great work!</p>
+                            </div>
+                            <div class="bmi-result-bar">
+                                <div class="bmi-bar-track">
+                                    <div class="bmi-bar-fill" id="bmiBarFill"></div>
+                                    <div class="bmi-bar-marker" id="bmiBarMarker"></div>
+                                </div>
+                                <div class="bmi-bar-labels">
+                                    <span>Underweight</span>
+                                    <span>Normal</span>
+                                    <span>Overweight</span>
+                                    <span>Obese</span>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-outline-accent w-100 mt-3" id="bmiRecalculate">
+                                <i class="fas fa-redo me-2"></i> Calculate Again
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center g-5 mt-5">
+                <div class="col-lg-6" data-animate="fade-right">
+                    <div class="section-label"><span></span> Nutrition Guide</div>
+                    <h2 class="section-title">Understand Your <span class="text-gradient">Daily Calories</span></h2>
+                    <p class="section-description">
+                        Your Total Daily Energy Expenditure (TDEE) determines how many calories your body needs each day.
+                        Knowing this helps you lose weight, maintain, or build muscle effectively.
+                    </p>
+                    <div class="bmi-info-cards">
+                        <div class="bmi-info-card">
+                            <span class="bmi-range deficit"></span>
+                            <div>
+                                <strong>Caloric Deficit</strong>
+                                <span>Eat less than you burn to lose weight</span>
+                            </div>
+                        </div>
+                        <div class="bmi-info-card">
+                            <span class="bmi-range maintenance"></span>
+                            <div>
+                                <strong>Maintenance</strong>
+                                <span>Eat equal to what you burn to stay steady</span>
+                            </div>
+                        </div>
+                        <div class="bmi-info-card">
+                            <span class="bmi-range surplus"></span>
+                            <div>
+                                <strong>Caloric Surplus</strong>
+                                <span>Eat more than you burn to build muscle</span>
+                            </div>
+                        </div>
+                        <div class="bmi-info-card">
+                            <span class="bmi-range activity"></span>
+                            <div>
+                                <strong>Activity Level</strong>
+                                <span>Higher activity = more daily calories needed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate="fade-left">
+                    <div class="bmi-calculator-card">
+                        <h3 class="bmi-calc-title"><i class="fas fa-fire-flame-curved"></i> Calorie Calculator</h3>
+                        <form id="calorieForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="bmi-form-group">
+                                        <label for="calGender">Gender</label>
+                                        <select class="form-select" id="calGender" style="background:var(--dark-alt);border:1px solid var(--dark-border);color:#fff;padding:14px 16px;border-radius:var(--radius-sm);font-size:1rem;">
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="bmi-form-group">
+                                        <label for="calAge">Age</label>
+                                        <div class="bmi-input-wrapper">
+                                            <input type="number" class="bmi-input" id="calAge" placeholder="25" min="10" max="100" required>
+                                            <span class="bmi-input-unit">yrs</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="bmi-form-group">
+                                        <label for="calWeight">Weight (kg)</label>
+                                        <div class="bmi-input-wrapper">
+                                            <input type="number" class="bmi-input" id="calWeight" placeholder="70" min="1" max="500" required>
+                                            <span class="bmi-input-unit">kg</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="bmi-form-group">
+                                        <label for="calHeight">Height (cm)</label>
+                                        <div class="bmi-input-wrapper">
+                                            <input type="number" class="bmi-input" id="calHeight" placeholder="175" min="1" max="300" required>
+                                            <span class="bmi-input-unit">cm</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="bmi-form-group">
+                                        <label for="calActivity">Activity Level</label>
+                                        <select class="form-select" id="calActivity" style="background:var(--dark-alt);border:1px solid var(--dark-border);color:#fff;padding:14px 16px;border-radius:var(--radius-sm);font-size:1rem;">
+                                            <option value="1.2">Sedentary (little or no exercise)</option>
+                                            <option value="1.375">Lightly Active (1-3 days/week)</option>
+                                            <option value="1.55" selected>Moderately Active (3-5 days/week)</option>
+                                            <option value="1.725">Very Active (6-7 days/week)</option>
+                                            <option value="1.9">Extra Active (twice daily)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-accent btn-lg w-100 bmi-calc-btn">
+                                Calculate Calories <i class="fas fa-arrow-right ms-2"></i>
+                            </button>
+                        </form>
+                        <div class="bmi-result d-none" id="calorieResult">
+                            <div class="bmi-result-circle normal" style="border-color:var(--accent);">
+                                <span class="bmi-result-number" id="calorieNumber" style="color:var(--accent);">0</span>
+                                <span class="bmi-result-label">kcal/day</span>
+                            </div>
+                            <div class="bmi-result-category">
+                                <span class="bmi-category-badge normal" style="background:rgba(196,30,58,0.15);color:var(--accent);" id="calorieLabel">Maintenance</span>
+                                <p id="calorieMessage">Your estimated daily calorie needs to maintain your current weight.</p>
+                            </div>
+                            <div class="calorie-breakdown" id="calorieBreakdown">
+                                <div class="calorie-goal">
+                                    <span class="calorie-goal-label">Weight Loss</span>
+                                    <span class="calorie-goal-value" id="calLose">-</span>
+                                </div>
+                                <div class="calorie-goal">
+                                    <span class="calorie-goal-label">Maintenance</span>
+                                    <span class="calorie-goal-value" id="calMaintain">-</span>
+                                </div>
+                                <div class="calorie-goal">
+                                    <span class="calorie-goal-label">Muscle Gain</span>
+                                    <span class="calorie-goal-value" id="calGain">-</span>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-outline-accent w-100 mt-3" id="calorieRecalculate">
+                                <i class="fas fa-redo me-2"></i> Calculate Again
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Exercise of the Week -->
+    <section class="section-padding bg-dark-alt">
+        <div class="container">
+            <div class="text-center mb-5" data-animate="fade-up">
+                <div class="section-label center"><span></span> Exercise of the Week</div>
+                <h2 class="section-title">Try This: <span class="text-gradient">Barbell Deadlift</span></h2>
+            </div>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-animate="fade-right">
+                    <div class="exercise-image">
+                        <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=560&h=400&fit=crop" alt="Barbell Deadlift" class="img-fluid rounded-4">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate="fade-left">
+                    <div class="exercise-details">
+                        <h4>Benefits</h4>
+                        <ul class="exercise-list">
+                            <li><i class="fas fa-check"></i> Builds full-body strength â€” back, glutes, hamstrings, core</li>
+                            <li><i class="fas fa-check"></i> Improves posture and spinal stability</li>
+                            <li><i class="fas fa-check"></i> Boosts testosterone and growth hormone naturally</li>
+                            <li><i class="fas fa-check"></i> Enhances grip strength and athletic performance</li>
+                        </ul>
+                        <h4>Instructions</h4>
+                        <ol class="exercise-steps">
+                            <li>Stand with feet hip-width apart, barbell over mid-foot</li>
+                            <li>Hinge at the hips, grip the bar just outside your knees</li>
+                            <li>Brace your core, flatten your back, and drive through your heels</li>
+                            <li>Stand tall, squeeze your glutes at the top, then lower with control</li>
+                        </ol>
+                        <div class="exercise-prescription">
+                            <span><i class="fas fa-layer-group"></i> 4 Sets</span>
+                            <span><i class="fas fa-redo"></i> 8 Reps</span>
+                            <span><i class="fas fa-clock"></i> 90s Rest</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Myth vs Fact -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5" data-animate="fade-up">
+                <div class="section-label center"><span></span> Myth vs Fact</div>
+                <h2 class="section-title">Separating <span class="text-gradient">Truth from Fiction</span></h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6" data-animate="fade-up" data-delay="0">
+                    <div class="myth-fact-card">
+                        <div class="mf-myth">
+                            <span class="mf-badge myth">âŒ Myth</span>
+                            <p>Sweating more burns more fat.</p>
+                        </div>
+                        <div class="mf-fact">
+                            <span class="mf-badge fact">âœ… Fact</span>
+                            <p>Sweating is mainly your body's cooling mechanism, not a direct measure of fat loss. You can burn fat without breaking a sweat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate="fade-up" data-delay="100">
+                    <div class="myth-fact-card">
+                        <div class="mf-myth">
+                            <span class="mf-badge myth">âŒ Myth</span>
+                            <p>Skipping meals helps you lose weight faster.</p>
+                        </div>
+                        <div class="mf-fact">
+                            <span class="mf-badge fact">âœ… Fact</span>
+                            <p>Skippping meals often leads to overeating later. Regular, balanced meals keep your metabolism stable and hunger in check.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate="fade-up" data-delay="200">
+                    <div class="myth-fact-card">
+                        <div class="mf-myth">
+                            <span class="mf-badge myth">âŒ Myth</span>
+                            <p>Cardio is the only way to burn fat.</p>
+                        </div>
+                        <div class="mf-fact">
+                            <span class="mf-badge fact">âœ… Fact</span>
+                            <p>Strength training builds muscle, which raises your resting metabolic rate â€” burning more calories 24/7 than cardio alone.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-animate="fade-up" data-delay="300">
+                    <div class="myth-fact-card">
+                        <div class="mf-myth">
+                            <span class="mf-badge myth">âŒ Myth</span>
+                            <p>You need to train every day to see results.</p>
+                        </div>
+                        <div class="mf-fact">
+                            <span class="mf-badge fact">âœ… Fact</span>
+                            <p>Rest days are when your muscles repair and grow. Overtraining leads to burnout and injury. 3-5 focused sessions beat 7 mediocre ones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. FAQ -->
+    <section class="section-padding bg-dark-alt">
+        <div class="container">
+            <div class="text-center mb-5" data-animate="fade-up">
+                <div class="section-label center"><span></span> FAQ</div>
+                <h2 class="section-title">Frequently Asked <span class="text-gradient">Questions</span></h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-animate="fade-up" data-delay="100">
+                    <div class="accordion" id="tipsFaq">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">How much water should I drink daily?</button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#tipsFaq">
+                                <div class="accordion-body">Aim for 2â€“3 liters per day, more if you're active or in hot weather. A good indicator is pale yellow urine. Carry a water bottle and sip consistently throughout the day.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">How often should I exercise?</button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#tipsFaq">
+                                <div class="accordion-body">3â€“5 sessions per week is ideal for most people. Mix strength training (3x), cardio (2x), and at least 1-2 rest days. Consistency matters more than intensity.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">What should I eat before a workout?</button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#tipsFaq">
+                                <div class="accordion-body">Eat a balanced meal 1-2 hours before training: complex carbs + moderate protein + low fat. Great options include oatmeal with banana, rice with chicken, or a peanut butter toast.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">Is cardio necessary every day?</button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#tipsFaq">
+                                <div class="accordion-body">No. 2-3 cardio sessions per week is sufficient for heart health and fat loss. Overdoing cardio can actually hinder muscle growth and recovery. Balance is key.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">How many hours of sleep do I need?</button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#tipsFaq">
+                                <div class="accordion-body">7-9 hours for most adults. Sleep is when your body repairs muscle, regulates hormones, and consolidates memory. Poor sleep directly impacts fat loss and performance.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Newsletter -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="newsletter-card" data-animate="fade-up">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h3>Stay Updated with <span class="text-gradient">Weekly Health Tips</span></h3>
+                        <p>Get expert advice on nutrition, training, and wellness delivered straight to your inbox every week. No spam, just value.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('.nf-success').style.display='block'; this.querySelector('button').textContent='Subscribed!';">
+                            <div class="nf-input-group">
+                                <input type="email" placeholder="Enter your email address" required>
+                                <button type="submit" class="btn btn-accent">Subscribe</button>
+                            </div>
+                            <div class="nf-success" style="display:none;">
+                                <i class="fas fa-check-circle"></i> You're subscribed! Check your inbox for a welcome email.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. CTA -->
+    <section class="cta-banner section-padding">
+        <div class="cta-bg-pattern"></div>
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-animate="fade-up">
+                    <h2 class="cta-title">Ready to Start Your <span class="text-gradient">Fitness Journey</span>?</h2>
+                    <p class="cta-text">Put these tips into action with a personalized program and expert coaching. Your transformation starts now.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end" data-animate="fade-up" data-delay="200">
+                    <a href="contact.html" class="btn btn-accent btn-lg me-2">Book Free Consultation <i class="fas fa-arrow-right ms-2"></i></a>
+                    <a href="programs.html" class="btn btn-outline-accent btn-lg">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4 pb-5">
+                <div class="col-lg-3 col-md-6">
+                    <a class="footer-brand" href="index.html">
+                        <img src="img/logo-red.webp" alt="Stackly" class="brand-logo">
+                    </a>
+                    <p class="footer-about">Premium personal training and fitness coaching. Transform your body, elevate your life. Science-backed programs that deliver real results.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="trainers.html">Trainers</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Programs</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Strength Training</a></li>
+                        <li><a href="#">HIIT Cardio</a></li>
+                        <li><a href="#">Yoga &amp; Mobility</a></li>
+                        <li><a href="#">Nutrition Planning</a></li>
+                        <li><a href="#">Group Classes</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Contact Us</h5>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> hello@Stackly.com</li>
+                        <li><i class="fas fa-location-dot"></i> 123 Fitness Avenue, Downtown, NY 10001</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Working Hours</h5>
+                    <ul class="footer-hours">
+                        <li><span>Monday - Friday</span><span>5:00 AM - 11:00 PM</span></li>
+                        <li><span>Saturday</span><span>6:00 AM - 10:00 PM</span></li>
+                        <li><span>Sunday</span><span>7:00 AM - 9:00 PM</span></li>
+                        <li><span>Holidays</span><span>8:00 AM - 6:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p>&copy; 2026 Stackly. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

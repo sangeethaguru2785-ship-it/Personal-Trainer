@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly | Contact</title>
+    <meta name="description" content="Get in touch with Stackly. Start your fitness journey today with our expert personal trainers.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top nav-page" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo-red.webp" alt="Stackly" class="brand-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-bar"></span>
+                <span class="toggler-bar"></span>
+                <span class="toggler-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="trainers.html">Trainers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="healthy-tips.html">Healthy Tips</a></li>
+                </ul>
+                <a href="login.html" class="btn btn-outline-accent ms-2"><i class="fas fa-sign-in-alt me-1"></i> Login</a>
+                <a href="contact.html" class="btn btn-accent ms-2">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== Hero Banner ========== -->
+    <section class="page-hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="container position-relative">
+            <div class="page-hero-content" data-animate="fade-up">
+                <div class="hero-badge" style="display:inline-flex;align-items:center;gap:8px;background:rgba(196,30,58,0.12);border:1px solid rgba(196,30,58,0.25);padding:8px 20px;border-radius:50px;color:#C41E3A;font-size:0.85rem;font-weight:600;margin-bottom:20px;">
+                    <i class="fas fa-envelope"></i> Get In Touch
+                </div>
+                <h1 class="page-hero-title">Contact <span class="text-gradient">Us</span></h1>
+                <p class="page-hero-subtitle">Have questions or ready to start your fitness journey? We're here to help you every step of the way.</p>
+                <nav class="breadcrumb-nav" data-animate="fade-up" data-delay="100">
+                    <a href="index.html">Home</a>
+                    <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                    <span class="current">Contact</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Contact Information ========== -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-4" data-animate="fade-up">
+                <div class="col-lg-3 col-md-6">
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+                        <h5>Phone</h5>
+                        <p>+1 (555) 123-4567<br><small class="text-muted">Call us anytime</small></p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                        <h5>Email</h5>
+                        <p>hello@Stackly.com<br><small class="text-muted">We reply within 24 hours</small></p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-location-dot"></i></div>
+                        <h5>Address</h5>
+                        <p>123 Fitness Avenue<br>Downtown, NY 10001</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-clock"></i></div>
+                        <h5>Working Hours</h5>
+                        <p>Mon - Fri: 5AM - 11PM<br>Sat - Sun: 6AM - 10PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Contact Form + Google Map ========== -->
+    <section class="section-padding bg-dark-alt">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-7" data-animate="fade-right">
+                    <div class="section-label"><span></span> Send a Message</div>
+                    <h2 class="section-title">Let's Start Your <span class="text-gradient">Fitness Journey</span></h2>
+                    <p class="section-description mb-4">Ready to transform? Fill out the form and we'll create a personalized plan just for you.</p>
+                    <div class="contact-form-card">
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="contactName">Full Name</label>
+                                        <input type="text" class="form-control" id="contactName" placeholder="John Doe" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contactEmail">Email</label>
+                                        <input type="email" class="form-control" id="contactEmail" placeholder="john@example.com" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contactPhone">Phone</label>
+                                        <input type="tel" class="form-control" id="contactPhone" placeholder="+1 (555) 000-0000">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="fitnessGoal">Fitness Goal</label>
+                                        <select class="form-select" id="fitnessGoal">
+                                            <option value="">Select your fitness goal...</option>
+                                            <option>Weight Loss</option>
+                                            <option>Muscle Building</option>
+                                            <option>General Fitness</option>
+                                            <option>Strength Training</option>
+                                            <option>Flexibility & Mobility</option>
+                                            <option>Sports Performance</option>
+                                            <option>Rehabilitation</option>
+                                            <option>Nutrition Planning</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="contactMessage">Message</label>
+                                        <textarea class="form-control" id="contactMessage" rows="4" placeholder="Tell us about your fitness goals..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-accent btn-lg w-100">
+                                        Send Message <i class="fas fa-paper-plane ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-5" data-animate="fade-left">
+                    <div class="section-label"><span></span> Find Us</div>
+                    <h2 class="section-title">Our <span class="text-gradient">Location</span></h2>
+                    <div class="map-wrapper rounded-4 overflow-hidden mb-4" style="border: 1px solid var(--dark-border);">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.241263412748!2d-73.9878531!3d40.7579747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Social Media Links ========== -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5" data-animate="fade-up">
+                <div class="section-label center"><span></span> Follow Us</div>
+                <h2 class="section-title">Stay Connected <span class="text-gradient">With Us</span></h2>
+                <p class="section-description mx-auto">Join our community on social media for daily inspiration, tips, and behind-the-scenes content.</p>
+            </div>
+            <div class="d-flex justify-content-center gap-4 flex-wrap" data-animate="fade-up" data-delay="200">
+                <a href="#" class="contact-social-icon">
+                    <div class="csi-inner"><i class="fab fa-facebook-f"></i></div>
+                    <span>Facebook</span>
+                </a>
+                <a href="#" class="contact-social-icon">
+                    <div class="csi-inner"><i class="fab fa-instagram"></i></div>
+                    <span>Instagram</span>
+                </a>
+                <a href="#" class="contact-social-icon">
+                    <div class="csi-inner"><i class="fab fa-twitter"></i></div>
+                    <span>Twitter</span>
+                </a>
+                <a href="#" class="contact-social-icon">
+                    <div class="csi-inner"><i class="fab fa-youtube"></i></div>
+                    <span>YouTube</span>
+                </a>
+                <a href="#" class="contact-social-icon">
+
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="faq-section section-padding bg-dark-alt">
+        <div class="container">
+            <div class="text-center mb-5" data-animate="fade-up">
+                <div class="section-label center"><span></span> FAQ</div>
+                <h2 class="section-title">Frequently Asked <span class="text-gradient">Questions</span></h2>
+                <p class="section-description mx-auto">Got questions? We've got answers. Here are the most common things people ask.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-animate="fade-up" data-delay="200">
+                    <div class="accordion" id="contactFaqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#contactFaq1">
+                                    How do I get started with personal training?
+                                </button>
+                            </h2>
+                            <div id="contactFaq1" class="accordion-collapse collapse show" data-bs-parent="#contactFaqAccordion">
+                                <div class="accordion-body">
+                                    Simply fill out the contact form above or call us to book a free 30-minute consultation. We'll discuss your goals, assess your current fitness level, and match you with the perfect trainer and program.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contactFaq2">
+                                    What should I bring to my first session?
+                                </button>
+                            </h2>
+                            <div id="contactFaq2" class="accordion-collapse collapse" data-bs-parent="#contactFaqAccordion">
+                                <div class="accordion-body">
+                                    Wear comfortable workout clothes and athletic shoes. Bring a water bottle, a small towel, and a positive attitude. We provide all the equipment you need. If you have any medical conditions, bring relevant documentation.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contactFaq3">
+                                    Can I pause or cancel my membership?
+                                </button>
+                            </h2>
+                            <div id="contactFaq3" class="accordion-collapse collapse" data-bs-parent="#contactFaqAccordion">
+                                <div class="accordion-body">
+                                    Yes! We offer flexible membership options. You can pause your membership for up to 3 months per year at no extra cost. Cancellations can be made with 30 days' notice â€” no long-term contracts or hidden fees.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contactFaq4">
+                                    Do you offer group training sessions?
+                                </button>
+                            </h2>
+                            <div id="contactFaq4" class="accordion-collapse collapse" data-bs-parent="#contactFaqAccordion">
+                                <div class="accordion-body">
+                                    Absolutely! We run group classes including HIIT, strength circuits, yoga, and boxing throughout the week. Groups are kept small (max 12 people) so you still get personalized attention. Check our schedule or ask at the front desk.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contactFaq5">
+                                    How often should I train with a personal trainer?
+                                </button>
+                            </h2>
+                            <div id="contactFaq5" class="accordion-collapse collapse" data-bs-parent="#contactFaqAccordion">
+                                <div class="accordion-body">
+                                    For optimal results, we recommend 2-4 sessions per week depending on your goals and schedule. Beginners often start with 2 sessions per week and increase as they build confidence and strength. We'll help you find the perfect frequency.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Book Free Consultation CTA ========== -->
+    <section class="contact-cta-section">
+        <div class="contact-cta-bg"></div>
+        <div class="container">
+            <div class="contact-cta-content text-center" data-animate="fade-up">
+                <h2 class="contact-cta-title">Ready to Transform Your Body?</h2>
+                <p class="contact-cta-text">Book your free consultation today and take the first step toward a healthier, stronger you. No commitment required.</p>
+                <div class="contact-cta-buttons">
+                    <a href="contact.html" class="btn btn-accent btn-lg">Book Free Consultation <i class="fas fa-arrow-right ms-2"></i></a>
+                    <a href="tel:+15551234567" class="btn btn-outline-accent btn-lg">Call Us Now <i class="fas fa-phone ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4 pb-5">
+                <div class="col-lg-3 col-md-6">
+                    <a class="footer-brand" href="index.html">
+                        <img src="img/logo-red.webp" alt="Stackly" class="brand-logo">
+                    </a>
+                    <p class="footer-about">Premium personal training and fitness coaching. Transform your body, elevate your life. Science-backed programs that deliver real results.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="trainers.html">Trainers</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Programs</h5>
+                    <ul class="footer-links">
+                        <li><a href="programs.html">Strength Training</a></li>
+                        <li><a href="programs.html">HIIT Cardio</a></li>
+                        <li><a href="programs.html">Yoga & Mobility</a></li>
+                        <li><a href="programs.html">Nutrition Planning</a></li>
+                        <li><a href="programs.html">Group Classes</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Contact Us</h5>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> hello@Stackly.com</li>
+                        <li><i class="fas fa-location-dot"></i> 123 Fitness Avenue, Downtown, NY 10001</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Working Hours</h5>
+                    <ul class="footer-hours">
+                        <li><span>Monday - Friday</span><span>5:00 AM - 11:00 PM</span></li>
+                        <li><span>Saturday</span><span>6:00 AM - 10:00 PM</span></li>
+                        <li><span>Sunday</span><span>7:00 AM - 9:00 PM</span></li>
+                        <li><span>Holidays</span><span>8:00 AM - 6:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p>&copy; 2026 Stackly. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
