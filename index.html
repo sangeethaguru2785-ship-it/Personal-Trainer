@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,20 +28,24 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+                    <li class=
+                    "nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
                     <li class="nav-item"><a class="nav-link" href="trainers.html">Trainers</a></li>
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="healthy-tips.html">Healthy Tips</a></li>
                 </ul>
+                <a href="contact.html" class="btn btn-accent ms-2">Contact Us</a>
                 <a href="login.html" class="btn btn-outline-accent ms-2"><i class="fas fa-sign-in-alt me-1"></i> Login</a>
-                <a href="contact.html" class="btn btn-accent ms-2">Get Started</a>
             </div>
         </div>
     </nav>
 
     <section id="home" class="hero-section">
-        <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&h=1080&fit=crop">
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-man-doing-push-ups-at-the-gym-23456-large.mp4" type="video/mp4">
+        <video class="hero-video" autoplay muted playsinline preload="auto" poster="img/hero-bg.webp">
+            <source src="homehero1.mp4" type="video/mp4">
+        </video>
+        <video class="hero-video hero-video-alt" muted playsinline preload="auto">
+            <source src="homehero2.mp4" type="video/mp4">
         </video>
         <div class="hero-bg-overlay"></div>
         <div class="hero-particles" id="heroParticles"></div>
@@ -85,29 +89,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5 d-none d-lg-block">
-                    <div class="hero-visual" data-animate="fade-left">
-                        <div class="hero-shape-1"></div>
-                        <div class="hero-shape-2"></div>
-                        <div class="hero-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=700&fit=crop" alt="Fitness Training" class="hero-img">
-                        </div>
-                        <div class="hero-floating-card card-1">
-                            <i class="fas fa-heartbeat"></i>
-                            <div>
-                                <span class="fc-number">145</span>
-                                <span class="fc-label">BPM Active</span>
-                            </div>
-                        </div>
-                        <div class="hero-floating-card card-2">
-                            <i class="fas fa-fire-flame-curved"></i>
-                            <div>
-                                <span class="fc-number">850</span>
-                                <span class="fc-label">Cal Burned</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="hero-scroll-indicator">
@@ -124,10 +105,10 @@
                 <div class="col-lg-6" data-animate="fade-right">
                     <div class="about-images">
                         <div class="about-img-main">
-                            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=500&h=600&fit=crop" alt="Training Session" class="img-fluid rounded-4">
+                            <img src="img/about-training.webp" alt="Training Session" class="img-fluid rounded-4">
                         </div>
                         <div class="about-img-secondary">
-                            <img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=300&h=250&fit=crop" alt="Gym Equipment" class="img-fluid rounded-4">
+                            <img src="img/about-equipment.webp" alt="Gym Equipment" class="img-fluid rounded-4">
                         </div>
                         <div class="about-experience-badge">
                             <span class="aeb-number">15+</span>
@@ -184,13 +165,13 @@
             <div class="row g-4 mb-5">
                 <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="0">
                     <div class="transformation-card">
-                        <div class="ba-slider" data-before="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=500&fit=crop" data-after="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&h=500&fit=crop">
+                        <div class="ba-slider" data-before="img/transformations/trans-1-before.webp" data-after="img/transformations/trans-1-after.webp">
                             <div class="ba-before">
-                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=500&fit=crop" alt="Before transformation">
+                                <img src="img/transformations/trans-1-before.webp" alt="Before transformation">
                                 <span class="ba-label">Before</span>
                             </div>
                             <div class="ba-after">
-                                <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&h=500&fit=crop" alt="After transformation">
+                                <img src="img/transformations/trans-1-after.webp" alt="After transformation">
                                 <span class="ba-label">After</span>
                             </div>
                             <div class="ba-handle"><i class="fas fa-arrows-left-right"></i></div>
@@ -203,13 +184,13 @@
                 </div>
                 <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="100">
                     <div class="transformation-card">
-                        <div class="ba-slider" data-before="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=500&fit=crop" data-after="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&h=500&fit=crop">
+                        <div class="ba-slider" data-before="img/transformations/trans-2-before.webp" data-after="img/transformations/trans-2-after.webp">
                             <div class="ba-before">
-                                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=500&fit=crop" alt="Before transformation">
+                                <img src="img/transformations/trans-2-before.webp" alt="Before transformation">
                                 <span class="ba-label">Before</span>
                             </div>
                             <div class="ba-after">
-                                <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&h=500&fit=crop" alt="After transformation">
+                                <img src="img/transformations/trans-2-after.webp" alt="After transformation">
                                 <span class="ba-label">After</span>
                             </div>
                             <div class="ba-handle"><i class="fas fa-arrows-left-right"></i></div>
@@ -222,13 +203,13 @@
                 </div>
                 <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="200">
                     <div class="transformation-card">
-                        <div class="ba-slider" data-before="https://images.unsplash.com/photo-1550345332-09e3ac987658?w=400&h=500&fit=crop" data-after="https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=400&h=500&fit=crop">
+                        <div class="ba-slider" data-before="img/transformations/trans-3-before.webp" data-after="img/transformations/trans-3-after.webp">
                             <div class="ba-before">
-                                <img src="https://images.unsplash.com/photo-1550345332-09e3ac987658?w=400&h=500&fit=crop" alt="Before transformation">
+                                <img src="img/transformations/trans-3-before.webp" alt="Before transformation">
                                 <span class="ba-label">Before</span>
                             </div>
                             <div class="ba-after">
-                                <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=400&h=500&fit=crop" alt="After transformation">
+                                <img src="img/transformations/trans-3-after.webp" alt="After transformation">
                                 <span class="ba-label">After</span>
                             </div>
                             <div class="ba-handle"><i class="fas fa-arrows-left-right"></i></div>
@@ -376,7 +357,7 @@
                 <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="0">
                     <div class="program-card">
                         <div class="program-card-img">
-                            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=300&fit=crop" alt="Weight Loss" class="img-fluid">
+                            <img src="img/programs/program-personal-training.webp" alt="Weight Loss" class="img-fluid">
                             <div class="program-card-overlay">
                                 <span class="program-duration"><i class="fas fa-clock"></i> 45 min</span>
                             </div>
@@ -395,7 +376,7 @@
                 <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="100">
                     <div class="program-card">
                         <div class="program-card-img">
-                            <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&h=300&fit=crop" alt="Muscle Building" class="img-fluid">
+                            <img src="img/programs/program-group-fitness.webp" alt="Muscle Building" class="img-fluid">
                             <div class="program-card-overlay">
                                 <span class="program-duration"><i class="fas fa-clock"></i> 60 min</span>
                             </div>
@@ -414,7 +395,7 @@
                 <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="200">
                     <div class="program-card">
                         <div class="program-card-img">
-                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop" alt="Strength Training" class="img-fluid">
+                            <img src="img/programs/program-strength.webp" alt="Strength Training" class="img-fluid">
                             <div class="program-card-overlay">
                                 <span class="program-duration"><i class="fas fa-clock"></i> 50 min</span>
                             </div>
@@ -433,7 +414,7 @@
                 <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="100">
                     <div class="program-card">
                         <div class="program-card-img">
-                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop" alt="Fat Loss" class="img-fluid">
+                            <img src="img/programs/program-hiit.webp" alt="Fat Loss" class="img-fluid">
                             <div class="program-card-overlay">
                                 <span class="program-duration"><i class="fas fa-clock"></i> 40 min</span>
                             </div>
@@ -452,7 +433,7 @@
                 <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="200">
                     <div class="program-card">
                         <div class="program-card-img">
-                            <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=400&h=300&fit=crop" alt="Online Coaching" class="img-fluid">
+                            <img src="img/programs/program-online-coaching.webp" alt="Online Coaching" class="img-fluid">
                             <div class="program-card-overlay">
                                 <span class="program-duration"><i class="fas fa-laptop"></i> Virtual</span>
                             </div>
@@ -468,6 +449,25 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-4 col-md-6" data-animate="fade-up" data-delay="0">
+                    <div class="program-card">
+                        <div class="program-card-img">
+                            <img src="img/programs/program-rehab.webp" alt="Yoga & Flexibility" class="img-fluid">
+                            <div class="program-card-overlay">
+                                <span class="program-duration"><i class="fas fa-clock"></i> 60 min</span>
+                            </div>
+                        </div>
+                        <div class="program-card-body">
+                            <span class="program-badge flexibility">Yoga</span>
+                            <h4>Yoga & Flexibility</h4>
+                            <p>Improve mobility, balance, and mindfulness with guided yoga flows and deep stretching routines.</p>
+                            <div class="program-meta">
+                                <span><i class="fas fa-signal"></i> All Levels</span>
+                                <span><i class="fas fa-fire"></i> 200-400 cal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -477,7 +477,7 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-6" data-animate="fade-right">
                     <div class="trainer-spotlight-img">
-                        <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=600&h=700&fit=crop" alt="Head Trainer" class="img-fluid rounded-4">
+                        <img src="img/trainers/trainer-marcus.webp" alt="Head Trainer" class="img-fluid rounded-4">
                         <div class="trainer-spotlight-badge">
                             <i class="fas fa-award"></i>
                             <span>Head Trainer</span>
@@ -592,11 +592,11 @@
                 <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="0">
                     <div class="trainer-card">
                         <div class="trainer-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400&h=500&fit=crop" alt="Marcus Steel" class="trainer-img">
+                            <img src="img/trainers/trainer-marcus.webp" alt="Marcus Steel" class="trainer-img">
                             <div class="trainer-social">
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="404.html"><i class="fab fa-instagram"></i></a>
+                                <a href="404.html"><i class="fab fa-twitter"></i></a>
+                                <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                         <div class="trainer-info">
@@ -608,11 +608,11 @@
                 <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="100">
                     <div class="trainer-card">
                         <div class="trainer-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&h=500&fit=crop" alt="Sarah Quinn" class="trainer-img">
+                            <img src="img/transformations/trans-2-after.webp" alt="Sarah Quinn" class="trainer-img">
                             <div class="trainer-social">
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="404.html"><i class="fab fa-instagram"></i></a>
+                                <a href="404.html"><i class="fab fa-twitter"></i></a>
+                                <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                         <div class="trainer-info">
@@ -624,11 +624,11 @@
                 <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="200">
                     <div class="trainer-card">
                         <div class="trainer-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&h=500&fit=crop" alt="Jake Morrison" class="trainer-img">
+                            <img src="img/transformations/trans-1-after.webp" alt="Jake Morrison" class="trainer-img">
                             <div class="trainer-social">
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="404.html"><i class="fab fa-instagram"></i></a>
+                                <a href="404.html"><i class="fab fa-twitter"></i></a>
+                                <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                         <div class="trainer-info">
@@ -640,11 +640,11 @@
                 <div class="col-lg-3 col-md-6" data-animate="fade-up" data-delay="300">
                     <div class="trainer-card">
                         <div class="trainer-img-wrapper">
-                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=500&fit=crop" alt="Elena Voss" class="trainer-img">
+                            <img src="img/transformations/trans-1-before.webp" alt="Elena Voss" class="trainer-img">
                             <div class="trainer-social">
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="404.html"><i class="fab fa-instagram"></i></a>
+                                <a href="404.html"><i class="fab fa-twitter"></i></a>
+                                <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                         <div class="trainer-info">
@@ -985,7 +985,7 @@
             </div>
             <div class="gallery-grid" data-animate="fade-up" data-delay="200">
                 <div class="gallery-item gi-tall">
-                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&h=600&fit=crop" alt="Transformation 1">
+                    <img src="img/gallery/gallery-1.webp" alt="Transformation 1">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">-32 lbs</span>
                         <h5>Mike R.</h5>
@@ -993,7 +993,7 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=400&fit=crop" alt="Transformation 2">
+                    <img src="img/gallery/gallery-2.webp" alt="Transformation 2">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">+15 lbs muscle</span>
                         <h5>Sarah K.</h5>
@@ -1001,7 +1001,7 @@
                     </div>
                 </div>
                 <div class="gallery-item gi-wide">
-                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=400&fit=crop" alt="Transformation 3">
+                    <img src="img/gallery/gallery-3.webp" alt="Transformation 3">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">-48 lbs</span>
                         <h5>David L.</h5>
@@ -1009,7 +1009,7 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&h=400&fit=crop" alt="Transformation 4">
+                    <img src="img/gallery/gallery-4.webp" alt="Transformation 4">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">-25 lbs</span>
                         <h5>Emma W.</h5>
@@ -1017,7 +1017,7 @@
                     </div>
                 </div>
                 <div class="gallery-item gi-tall">
-                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=400&h=600&fit=crop" alt="Transformation 5">
+                    <img src="img/gallery/gallery-5.webp" alt="Transformation 5">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">Body Recomp</span>
                         <h5>James P.</h5>
@@ -1025,7 +1025,7 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop" alt="Transformation 6">
+                    <img src="img/gallery/gallery-6.webp" alt="Transformation 6">
                     <div class="gallery-overlay">
                         <span class="gallery-tag">-35 lbs</span>
                         <h5>Lisa M.</h5>
@@ -1051,7 +1051,7 @@
                             </div>
                             <p>"Stackly completely changed my life. I lost 40 pounds in 6 months and gained confidence I never knew I had. The trainers are incredible!"</p>
                             <div class="tc-author">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="David Chen" class="tc-avatar">
+                                <img src="img/avatars/avatar-david.webp" alt="David Chen" class="tc-avatar">
                                 <div>
                                     <h5>David Chen</h5>
                                     <span>Lost 40 lbs in 6 months</span>
@@ -1066,7 +1066,7 @@
                             </div>
                             <p>"The personalized nutrition plan and training program were game changers. I've never felt stronger or more energetic. Highly recommend!"</p>
                             <div class="tc-author">
-                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Maria Santos" class="tc-avatar">
+                                <img src="img/avatars/avatar-maria.webp" alt="Maria Santos" class="tc-avatar">
                                 <div>
                                     <h5>Maria Santos</h5>
                                     <span>Gained lean muscle mass</span>
@@ -1081,7 +1081,7 @@
                             </div>
                             <p>"As a beginner, I was nervous. But the team made me feel welcome from day one. The group classes are addictive and the results speak for themselves."</p>
                             <div class="tc-author">
-                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" alt="James Wilson" class="tc-avatar">
+                                <img src="img/avatars/avatar-james.webp" alt="James Wilson" class="tc-avatar">
                                 <div>
                                     <h5>James Wilson</h5>
                                     <span>From beginner to beast mode</span>
@@ -1098,91 +1098,6 @@
                         <span class="tn-dot"></span>
                     </div>
                     <button class="tn-btn" id="nextTestimonial"><i class="fas fa-arrow-right"></i></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="pricing" class="section-padding">
-        <div class="container">
-            <div class="text-center mb-5" data-animate="fade-up">
-                <div class="section-label center"><span></span> Pricing Plans</div>
-                <h2 class="section-title">Choose Your <span class="text-gradient">Plan</span></h2>
-                <p class="section-description mx-auto">Flexible pricing to fit every budget. All plans include access to our state-of-the-art facilities.</p>
-            </div>
-            <div class="row g-4 justify-content-center" data-animate="fade-up" data-delay="200">
-                <div class="col-lg-4 col-md-6">
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <span class="pricing-tag">Starter</span>
-                            <div class="pricing-price">
-                                <span class="currency">$</span>
-                                <span class="amount">29</span>
-                                <span class="period">/month</span>
-                            </div>
-                        </div>
-                        <div class="pricing-body">
-                            <ul class="pricing-features">
-                                <li><i class="fas fa-check"></i> Access to Gym Floor</li>
-                                <li><i class="fas fa-check"></i> Locker Room Access</li>
-                                <li><i class="fas fa-check"></i> Basic Fitness Assessment</li>
-                                <li><i class="fas fa-check"></i> WiFi Included</li>
-                                <li class="disabled"><i class="fas fa-xmark"></i> Personal Training Sessions</li>
-                                <li class="disabled"><i class="fas fa-xmark"></i> Nutrition Planning</li>
-                                <li class="disabled"><i class="fas fa-xmark"></i> Recovery Suite</li>
-                            </ul>
-                            <a href="contact.html" class="btn btn-outline-accent btn-lg w-100">Get Started</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="pricing-card popular">
-                        <div class="pricing-popular-badge">Most Popular</div>
-                        <div class="pricing-header">
-                            <span class="pricing-tag">Pro</span>
-                            <div class="pricing-price">
-                                <span class="currency">$</span>
-                                <span class="amount">79</span>
-                                <span class="period">/month</span>
-                            </div>
-                        </div>
-                        <div class="pricing-body">
-                            <ul class="pricing-features">
-                                <li><i class="fas fa-check"></i> Full Gym Access 24/7</li>
-                                <li><i class="fas fa-check"></i> 4 Personal Training Sessions</li>
-                                <li><i class="fas fa-check"></i> Custom Nutrition Plan</li>
-                                <li><i class="fas fa-check"></i> All Group Classes</li>
-                                <li><i class="fas fa-check"></i> InBody Assessment Monthly</li>
-                                <li><i class="fas fa-check"></i> Recovery Suite Access</li>
-                                <li class="disabled"><i class="fas fa-xmark"></i> Private Coaching</li>
-                            </ul>
-                            <a href="contact.html" class="btn btn-accent btn-lg w-100">Get Started</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="pricing-card">
-                        <div class="pricing-header">
-                            <span class="pricing-tag">Elite</span>
-                            <div class="pricing-price">
-                                <span class="currency">$</span>
-                                <span class="amount">149</span>
-                                <span class="period">/month</span>
-                            </div>
-                        </div>
-                        <div class="pricing-body">
-                            <ul class="pricing-features">
-                                <li><i class="fas fa-check"></i> Everything in Pro</li>
-                                <li><i class="fas fa-check"></i> 12 Personal Training Sessions</li>
-                                <li><i class="fas fa-check"></i> Premium Nutrition Coaching</li>
-                                <li><i class="fas fa-check"></i> Priority Class Booking</li>
-                                <li><i class="fas fa-check"></i> Quarterly Body Analysis</li>
-                                <li><i class="fas fa-check"></i> Sauna &amp; Cryotherapy</li>
-                                <li><i class="fas fa-check"></i> Guest Passes (2/month)</li>
-                            </ul>
-                            <a href="contact.html" class="btn btn-outline-accent btn-lg w-100">Get Started</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1242,7 +1157,7 @@
                             </h2>
                             <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Absolutely! Our Online Coaching program gives you the same personalized programming, video check-ins, and support â€” all from the comfort of your home or any gym worldwide.
+                                    Absolutely! Our Online Coaching program gives you the same personalized programming, video check-ins, and support — all from the comfort of your home or any gym worldwide.
                                 </div>
                             </div>
                         </div>
@@ -1288,27 +1203,27 @@
             </div>
             <div class="instagram-grid" data-animate="fade-up" data-delay="200">
                 <div class="ig-item">
-                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=400&fit=crop" alt="Instagram 1">
+                    <img src="img/gallery/gallery-1.webp" alt="Instagram 1">
                     <div class="ig-overlay"><i class="fab fa-instagram"></i></div>
                 </div>
                 <div class="ig-item">
-                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=400&fit=crop" alt="Instagram 2">
+                    <img src="img/gallery/gallery-2.webp" alt="Instagram 2">
                     <div class="ig-overlay"><i class="fab fa-instagram"></i></div>
                 </div>
                 <div class="ig-item">
-                    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&h=400&fit=crop" alt="Instagram 3">
+                    <img src="img/gallery/gallery-3.webp" alt="Instagram 3">
                     <div class="ig-overlay"><i class="fab fa-instagram"></i></div>
                 </div>
                 <div class="ig-item">
-                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=400&fit=crop" alt="Instagram 4">
+                    <img src="img/gallery/gallery-5.webp" alt="Instagram 4">
                     <div class="ig-overlay"><i class="fab fa-instagram"></i></div>
                 </div>
                 <div class="ig-item">
-                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=400&h=400&fit=crop" alt="Instagram 5">
+                    <img src="img/gallery/gallery-4.webp" alt="Instagram 5">
                     <div class="ig-overlay"><i class="fab fa-instagram"></i></div>
                 </div>
                 <div class="ig-item">
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop" alt="Instagram 6">
+                    <img src="img/gallery/gallery-6.webp" alt="Instagram 6">
                     <div class="ig-overlay"><i class="fab fa-instagram"></i></div>
                 </div>
             </div>
@@ -1333,6 +1248,86 @@
         </div>
     </section>
 
+    <section class="newsletter-section section-padding">
+        <div class="newsletter-bg-glow"></div>
+        <div class="newsletter-bg-glow glow-2"></div>
+        <div class="container position-relative">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5" data-animate="fade-right">
+                    <div class="newsletter-visual">
+                        <div class="newsletter-icon-wrapper">
+                            <div class="newsletter-icon-ring"></div>
+                            <div class="newsletter-icon-ring ring-2"></div>
+                            <div class="newsletter-icon">
+                                <i class="fas fa-envelope-open-text"></i>
+                            </div>
+                        </div>
+                        <div class="newsletter-float-card nfc-1">
+                            <i class="fas fa-fire-flame-curved"></i>
+                            <div>
+                                <span class="nfc-num">12,400+</span>
+                                <span class="nfc-label">Active Subscribers</span>
+                            </div>
+                        </div>
+                        <div class="newsletter-float-card nfc-2">
+                            <i class="fas fa-bolt"></i>
+                            <div>
+                                <span class="nfc-num">3x</span>
+                                <span class="nfc-label">Weekly Content</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-animate="fade-left">
+                    <div class="section-label"><span></span> Newsletter</div>
+                    <h2 class="section-title">Stay in the <span class="text-gradient">Loop</span></h2>
+                    <p class="section-description mb-4">
+                        Get exclusive workout tips, nutrition hacks, transformation stories, and special offers 
+                        delivered straight to your inbox. No spam, just pure value.
+                    </p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <div class="newsletter-input-group">
+                            <div class="newsletter-input-wrapper">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" class="newsletter-input" id="newsletterEmail" placeholder="Enter your email address" required>
+                            </div>
+                            <button type="submit" class="btn btn-accent newsletter-btn">
+                                Subscribe <i class="fas fa-paper-plane ms-2"></i>
+                            </button>
+                        </div>
+                        <div class="newsletter-success d-none" id="newsletterSuccess">
+                            <i class="fas fa-check-circle"></i>
+                            <span>You're subscribed! Check your inbox for a welcome email.</span>
+                        </div>
+                    </form>
+                    <div class="newsletter-trust">
+                        <div class="newsletter-trust-avatars">
+                            <img src="img/avatars/avatar-david.webp" alt="Subscriber">
+                            <img src="img/avatars/avatar-maria.webp" alt="Subscriber">
+                            <img src="img/avatars/avatar-james.webp" alt="Subscriber">
+                            <img src="img/avatars/avatar-mike.webp" alt="Subscriber">
+                        </div>
+                        <p>Trained by <span class="text-accent">12,400+</span> fitness enthusiasts worldwide</p>
+                    </div>
+                    <div class="newsletter-perks">
+                        <div class="newsletter-perk">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Free workout plans</span>
+                        </div>
+                        <div class="newsletter-perk">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Weekly tips</span>
+                        </div>
+                        <div class="newsletter-perk">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Unsubscribe anytime</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <div class="row g-4 pb-5">
@@ -1342,10 +1337,10 @@
                     </a>
                     <p class="footer-about">Premium personal training and fitness coaching. Transform your body, elevate your life. Science-backed programs that deliver real results.</p>
                     <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+                        <a href="404.html"><i class="fab fa-instagram"></i></a>
+                        <a href="404.html"><i class="fab fa-twitter"></i></a>
+                        <a href="404.html"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6">

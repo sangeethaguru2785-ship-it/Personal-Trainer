@@ -20,7 +20,8 @@
         <div class="error-particles" id="errorParticles"></div>
         <div class="container position-relative">
             <div class="error-content">
-                <div class="error-icon-wrapper" id="errorIcon">
+                <img src="img/error-404.webp" alt="404 Page Not Found" class="error-hero-img">
+<div class="error-icon-wrapper" id="errorIcon">
                     <div class="error-icon-ring"></div>
                     <div class="error-icon-ring ring-2"></div>
                     <div class="error-icon-inner">
@@ -43,16 +44,6 @@
                     <button onclick="history.back()" class="btn btn-outline-light btn-lg error-btn-secondary">
                         <i class="fas fa-arrow-left me-2"></i> Go Back
                     </button>
-                </div>
-
-                <div class="error-search" id="errorSearch">
-                    <p>Or try searching:</p>
-                    <form class="error-search-form" onsubmit="window.location.href='index.html'">
-                        <input type="text" placeholder="Search our site..." class="error-search-input">
-                        <button type="submit" class="btn btn-accent">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -84,8 +75,7 @@
               .from('#errorCode', { y: 60, opacity: 0, duration: 0.7 }, '-=0.3')
               .from('#errorTitle', { y: 40, opacity: 0, duration: 0.6 }, '-=0.3')
               .from('#errorMessage', { y: 30, opacity: 0, duration: 0.6 }, '-=0.2')
-              .from('#errorButtons', { y: 30, opacity: 0, duration: 0.6 }, '-=0.2')
-              .from('#errorSearch', { y: 20, opacity: 0, duration: 0.5 }, '-=0.1');
+              .from('#errorButtons', { y: 30, opacity: 0, duration: 0.6 }, '-=0.2');
 
             // Floating icon animation
             gsap.to('.error-icon-inner', {
