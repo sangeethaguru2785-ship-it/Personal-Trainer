@@ -4322,6 +4322,8 @@ select.bmi-input option[value=""] {
     margin-bottom: 14px;
 }
 
+.tcc-emoji i { color: var(--accent); }
+
 .tip-category-card h4 {
     color: #fff;
     font-size: 1.05rem;
