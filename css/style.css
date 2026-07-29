@@ -26,7 +26,7 @@
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; overflow-x: hidden; }
 
 body {
     font-family: 'Inter', sans-serif;
@@ -6957,13 +6957,135 @@ select.bmi-input option[value=""] {
     .dash-stat-icon { width: 42px; height: 42px; font-size: 1rem; }
     .dash-stat-value { font-size: 1.2rem; }
     .dash-welcome-banner { flex-direction: column; text-align: center; padding: 24px; }
+    .dash-welcome-content h2 { font-size: 1.4rem; }
     .dash-welcome-streak { justify-content: center; }
     .dash-messages-layout { flex-direction: column; }
     .dash-msg-sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--dark-border); max-height: 200px; overflow-y: auto; }
     .dash-msg-chat { min-height: 300px; }
     .dash-section-header { flex-direction: column; align-items: flex-start; }
+    .dash-section-header h2 { font-size: 1.3rem; }
+    .dash-card-title { font-size: 0.95rem; }
+    .dash-breadcrumb-page { font-size: 0.9rem; }
     .dash-slots-grid { grid-template-columns: 1fr 1fr; }
     .dash-table-footer { flex-direction: column; gap: 12px; }
+    .dash-appt-time { display: none; }
+    .dash-macro-circle { width: 90px; height: 90px; }
+    .dash-macro-card { padding: 16px; }
+    .dash-exercise-name { font-size: 0.82rem; }
+    .dash-meal-name { font-size: 0.82rem; }
+    .dash-chat-bubble { max-width: 85%; font-size: 0.82rem; }
+    .dash-day-name { min-width: 28px; font-size: 0.75rem; }
+    .dash-weekly-schedule { gap: 2px; }
+    .dash-schedule-day { padding: 10px 12px; gap: 10px; }
+    .dash-review-score { font-size: 2.2rem; }
+    .dash-card-body { padding: 16px; }
+    .dash-card-header { padding: 14px 16px; }
+    .dash-timeline-item { gap: 10px; }
+    .dash-timeline-time { min-width: 55px; font-size: 0.75rem; }
+}
+
+@media (max-width: 575px) {
+    .dash-sidebar { width: 100%; max-width: 300px; }
+    .dash-content { padding: 12px; }
+    .dash-topbar { padding: 0 12px; height: 56px; }
+    .dash-topbar-left { gap: 10px; }
+    .dash-breadcrumb-page { font-size: 0.82rem; }
+    .dash-section-header { gap: 8px; margin-bottom: 16px; }
+    .dash-section-header h2 { font-size: 1.1rem; }
+    .dash-card-title { font-size: 0.85rem; letter-spacing: 1px; }
+    .dash-card-body { padding: 12px; }
+    .dash-card-header { padding: 12px 14px; }
+    .dash-stat-card { padding: 12px; min-height: 72px; gap: 10px; }
+    .dash-stat-icon { width: 36px; height: 36px; font-size: 0.85rem; border-radius: 10px; }
+    .dash-stat-value { font-size: 1rem; }
+    .dash-stat-label { font-size: 0.72rem; }
+    .dash-stat-trend { font-size: 0.7rem; padding: 3px 8px; }
+    .dash-welcome-banner { padding: 18px; gap: 16px; }
+    .dash-welcome-content h2 { font-size: 1.2rem; }
+    .dash-welcome-content p { font-size: 0.82rem; }
+    .dash-welcome-streak { font-size: 0.8rem; padding: 6px 14px; }
+    .dash-slots-grid { grid-template-columns: 1fr; gap: 8px; }
+    .dash-slot-item { padding: 12px; }
+    .dash-slot-time { font-size: 0.88rem; }
+    .dash-card-filter { gap: 2px; }
+    .dash-filter-btn { padding: 4px 10px; font-size: 0.72rem; }
+    .dash-appointment-list { gap: 0; }
+    .dash-appointment-item { padding: 10px 12px; gap: 10px; }
+    .dash-appt-avatar, .dash-appt-icon { width: 34px; height: 34px; font-size: 0.78rem; }
+    .dash-appt-name { font-size: 0.82rem; }
+    .dash-appt-type { font-size: 0.72rem; }
+    .dash-notif-item { padding: 12px; gap: 10px; }
+    .dash-notif-icon { width: 34px; height: 34px; font-size: 0.78rem; }
+    .dash-notif-content p { font-size: 0.82rem; }
+    .dash-timeline-item { padding-bottom: 14px; gap: 8px; }
+    .dash-timeline-time { min-width: 48px; font-size: 0.72rem; }
+    .dash-timeline-card { padding: 12px; }
+    .dash-tl-title { font-size: 0.82rem; }
+    .dash-tl-desc { font-size: 0.78rem; }
+    .dash-macro-card { padding: 12px; }
+    .dash-macro-circle { width: 72px; height: 72px; }
+    .dash-macro-card h4 { font-size: 0.9rem; }
+    .dash-macro-value { font-size: 0.78rem; }
+    .dash-meal-item { padding: 10px 12px; gap: 10px; }
+    .dash-meal-icon { width: 34px; height: 34px; font-size: 0.8rem; }
+    .dash-meal-name { font-size: 0.8rem; }
+    .dash-meal-desc { font-size: 0.75rem; }
+    .dash-meal-cal { font-size: 0.8rem; }
+    .dash-exercise-item { padding: 10px 12px; gap: 10px; }
+    .dash-exercise-name { font-size: 0.8rem; }
+    .dash-exercise-detail { font-size: 0.72rem; }
+    .dash-workout-meta { gap: 12px; font-size: 0.75rem; flex-wrap: wrap; }
+    .dash-mini-stat { flex-direction: column; text-align: center; padding: 14px; gap: 10px; }
+    .dash-mini-stat-icon { width: 36px; height: 36px; font-size: 0.9rem; }
+    .dash-mini-stat-value { font-size: 1rem; }
+    .dash-mini-stat-label { font-size: 0.72rem; }
+    .dash-sidebar-user { padding: 14px; gap: 10px; }
+    .dash-user-avatar { width: 36px; height: 36px; font-size: 0.85rem; }
+    .dash-user-name { font-size: 0.82rem; }
+    .dash-user-role { font-size: 0.72rem; }
+    .dash-sidebar-header { padding: 14px 14px 12px; }
+    .dash-brand-text { font-size: 1.2rem; }
+    .dash-nav-link { padding: 9px 12px; font-size: 0.82rem; gap: 10px; }
+    .dash-nav-link i { font-size: 0.85rem; width: 18px; }
+    .dash-badge { font-size: 0.65rem; padding: 1px 6px; }
+    .dash-table { min-width: 100%; }
+    .dash-table thead th, .dash-table tbody td { padding: 10px 12px; font-size: 0.78rem; }
+    .dash-chat-body { padding: 12px; gap: 8px; }
+    .dash-chat-bubble { max-width: 90%; padding: 10px 12px; font-size: 0.8rem; }
+    .dash-chat-header { padding: 12px 14px; }
+    .dash-chat-footer { padding: 10px 14px; gap: 8px; }
+    .dash-chat-input { font-size: 0.82rem; padding: 8px 14px; }
+    .dash-review-card { padding: 0; }
+    .dash-review-header { padding: 14px 16px; }
+    .dash-review-text { padding: 14px 16px; font-size: 0.82rem; }
+    .dash-profile-avatar { width: 72px; height: 72px; font-size: 1.8rem; }
+    .dash-form-input { padding: 8px 12px; font-size: 0.82rem; }
+    .dash-schedule-day { padding: 8px 10px; gap: 8px; }
+    .dash-day-workout { font-size: 0.78rem; }
+    .dash-tip-card { padding: 18px; }
+    .dash-tip-icon { width: 40px; height: 40px; font-size: 1rem; }
+    .dash-tip-card h4 { font-size: 0.9rem; }
+    .dash-tip-card p { font-size: 0.8rem; }
+    .dash-toggle-list { gap: 8px; }
+    .dash-toggle { font-size: 0.82rem; gap: 10px; }
+    .dash-toggle-slider { width: 36px; height: 20px; }
+    .dash-toggle-slider::after { width: 14px; height: 14px; }
+    .dash-toggle input:checked + .dash-toggle-slider::after { left: 18px; }
+    .dash-schedule-day { font-size: 0.75rem; }
+    .dash-section-actions { width: 100%; }
+    .dash-search-sm .dash-search-input { width: 100%; font-size: 0.78rem; }
+    .dash-enrolled-card .dash-card-body { padding: 14px; }
+    .dash-profile-badges { gap: 6px; }
+    .dash-badge-tag { font-size: 0.72rem; padding: 4px 10px; }
+    .dash-bmi-score { font-size: 2.2rem; }
+    .dash-bmi-category { font-size: 0.9rem; }
+    .dash-calorie-value { font-size: 1.2rem; }
+    .dash-calorie-row { font-size: 0.8rem; padding: 6px 10px; }
+    .dash-streak-ring { width: 72px; height: 72px; }
+    .dash-streak-number { font-size: 1rem; }
+    .dash-card-filter { flex-wrap: wrap; }
+    .dash-progress-header { font-size: 0.75rem; }
+    .dash-progress-text { font-size: 0.75rem; }
 }
 
 /* ========== Auth Pages (Login / Sign Up) ========== */
