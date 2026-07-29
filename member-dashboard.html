@@ -42,7 +42,8 @@
             <a href="#" class="dash-nav-link" data-section="notifications"><i class="fas fa-bell"></i><span>Notifications</span><span class="dash-badge">2</span></a>
             <div class="dash-nav-divider"></div>
             <a href="#" class="dash-nav-link" data-section="settings"><i class="fas fa-gear"></i><span>Settings</span></a>
-            <a href="index.html" class="dash-nav-link"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
+            <a href="index.html" class="dash-nav-link dash-go-home"><i class="fas fa-home"></i><span>Go to Home</span></a>
+            <a href="login.html" class="dash-nav-link" onclick="localStorage.removeItem('dashUserName');localStorage.removeItem('dashUserEmail');localStorage.removeItem('dashUserRole')"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
         </nav>
     </aside>
 
@@ -108,7 +109,7 @@
                         <div class="dash-stat-card">
                             <div class="dash-stat-icon stat-appointments"><i class="fas fa-weight-scale"></i></div>
                             <div class="dash-stat-info">
-                                <span class="dash-stat-value">-<span data-count="5">0</span></span>
+                                <span class="dash-stat-value" data-count="5">-0</span>
                                 <span class="dash-stat-label">lbs This Month</span>
                             </div>
                             <div class="dash-stat-trend trend-up"><i class="fas fa-arrow-up"></i> On Track</div>
@@ -260,8 +261,8 @@
                         <div class="dash-card text-center">
                             <div class="dash-card-body">
                                 <div class="dash-profile-avatar"><img src="img/avatars/avatar-user.webp" alt="User Profile" class="dash-avatar-img"></div>
-                                <h3 class="mt-3 mb-1">Alex Morgan</h3>
-                                <p class="text-muted">Premium Member since Jan 2026</p>
+                                <h3 class="mt-3 mb-1" id="profileFullName">Alex Morgan</h3>
+                                <p class="text-muted" id="profileMemberSince">Premium Member since Jan 2026</p>
                                 <div class="dash-profile-badges">
                                     <span class="dash-badge-tag"><i class="fas fa-fire"></i> 14-Day Streak</span>
                                     <span class="dash-badge-tag"><i class="fas fa-trophy"></i> Top Performer</span>
@@ -275,42 +276,42 @@
                                 <h3 class="dash-card-title">Personal Details</h3>
                             </div>
                             <div class="dash-card-body">
-                                <form class="dash-form">
+                                <form class="dash-form" id="profileForm">
                                     <div class="row g-3">
                                         <div class="col-md-6">
                                             <label class="dash-form-label">Full Name</label>
-                                            <input type="text" class="dash-form-input" value="Alex Morgan">
+                                            <input type="text" class="dash-form-input" id="memberFullName" value="Alex Morgan" pattern="[A-Za-z\s]+" title="Name must contain only letters">
                                         </div>
                                         <div class="col-md-6">
                                             <label class="dash-form-label">Email</label>
-                                            <input type="email" class="dash-form-input" value="alex@email.com">
+                                            <input type="email" class="dash-form-input" id="memberEmail" value="alex@email.com" pattern="[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}" title="Enter a valid email (e.g. abc@gmail.com)">
                                         </div>
                                         <div class="col-md-6">
                                             <label class="dash-form-label">Phone</label>
-                                            <input type="tel" class="dash-form-input" value="+1 (555) 234-5678">
+                                            <input type="tel" class="dash-form-input" id="memberPhone" value="15552345678" pattern="[0-9]*" title="Phone must contain only numbers">
                                         </div>
                                         <div class="col-md-6">
                                             <label class="dash-form-label">Date of Birth</label>
-                                            <input type="date" class="dash-form-input" value="1992-06-15">
+                                            <input type="date" class="dash-form-input" id="memberDob" value="1992-06-15">
                                         </div>
                                         <div class="col-md-4">
                                             <label class="dash-form-label">Weight (lbs)</label>
-                                            <input type="number" class="dash-form-input" value="178">
+                                            <input type="number" class="dash-form-input" id="memberWeight" value="178">
                                         </div>
                                         <div class="col-md-4">
                                             <label class="dash-form-label">Height</label>
-                                            <input type="text" class="dash-form-input" value="5'10&quot;">
+                                            <input type="text" class="dash-form-input" id="memberHeight" value="5'10&quot;">
                                         </div>
                                         <div class="col-md-4">
                                             <label class="dash-form-label">Goal</label>
-                                            <select class="dash-form-input">
+                                            <select class="dash-form-input" id="memberGoal">
                                                 <option selected>Lose Weight</option>
                                                 <option>Build Muscle</option>
                                                 <option>Maintain</option>
                                             </select>
                                         </div>
                                         <div class="col-12">
-                                            <button type="button" class="btn btn-accent">Save Changes</button>
+                                            <button type="button" class="btn btn-accent" id="profileSaveBtn">Save Changes</button>
                                         </div>
                                     </div>
                                 </form>
@@ -1106,6 +1107,46 @@
             });
         }
     });
+    </script>
+    <script>
+        var userData = initDashboardUser();
+
+        function fillProfileFromStorage() {
+            var name = localStorage.getItem('dashUserName') || 'Alex Morgan';
+            var email = localStorage.getItem('dashUserEmail') || 'alex@email.com';
+            var fullNameEl = document.getElementById('memberFullName');
+            var emailEl = document.getElementById('memberEmail');
+            var profileNameEl = document.getElementById('profileFullName');
+            if (fullNameEl) fullNameEl.value = name;
+            if (emailEl) emailEl.value = email;
+            if (profileNameEl) profileNameEl.textContent = name;
+        }
+        fillProfileFromStorage();
+
+        document.getElementById('profileSaveBtn').addEventListener('click', function() {
+            var newName = document.getElementById('memberFullName').value.trim();
+            var newEmail = document.getElementById('memberEmail').value.trim();
+            if (newName) {
+                localStorage.setItem('dashUserName', newName);
+                localStorage.setItem('dashUserEmail', newEmail);
+                var profileNameEl = document.getElementById('profileFullName');
+                if (profileNameEl) profileNameEl.textContent = newName;
+                initDashboardUser();
+                this.textContent = 'Saved!';
+                var btn = this;
+                setTimeout(function() { btn.textContent = 'Save Changes'; }, 2000);
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('click', function(e) {
+            var target = e.target.closest('a');
+            if (target && !target.closest('.dash-sidebar') && !target.closest('form')) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.location.href = '404.html';
+            }
+        });
     </script>
 </body>
 </html>

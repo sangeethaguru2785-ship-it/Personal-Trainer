@@ -72,7 +72,7 @@
                         <label for="loginEmail">Email Address</label>
                         <div class="auth-input-wrapper">
                             <i class="fas fa-envelope"></i>
-                            <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                            <input type="email" id="loginEmail" placeholder="Enter your email" pattern="[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}" title="Enter a valid email (e.g. abc@gmail.com)" required>
                             <span class="auth-input-status"></span>
                         </div>
                         <span class="auth-error" id="loginEmailError"></span>
@@ -82,7 +82,7 @@
                         <label for="loginPassword">Password</label>
                         <div class="auth-input-wrapper">
                             <i class="fas fa-lock"></i>
-                            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                            <input type="password" id="loginPassword" placeholder="Enter your password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).*" title="Must include uppercase, lowercase, number &amp; special character" required>
                             <button type="button" class="auth-toggle-pass" data-target="loginPassword">
                                 <i class="fas fa-eye"></i>
                             </button>
@@ -91,13 +91,14 @@
                         <span class="auth-error" id="loginPasswordError"></span>
                     </div>
 
-                    <div class="auth-form-options">
+                    <div class="auth-form-options" id="loginRememberGroup">
                         <label class="auth-checkbox">
                             <input type="checkbox" id="rememberMe">
                             <span class="auth-checkbox-mark"></span>
                             Remember me
                         </label>
-                        <a href="#" class="auth-forgot" data-bs-toggle="modal" data-bs-target="#forgotModal">Forgot Password?</a>
+                        <a href="404.html" class="auth-forgot">Forgot Password?</a>
+                        <span class="auth-error" id="loginRememberError"></span>
                     </div>
 
                     <button type="submit" class="btn btn-accent auth-submit-btn">
@@ -120,6 +121,8 @@
                         <span>Apple</span>
                     </a>
                 </div>
+
+                <a href="index.html" class="auth-go-home">Go to Home</a>
 
                 <p class="auth-switch">
                     Don't have an account? <a href="signup.html">Sign Up</a>
@@ -147,7 +150,7 @@
                             <label for="forgotEmail">Email Address</label>
                             <div class="auth-input-wrapper">
                                 <i class="fas fa-envelope"></i>
-                                <input type="email" id="forgotEmail" placeholder="Enter your email" required>
+                                <input type="email" id="forgotEmail" placeholder="Enter your email" pattern="[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}" title="Enter a valid email (e.g. abc@gmail.com)" required>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-accent w-100 mt-3">Send Reset Link</button>

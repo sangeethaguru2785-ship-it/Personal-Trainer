@@ -70,7 +70,7 @@
                                 <label for="signupFirstName">First Name</label>
                                 <div class="auth-input-wrapper">
                                     <i class="fas fa-user"></i>
-                                    <input type="text" id="signupFirstName" placeholder="First name" required>
+                                    <input type="text" id="signupFirstName" placeholder="First name" pattern="[A-Za-z]+" title="First name must contain only letters" required>
                                     <span class="auth-input-status"></span>
                                 </div>
                                 <span class="auth-error" id="signupFirstNameError"></span>
@@ -81,7 +81,7 @@
                                 <label for="signupLastName">Last Name</label>
                                 <div class="auth-input-wrapper">
                                     <i class="fas fa-user"></i>
-                                    <input type="text" id="signupLastName" placeholder="Last name" required>
+                                    <input type="text" id="signupLastName" placeholder="Last name" pattern="[A-Za-z]+" title="Last name must contain only letters" required>
                                     <span class="auth-input-status"></span>
                                 </div>
                                 <span class="auth-error" id="signupLastNameError"></span>
@@ -93,7 +93,7 @@
                         <label for="signupEmail">Email Address</label>
                         <div class="auth-input-wrapper">
                             <i class="fas fa-envelope"></i>
-                            <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                            <input type="email" id="signupEmail" placeholder="Enter your email" pattern="[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}" title="Enter a valid email (e.g. abc@gmail.com)" required>
                             <span class="auth-input-status"></span>
                         </div>
                         <span class="auth-error" id="signupEmailError"></span>
@@ -103,7 +103,7 @@
                         <label for="signupPassword">Password</label>
                         <div class="auth-input-wrapper">
                             <i class="fas fa-lock"></i>
-                            <input type="password" id="signupPassword" placeholder="Create a password" required>
+                            <input type="password" id="signupPassword" placeholder="Create a password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).*" title="Must include uppercase, lowercase, number &amp; special character" required>
                             <button type="button" class="auth-toggle-pass" data-target="signupPassword">
                                 <i class="fas fa-eye"></i>
                             </button>
@@ -133,15 +133,16 @@
                         <label for="signupPhone">Phone Number <span class="text-muted">(optional)</span></label>
                         <div class="auth-input-wrapper">
                             <i class="fas fa-phone"></i>
-                            <input type="tel" id="signupPhone" placeholder="+1 (555) 123-4567">
+                            <input type="tel" id="signupPhone" placeholder="1234567890" pattern="[0-9]*" title="Phone must contain only numbers">
                         </div>
+                        <span class="auth-error" id="signupPhoneError"></span>
                     </div>
 
                     <div class="auth-form-check">
                         <label class="auth-checkbox">
                             <input type="checkbox" id="agreeTerms" required>
                             <span class="auth-checkbox-mark"></span>
-                            I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                            I agree to the <a href="404.html">Terms of Service</a> and <a href="404.html">Privacy Policy</a>
                         </label>
                         <span class="auth-error" id="agreeTermsError"></span>
                     </div>
@@ -166,6 +167,8 @@
                         <span>Apple</span>
                     </a>
                 </div>
+
+                <a href="index.html" class="auth-go-home">Go to Home</a>
 
                 <p class="auth-switch">
                     Already have an account? <a href="login.html">Sign In</a>
