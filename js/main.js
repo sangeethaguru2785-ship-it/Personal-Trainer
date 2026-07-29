@@ -141,12 +141,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ========== Testimonial Slider ==========
-    const prevBtn = document.getElementById('prevTestimonial');
-    const nextBtn = document.getElementById('nextTestimonial');
     const dots = document.querySelectorAll('.tn-dot');
     const track = document.getElementById('testimonialTrack');
 
-    if (prevBtn && nextBtn && track) {
+    if (dots.length && track) {
         let currentSlide = 0;
         const totalSlides = dots.length;
 
@@ -171,8 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        prevBtn.addEventListener('click', () => updateSlider(currentSlide - 1));
-        nextBtn.addEventListener('click', () => updateSlider(currentSlide + 1));
         dots.forEach((dot, i) => {
             dot.addEventListener('click', () => updateSlider(i));
         });
@@ -184,6 +180,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
+
+            const name = document.getElementById('contactName');
+            const phone = document.getElementById('contactPhone');
+
+            if (name && name.value.trim() && !/^[A-Za-z\s]+$/.test(name.value.trim())) {
+                alert('Name must contain only letters');
+                return;
+            }
+            if (phone && phone.value.trim() && !/^[0-9]*$/.test(phone.value.trim())) {
+                alert('Phone must contain only numbers');
+                return;
+            }
 
             const btn = this.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
@@ -235,6 +243,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // ========== Hero Video Sequential Playback (Home page only) ==========
     const heroVideoA = document.querySelector('.hero-video:not(.hero-video-alt)');
     const heroVideoB = document.querySelector('.hero-video-alt');
+    const heroSection = document.querySelector('.hero-section');
+
+    if (heroVideoA) {
+        heroVideoA.play().catch(function () {});
+    }
 
     if (heroVideoA && heroVideoB) {
         function fadeToNext(from, to) {
@@ -256,18 +269,6 @@ document.addEventListener('DOMContentLoaded', () => {
             fadeToNext(heroVideoA, heroVideoB);
             watchEnd(heroVideoB, heroVideoA);
         });
-    }
-
-    // ========== Parallax on Hero (Home page only) ==========
-    const heroSection = document.querySelector('.hero-section');
-
-    if (heroSection && window.innerWidth > 991) {
-        window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            if (scrollY < window.innerHeight) {
-                heroSection.style.backgroundPositionY = `${scrollY * 0.3}px`;
-            }
-        }, { passive: true });
     }
 
     // ========== Tilt Effect on Service Cards ==========
@@ -614,7 +615,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const emailInput = document.getElementById('newsletterEmail');
             const email = emailInput.value.trim();
 
-            if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            if (email && /^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/.test(email)) {
                 newsletterForm.querySelector('.newsletter-input-group').style.display = 'none';
                 newsletterSuccess.classList.remove('d-none');
                 emailInput.value = '';

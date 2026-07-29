@@ -74,21 +74,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Stat counter animation
-    var statValues = document.querySelectorAll('.dash-stat-value[data-count]');
+    var statValues = Array.from(document.querySelectorAll('.dash-stat-value[data-count]'));
     var counterObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
                 var el = entry.target;
                 var target = parseInt(el.getAttribute('data-count'));
+                var text = el.textContent;
+                var prefix = text.replace(/[\d,.\s]/g, '');
                 var current = 0;
-                var increment = Math.ceil(target / 60);
+                var increment = Math.max(1, Math.ceil(target / 60));
                 var timer = setInterval(function() {
                     current += increment;
                     if (current >= target) {
                         current = target;
                         clearInterval(timer);
                     }
-                    el.textContent = current.toLocaleString();
+                    el.textContent = prefix + current.toLocaleString();
                 }, 25);
                 counterObserver.unobserve(el);
             }
@@ -106,15 +108,6 @@ document.addEventListener('DOMContentLoaded', function() {
             opacity: 0, y: 25, duration: 0.5, stagger: 0.08, ease: 'power2.out', delay: 0.3
         });
     }
-
-    // Filter buttons
-    var filterBtns = document.querySelectorAll('.dash-filter-btn');
-    filterBtns.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            filterBtns.forEach(function(b) { b.classList.remove('active'); });
-            this.classList.add('active');
-        });
-    });
 
     // Chart colors
     var accent = '#C41E3A';
@@ -135,16 +128,35 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // Member Growth Chart (Trainer)
+    // Member Growth Chart (Trainer) with filter support
+    var memberData = {
+        week: {
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            members: [12, 19, 8, 15, 22, 14, 18],
+            sessions: [28, 35, 22, 40, 38, 30, 25]
+        },
+        month: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+            members: [45, 52, 38, 61, 55, 48, 72],
+            sessions: [120, 135, 110, 148, 142, 128, 165]
+        },
+        year: {
+            labels: ['2021', '2022', '2023', '2024', '2025', '2026'],
+            members: [320, 480, 650, 890, 1200, 1560],
+            sessions: [850, 1200, 1650, 2200, 2900, 3800]
+        }
+    };
+
     var mgc = document.getElementById('memberGrowthChart');
+    var memberChart = null;
     if (mgc) {
-        new Chart(mgc, {
+        memberChart = new Chart(mgc, {
             type: 'line',
             data: {
-                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                labels: memberData.week.labels,
                 datasets: [{
                     label: 'New Members',
-                    data: [12, 19, 8, 15, 22, 14, 18],
+                    data: memberData.week.members,
                     borderColor: accent,
                     backgroundColor: accentLight,
                     fill: true,
@@ -153,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     pointRadius: 4
                 }, {
                     label: 'Active Sessions',
-                    data: [28, 35, 22, 40, 38, 30, 25],
+                    data: memberData.week.sessions,
                     borderColor: green,
                     backgroundColor: 'rgba(42,157,143,0.1)',
                     fill: true,
@@ -165,6 +177,21 @@ document.addEventListener('DOMContentLoaded', function() {
             options: defaultOptions
         });
     }
+
+    var filterBtns = document.querySelectorAll('.dash-filter-btn');
+    filterBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            filterBtns.forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            var period = this.textContent.toLowerCase().trim();
+            if (memberChart && memberData[period]) {
+                memberChart.data.labels = memberData[period].labels;
+                memberChart.data.datasets[0].data = memberData[period].members;
+                memberChart.data.datasets[1].data = memberData[period].sessions;
+                memberChart.update();
+            }
+        });
+    });
 
     // Program Distribution (Trainer)
     var pdc = document.getElementById('programDistChart');
@@ -326,3 +353,48 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+function initDashboardUser() {
+    var name = localStorage.getItem('dashUserName') || 'User';
+    var email = localStorage.getItem('dashUserEmail') || '';
+    var rawRole = localStorage.getItem('dashUserRole') || '';
+
+    function getInitials(n) {
+        return n.trim().charAt(0).toUpperCase();
+    }
+
+    function setTextAvatar(container, userName) {
+        if (!container) return;
+        var img = container.querySelector('img');
+        if (img) img.remove();
+        container.textContent = getInitials(userName);
+    }
+
+    // Sidebar avatar + name + role
+    var sidebarName = document.querySelector('.dash-user-name');
+    if (sidebarName) sidebarName.textContent = name;
+
+    var sidebarRole = document.querySelector('.dash-user-role');
+    if (sidebarRole) {
+        var roleLabel = rawRole === 'trainer' ? 'Head Trainer' : rawRole === 'member' ? 'Premium Member' : sidebarRole.textContent;
+        sidebarRole.textContent = roleLabel;
+    }
+
+    // Text avatar in sidebar
+    setTextAvatar(document.querySelector('.dash-user-avatar'), name);
+
+    // Text avatar on profile page
+    setTextAvatar(document.querySelector('.dash-profile-avatar'), name);
+
+    // Text avatar on settings page
+    setTextAvatar(document.querySelector('.dash-settings-avatar'), name);
+
+    // Welcome heading
+    var welcomeEl = document.querySelector('.dash-welcome-content h2');
+    if (welcomeEl) {
+        var firstName = name.split(' ')[0];
+        welcomeEl.innerHTML = 'Welcome back, <span class="text-gradient">' + firstName + '</span>!';
+    }
+
+    return { name: name, email: email, role: rawRole };
+}

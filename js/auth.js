@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tl.from('.auth-left-content > *', {
             opacity: 0, x: -40, duration: 0.6, stagger: 0.12
         })
-        .from('.auth-form-wrapper > *', {
+        .from('.auth-form-wrapper > :not(.auth-go-home)', {
             opacity: 0, y: 25, duration: 0.5, stagger: 0.08
         }, '-=0.4');
 
@@ -79,7 +79,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function validateEmail(email) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        return /^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/.test(email);
+    }
+
+    function validatePassword(pw) {
+        return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).+$/.test(pw);
     }
 
     // ===== Real-time Validation =====
@@ -107,8 +111,8 @@ document.addEventListener('DOMContentLoaded', function() {
         loginPass.addEventListener('blur', function() {
             if (!this.value) {
                 showError('loginPasswordGroup', 'loginPasswordError', 'Password is required');
-            } else if (this.value.length < 6) {
-                showError('loginPasswordGroup', 'loginPasswordError', 'Password must be at least 6 characters');
+            } else if (!validatePassword(this.value)) {
+                showError('loginPasswordGroup', 'loginPasswordError', 'Must include uppercase, lowercase, number & special character');
             } else {
                 clearError('loginPasswordGroup', 'loginPasswordError');
                 setValid('loginPasswordGroup');
@@ -131,6 +135,8 @@ document.addEventListener('DOMContentLoaded', function() {
             el.addEventListener('blur', function() {
                 if (!this.value.trim()) {
                     showError(f.group, f.error, f.label + ' is required');
+                } else if (!/^[A-Za-z]+$/.test(this.value.trim())) {
+                    showError(f.group, f.error, f.label + ' must contain only letters');
                 } else {
                     clearError(f.group, f.error);
                     setValid(f.group);
@@ -171,17 +177,19 @@ document.addEventListener('DOMContentLoaded', function() {
             var strength = 0;
             if (val.length >= 6) strength++;
             if (val.length >= 10) strength++;
+            if (/[a-z]/.test(val)) strength++;
             if (/[A-Z]/.test(val)) strength++;
             if (/[0-9]/.test(val)) strength++;
             if (/[^A-Za-z0-9]/.test(val)) strength++;
 
             var levels = [
                 { width: '0%', color: 'transparent', text: '' },
-                { width: '20%', color: '#C41E3A', text: 'Very Weak' },
-                { width: '40%', color: '#E8572A', text: 'Weak' },
-                { width: '60%', color: '#E9C46A', text: 'Fair' },
-                { width: '80%', color: '#2A9D8F', text: 'Strong' },
-                { width: '100%', color: '#2A9D8F', text: 'Very Strong' }
+                { width: '16%', color: '#C41E3A', text: 'Very Weak' },
+                { width: '33%', color: '#E8572A', text: 'Weak' },
+                { width: '50%', color: '#E9C46A', text: 'Fair' },
+                { width: '66%', color: '#2A9D8F', text: 'Good' },
+                { width: '83%', color: '#2A9D8F', text: 'Strong' },
+                { width: '100%', color: '#00c896', text: 'Very Strong' }
             ];
 
             var level = levels[strength] || levels[0];
@@ -194,8 +202,8 @@ document.addEventListener('DOMContentLoaded', function() {
         signupPass.addEventListener('blur', function() {
             if (!this.value) {
                 showError('signupPasswordGroup', 'signupPasswordError', 'Password is required');
-            } else if (this.value.length < 6) {
-                showError('signupPasswordGroup', 'signupPasswordError', 'Password must be at least 6 characters');
+            } else if (!validatePassword(this.value)) {
+                showError('signupPasswordGroup', 'signupPasswordError', 'Must include uppercase, lowercase, number & special character');
             } else {
                 clearError('signupPasswordGroup', 'signupPasswordError');
                 setValid('signupPasswordGroup');
@@ -222,6 +230,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // ===== Remember Me Checkbox =====
+    var rememberMe = document.getElementById('rememberMe');
+    if (rememberMe) {
+        rememberMe.addEventListener('change', function() {
+            if (this.checked) clearError('loginRememberGroup', 'loginRememberError');
+        });
+    }
+
     // ===== Login Form Submit =====
     var loginForm = document.getElementById('loginForm');
     if (loginForm) {
@@ -231,6 +247,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
             var email = document.getElementById('loginEmail');
             var pass = document.getElementById('loginPassword');
+            var remember = document.getElementById('rememberMe');
+
+            if (!remember.checked) {
+                showError('loginRememberGroup', 'loginRememberError', 'Please select the Remember Me checkbox');
+                valid = false;
+            }
 
             if (!email.value.trim()) {
                 showError('loginEmailGroup', 'loginEmailError', 'Email is required');
@@ -243,8 +265,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!pass.value) {
                 showError('loginPasswordGroup', 'loginPasswordError', 'Password is required');
                 valid = false;
-            } else if (pass.value.length < 6) {
-                showError('loginPasswordGroup', 'loginPasswordError', 'Password must be at least 6 characters');
+            } else if (!validatePassword(pass.value)) {
+                showError('loginPasswordGroup', 'loginPasswordError', 'Must include uppercase, lowercase, number & special character');
                 valid = false;
             }
 
@@ -258,6 +280,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Simulate login
                 var role = document.getElementById('loginRole').value;
+                var userName = email.value.split('@')[0].replace(/\./g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); });
+                localStorage.setItem('dashUserName', userName);
+                localStorage.setItem('dashUserEmail', email.value.trim());
+                localStorage.setItem('dashUserRole', role);
                 setTimeout(function() {
                     window.location.href = role === 'trainer' ? 'trainer-dashboard.html' : 'member-dashboard.html';
                 }, 1500);
@@ -287,9 +313,15 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!firstName.value.trim()) {
                 showError('signupFirstNameGroup', 'signupFirstNameError', 'First name is required');
                 valid = false;
+            } else if (!/^[A-Za-z]+$/.test(firstName.value.trim())) {
+                showError('signupFirstNameGroup', 'signupFirstNameError', 'First name must contain only letters');
+                valid = false;
             }
             if (!lastName.value.trim()) {
                 showError('signupLastNameGroup', 'signupLastNameError', 'Last name is required');
+                valid = false;
+            } else if (!/^[A-Za-z]+$/.test(lastName.value.trim())) {
+                showError('signupLastNameGroup', 'signupLastNameError', 'Last name must contain only letters');
                 valid = false;
             }
             if (!email.value.trim()) {
@@ -302,8 +334,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!pass.value) {
                 showError('signupPasswordGroup', 'signupPasswordError', 'Password is required');
                 valid = false;
-            } else if (pass.value.length < 6) {
-                showError('signupPasswordGroup', 'signupPasswordError', 'Password must be at least 6 characters');
+            } else if (!validatePassword(pass.value)) {
+                showError('signupPasswordGroup', 'signupPasswordError', 'Must include uppercase, lowercase, number & special character');
                 valid = false;
             }
             if (!confirm.value) {
@@ -318,6 +350,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 valid = false;
             }
 
+            var phone = document.getElementById('signupPhone');
+            if (phone && phone.value.trim() && !/^[0-9]*$/.test(phone.value.trim())) {
+                showError('signupPhoneGroup', 'signupPhoneError', 'Phone must contain only numbers');
+                valid = false;
+            }
+
             if (valid) {
                 var btn = this.querySelector('.auth-submit-btn');
                 var btnText = btn.querySelector('.auth-btn-text');
@@ -327,6 +365,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 btn.disabled = true;
 
                 // Simulate signup
+                var firstName = document.getElementById('signupFirstName').value.trim();
+                var lastName = document.getElementById('signupLastName').value.trim();
+                var fullName = firstName + ' ' + lastName;
+                localStorage.setItem('dashUserName', fullName);
+                localStorage.setItem('dashUserEmail', document.getElementById('signupEmail').value.trim());
+                localStorage.setItem('dashUserRole', document.getElementById('signupRole').value);
                 setTimeout(function() {
                     window.location.href = 'login.html';
                 }, 1500);
